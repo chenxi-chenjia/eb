@@ -1,0 +1,27 @@
+helpCenter:帮助中心
+	aboutUs：关于我们
+	problem：常见问题
+	serchMine：搜索我的
+
+
+
+news:新闻资讯
+	details：资讯详情
+
+
+
+serviceCenter:服务中心
+	contact：联系方式
+	download：常用下载
+	payment：付款方式
+	price：价格预览
+	registrar：注册商服务
+	renewal：产品续费
+	reprot：违规举报
+	terms：服务条款
+
+
+
+virtualHost:虚拟主机
+	homepage：虚拟主机主页
+	virtual-buyDatabase:购买数据库

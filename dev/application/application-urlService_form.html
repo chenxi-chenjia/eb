@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>增值应用-网址移动服务(表单)</title>
+	<link rel="stylesheet" href="../static/css/public.css">
+	<link rel="stylesheet" href="../static/css/respective.css">
+	<script src='../static/js/jquery.min.js'></script>
+	<script src='../static/js/webuploader.min.js'></script>
+	<script src='../static/js/respective.js'></script>
+	<script src='../static/js/public.js'></script>
+	
+</head>
+<body>
+	
+
+	<!--头部  -->
+	<div class="header">
+		<div class="center">
+			<div class="headerLeft">
+				第一商务欢迎你
+			</div>
+			<div class="headerRight">
+				<div class="link header-float show">
+					<a href="#" class="login">登录</a>
+					<div class="line"></div>
+					<a href="#" class="registered">注册</a>
+				</div>
+				<div class="login-bingo header-float">
+					<span>路人甲123456欢迎你</span>
+					<a href="#">退出</a>
+				</div>
+				<ul class="header-float">
+					<li><a href="#">购物车<span>0</span></a></li>
+					<li><a href="#">备案</a></li>
+					<li><a href="#">帮助中心</a></li>
+					<li><a href="#">服务中心</a></li>
+					<li><a href="#">新闻资讯</a></li>
+					<li><a href="#">关于我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 导航栏 -->
+	<div class="nav">
+		<div class="center">
+			<h1 class="logo"><a href="#"><img src="../static/img/logo.png" alt=""></a></h1>
+			<div class="navLis">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">域名注册</a></li>
+					<li><a href="#">商标注册</a></li>
+					<li><a href="#">虚拟主机</a></li>
+					<li><a href="#">企业邮局</a></li>
+					<li class="now"><a href="#">云服务器</a></li>
+					<!-- <li><a href="#">SSL证书</a></li>
+					<li><a href="#">租用托管</a></li>
+					<li><a href="#">增值应用</a></li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- 内容区 -->
+	<div id="application-urlService_form" class="application-form">
+		<div class="center">
+			<div class="top">
+				<ul>
+					<li class="t1">
+						<div class="icon"></div>
+						<h3>”.网址“域名查询</h3>
+					</li>
+					<li class="t2 now">
+						<div class="icon"></div>
+						<h3>填写注册信息</h3>
+					</li>
+					<li class="t3">
+						<div class="icon"></div>
+						<h3>完成</h3>
+					</li>
+				</ul>
+			</div>
+			<div class="form">
+				<div class="l1 floor">
+					<div class="title"><div class="icon"></div><h5>网址查询</h5></div>
+					<div class="content">
+						<ul>
+							<li>
+								<span class="total">网址名称：</span>
+								<span class="bind">graeiuh.网址（普通域名）</span>
+							</li>
+							<li class="prise">
+								<span class="total">购买价格：</span>
+								<span class="bind"> 2800元/年</span>
+							</li>
+							<li class="ip">
+								<span class="total">注册年数：</span>
+								<span class="bind">
+									<i class="sub">
+										<div>
+											<b class="h"></b>
+										</div>
+										
+									</i>
+									<input type="text" name="time" value="1">
+									<i class="add">
+										<div>
+											<b class="h"></b>
+											<b class="s"></b>
+										</div>
+									</i>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="l2 floor">
+					<div class="title"><div class="icon"></div><h5>用户信息</h5></div>
+					<div class="content">
+						<ul>
+							<li class="type">
+								<span class="total">用户类型：</span>
+								<span class="bind bingo">
+									<i class="icon"></i>
+									企业
+								</span>
+								<span class="bind">
+									<i class="icon"></i>
+									个人
+								</span>
+							</li>
+							<li>
+								<span class="total">用户名称：</span>
+								<input type="text" name='idcard'>
+								<span class="ts"><b>*</b>填写个人姓名或企业名称</span>
+							</li>
+							<li>
+								<span class="total">证件类型：</span>
+								<select name="subtraction" id="subtract">
+									<option value="none">请选择</option>
+									<option value="certificate ">身份证</option>
+									<option value="student ">学生证</option>
+									<option value="lao ">老年证</option>
+									<option value="nqr ">青年证</option>
+								</select>
+							</li>
+							<li>
+								<span class="total">证件号码：</span>
+								<input type="text" name="idnum">
+								<span class="ts"> <b>*</b>证件号码</span>
+							</li>
+							<li class="file">
+								<span class="total">上传证件：</span>
+								<span class="inputbox" id="picker">
+									上传证件
+								</span>
+								<span class="filename"></span>
+								<span class="ts"> <b>*</b> 根据证件类型选择正确的文件上传</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="l3 floor">
+					<div class="title"><div class="icon"></div><h5>联系人信息</h5></div>
+					<div class="content">
+						<ul>
+							<li>
+								<span class="total">联系人姓名：</span>
+								<input type="text" name="lxrname">
+								<span class="ts"><b>*</b>联系人姓名</span>
+							</li>
+							<li class="sh">
+								<span class="total">省市：</span>
+								<select name="sheng" id="sheng">
+									<option value="none">请选择</option>
+									<option></option>
+									<option></option>
+									<option></option>
+									<option></option>
+									<option></option>
+									<option></option>
+								</select>
+								<select name="shi" id="shi">
+									<option value="none">请选择</option>
+								</select>
+							</li>
+							<li>
+								<span class="total">地址：</span>
+								<input type="text" name="address">
+								<span class="ts"><b>*</b>联系地址</span>
+							</li>
+							<li>
+								<span class="total">手机号码：</span>
+								<input type="text" name="mphone">
+								<span class="ts"><b>*</b>11位数字手机号码</span>
+							</li>
+							<li>
+								<span class="total">电子邮箱：</span>
+								<input type="text" name="emile">
+								<span class="ts"><b>*</b>常用电子邮箱</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="l4 floor">
+					<div class="title"><div class="icon"></div><h5>选填内容</h5></div>
+					<div class="content">
+						<ul>
+							<li>
+								<span class="total">座机号码：</span>
+								<input type="text" name="phone">
+								<span class="ts">座机号码，不能填写除数字以外的任何字符</span>
+							</li>
+							<li>
+								<span class="total">传真：</span>
+								<input type="text" name="fax">
+								<span class="ts">传真号码，不能填写除数字以外的任何字符</span>
+							</li>
+							<li>
+								<span class="total">邮政编码：</span>
+								<input type="text" name="zipcode">
+								<span class="ts">6位数字的邮政编码</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="floor button">
+					<a href="#" class="go">提交</a>
+					<a href="#" class="back">重新查询</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 底部 -->
+	<div class="footer">
+		<div class="top">
+			<div class="center">
+				<img src="../static/img/serviceNav.png" alt="">
+				<div>
+					<h1 class="same ">
+						您的业务还没有展开？马上
+					</h1>
+					<div class="create same btn-same "><a href="#">创建业务</a></div>
+					<h1 class="same">或者</h1>
+					<div class="become same btn-same"><a href="#">成为代理商</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="service-lis">
+			<div class="center">
+				<ul>
+					<li class="first">
+						<dl>
+							<dt>服务技术</dt>
+							<dd><a href="#">联系客服</a></dd>
+							<dd><a href="#">常用下载</a></dd>
+							<dd><a href="#">帮助中心</a></dd>
+							<dd><a href="#">违规举报</a></dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>新手指导</dt>
+							<dd><a href="#">注册第一商务</a></dd>
+							<dd><a href="#">域名注册申请</a></dd>
+							<dd><a href="#">购买虚拟主机</a></dd>
+							<dd><a href="#">主机邮局续费</a></dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>付款方式</dt>
+							<dd><a href="#">在线支付</a></dd>
+							<dd><a href="#">银行汇款</a></dd>
+							<dd><a href="#">邮局汇款</a></dd>
+							<dd><a href="#">上门缴收</a></dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>快速入口</dt>
+							<dd><a href="#">域名控制面板</a></dd>
+							<dd><a href="#">虚拟主机管理</a></dd>
+							<dd><a href="#">云主机管理</a></dd>
+							<dd><a href="#">数据库管理</a></dd>
+						</dl>
+					</li>
+					<li class="last">
+						<dl>
+							<dt><h3>客服热线：<span>4006-035-001</span></h3></dt>
+							<dd class="show"><i class="icon same show1 wxshow"></i><i class="icon same show2 wx"></i><a href="#">第一商务官方微信</a></dd>
+							<dd><i class="icon same show1 xlshow"></i><i class="icon same show2 xl"></i><a href="#">第一商务官方微博</a></dd>
+							<dd><i class="icon same show1 qqshow"></i><i class="icon same show2 qq"></i><a href="#">第一商务官方客服</a></dd>
+						</dl>
+						<div>
+							<i class="icon wxewm show-hide-icon show"></i>
+							<i class="icon xlewm show-hide-icon"></i>
+							<i class="icon qqewm show-hide-icon"></i>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="center">
+				<ul>
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">网站地图</a></li>
+					<li><a href="#">人才招聘</a></li>
+					<li><a href="#">客服中心</a></li>
+					<li><a href="#">友情链接</a></li>
+					<li><a href="#">联系方式</a></li>
+					<li><a href="#">付款方式</a></li>
+					<li><a href="#">有问必答</a></li>
+					<li><a href="#">价格总览</a></li>
+				</ul>
+			</div>
+		</div>
+		<p>
+			客服热线：0571-87756803&nbsp;&nbsp; 87756807 &nbsp;&nbsp;&nbsp;&nbsp;合作热线：0571-87756822&nbsp;&nbsp;&nbsp;&nbsp;  网络备案：0571-87756883&nbsp;&nbsp; 87756809&nbsp;&nbsp;&nbsp;&nbsp;传真：0571-87756868
+		</p>
+		<p>
+			第一商务投诉电话：0571-87756866&nbsp;&nbsp;国家域名注册服务投诉中心投诉受理电话：010-58813000
+		</p>
+		<p>
+			地址：浙江省杭州市西湖区紫霞街176号杭州互联网创新创业园2号楼11楼(310030)
+		</p>
+		<p>
+			信息产业部域名注册服务批文号：信部电函[2008]224号&nbsp;&nbsp;&nbsp;&nbsp;经营许可证：浙B1.B2-20120241&nbsp;&nbsp;&nbsp;&nbsp; 浙公网安备33010602000268号
+		</p>
+		<p>
+			Copyright© 1999-2016 第一商务 版权所有
+		</p>
+		<p class="logo">
+			<a href="#" class="l1"></a>
+			<a href="#" class="l2"></a>
+			<a href="#" class="l3"></a>
+			<a href="#" class="l4"></a>
+			<a href="#" class="l5"></a>
+			<a href="#" class="l6"></a>
+			<a href="#" class="l7"></a>
+			<a href="#" class="l8"></a>
+		</p>	
+		<p class="link">
+			<span>友情链接：</span>
+			<a href="#">爱名网</a><span class="line">|</span><a href="#">域名抢注</a><span class="line">|</span><a href="#">商务网</a><span class="line">|</span><a href="#">电商网 </a><span class="line">|</span><a href="#">成都网建设 </a><span class="line">|</span><a href="#">折800</a><span class="line">|</span><a href="#">中网</a><span class="line">|</span><a href="#">步淘网</a><span class="line">|</span><a href="#">九赢广告联盟</a>
+		</p>
+	</div>
+	
+</body>
+</html>
