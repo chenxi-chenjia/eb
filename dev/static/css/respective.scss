@@ -7535,3 +7535,622 @@ h1{
 		}
 	}
 }
+//域名注册首页
+#domain-banner{
+	padding:0;
+	position:relative;
+	min-height:400px;
+	background:#f5f5f5;
+	.icon{
+		background-image:url(../img/domain.png);
+	}
+	.bg{
+		position:absolute;
+		top:0;
+		z-index: 0;
+		left:50%;
+		transform:translateX(-50%);
+		height: 400px;
+		width: 100%;
+		background-position:center;
+		background-image:url(../img/domain_banner.jpg);
+	}
+	.content{
+		position:relative;
+		z-index: 1;
+		h1{
+			font-size: 50px;
+			color:#fff;
+			padding:65px 0 30px;
+		}
+	}
+	.input-box{
+		width: 998px;
+		height: 50px;
+		padding:8px;
+		overflow: hidden;
+		border-radius:10px;
+		position:relative;
+		margin: 0 auto;
+		.mask{
+			width: 100%;
+			height: 100%;
+			background:#fff;
+			opacity: 0.3;
+			position:absolute;
+			z-index: 0;
+			top:0;
+			left: 0;
+		}
+		input{
+			width: 800px;
+			height: 50px;
+			padding-left:10px;
+			border-top-left-radius:10px;
+			border-bottom-left-radius:10px;
+			position:relative;
+			z-index: 1;
+			font-size: 16px;
+		}
+		.button{
+			width: 188px;
+			height: 50px;
+			position:absolute;
+			top:8px;
+			right: 8px;
+			background: #e2383a;
+			text-align: center;
+			line-height: 50px;
+			border-top-right-radius:10px;
+			border-bottom-right-radius:10px;
+			span{
+				padding-left: 30px;
+			    position: relative;
+			    color: #fff;
+			    font-size: 22px;
+			}
+			.icon{
+				width: 20px;
+			    height: 20px;
+			    position: absolute;
+			    left: 0;
+			    top: 6px;
+			    background-position: -285px 0;
+			    background-image: url(../img/domain.png);
+			}
+		}
+	}
+	.fj{
+		width: 1014px;
+		margin: 34px auto 0;
+		line-height: 20px;
+		position:relative;
+		a{
+			font-size: 16px;
+			color: #fff;
+			margin-right:30px;
+			transition: color ease-in-out .25s;
+			cursor: pointer;
+		}
+		span{
+			color:#fff;
+			font-size: 12px;
+			margin-right: 30px;
+
+		}
+		a:hover{
+			color:#e2383a;
+			border-bottom:1px solid #e2383a;
+		}
+		
+		p{
+			float:right;
+			width: 430px;
+			overflow:hidden;
+			text-overflow:ellipsis;
+			padding-left: 25px;
+			color:#fff;
+			white-space: nowrap;
+			position:relative;
+			.icon{
+				width: 16px;
+				height: 14px;
+				background-position:-319px 0;
+				position:absolute;
+				top:3px;
+				left:0;
+
+			} 
+		}
+	}
+	.yms-box{
+		padding-top:40px;
+		padding-left:40px;
+		background:#fff;
+		margin-top:30px; 
+		li{
+			width: 116px;
+			height: 36px;
+			span{
+				padding:0 23px;
+				position:relative;
+				cursor: pointer;
+			}
+			.icon.nick{
+				width: 16px;
+				height: 16px;
+				background-position:-50px 0;
+				position:absolute;
+				top:3px;
+				left: 0;
+			}
+			.icon.hot{
+				width: 16px;
+				height: 16px;
+				position:absolute;
+				background-position:-180px 0;
+				top:3px;
+				right: 0; 
+			}
+			span.check{
+				.nick.icon{
+					background-position:-30px 0;
+				}
+			}
+		}
+		.line{
+			width: 1120px;
+			border-bottom:1px dashed #e6e6e6;
+		}
+		.cz{
+			padding:16px 0;
+			a{
+				color: #008bcc;
+			}
+			span{
+				margin-left: 20px;
+				padding-left: 20px;
+				position:relative;
+				cursor: pointer;
+				.icon{
+					position:absolute;
+					top:3px;
+					left: 0;
+					width: 14px;
+					height: 14px;
+					background-position:0 0;
+				}
+			}
+			span.check{
+				.icon{
+					background-position:-15px 0;	
+				}
+			}
+			span.save{
+				padding:8px 13px;
+				border:1px solid #e6e6e6;
+			}
+		}
+	}
+}
+#domain{
+	padding:0;
+	.floor1{
+		padding:70px 0;
+		.jdlb{
+			position:relative;
+			height: 180px;
+		}
+		.btnl{
+			position:absolute;
+			width: 30px;
+			height: 120px;
+			background-position:-536px 0;
+			left: 0;
+			top:50%;
+			margin-top: -60px;
+			cursor: pointer;
+			transition: all ease-in-out .25s;
+			opacity: 0;
+		}
+		.btnr{
+			position:absolute;
+			width: 30px;
+			height: 120px;
+			background-position:-577px 0;
+			right: 0;
+			top:50%;
+			margin-top: -60px;
+			cursor: pointer;
+			transition: all ease-in-out .25s;
+			opacity: 0;
+		}
+		.hover{
+			opacity: 1;
+		}
+		.img-box{
+			width: 1060px;
+			overflow: hidden;
+			position:relative;
+			margin: 0 auto;
+			height: 180px;
+		}
+		ul{
+			position:absolute;
+			top:0;
+			left: 0;
+		}
+		li{
+			border:1px solid #e6e6e6;
+			width: 193px;
+			padding:0 20px;
+			height: 178px;
+			background:#fff;
+			.img{
+				padding-top: 20px;
+				padding-bottom:10px;
+				text-align: center;
+			}
+			a{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			p{
+				text-align: center;
+				font-size: 16px;
+				color:#e2383a;
+				span{
+					font-size: 32px;
+					color:#e2383a;
+				}
+			}
+			h4{
+				font-size: 16px;
+				font-weight: 400;
+				padding-bottom:15px;
+				border-bottom:1px dashed #e6e6e6;
+				text-align: center
+			}
+		}
+		li+li{
+			margin-left: 40px;
+		}
+	}
+	.floor2{
+		background:#fff;
+		padding:50px 0;
+		h1{
+			padding:0;
+			font-size: 30px;
+			color: #333;
+		}
+		.form{
+			border-top:1px solid #e6e6e6;
+			border-left:1px solid #e6e6e6;
+			.top{
+				background:#f5f5f5;
+			}
+			li{
+				text-align: center;
+				height: 50px;
+				line-height: 50px;
+				border-right:1px solid #e6e6e6;
+				border-bottom:1px solid #e6e6e6;
+			}
+			.r1{
+				width: 178px;
+			}
+			.r2{
+				width: 298px;
+			}
+			.r3{
+				width: 178px;
+			}
+			.r4{
+				width: 178px;
+			}
+			.r5{
+				width: 178px;
+			}
+			.r6{
+				width: 183px;
+			}
+			.blue{
+				a{
+					color: #008bcc;
+				}
+				a:hover{
+					border-bottom:1px solid #008bcc;
+				}
+			}
+			.red{
+				color:#e2383a;
+			}
+			del{
+				font-size: 12px;
+				padding:0 3px;
+			}
+		}
+	}
+}
+//域名查询结果页面
+#domain-banner.domain-result-banner{
+	min-height:200px;
+	.bg{
+		height: 200px;
+	}
+	.content{
+		padding-top:60px;
+	}
+	.ck{
+		text-align: right;
+		padding-top:25px;
+		width: 1014px;
+		margin:  0 auto;
+		span{
+			padding-right:25px;
+			position:relative;
+			font-size: 16px;
+			color:#fff;
+			cursor: pointer;
+		}
+		.icon{
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			top:3px;
+			right: 0px;
+			background-position:-345px 0;
+		}
+	}
+	.yms-box{
+		position:absolute;
+		top:118px;
+		left: 101px;
+		box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		width: 770px;
+		margin: 0;
+		display: none;
+	}
+}
+#domain-result{
+	padding:50px 0;
+	h2{
+		color:#333;
+		font-size: 26px;
+		padding-bottom:20px; 
+		font-weight: 400;
+	}
+	.content{
+		background:#fff;
+		padding:30px 40px; 
+	}
+	h3{
+		padding-left:8px;
+		position:relative;
+		padding-bottom:14px;
+		border-bottom:1px solid #e6e6e6;
+		font-size: 18px;
+		color: #333;
+		font-weight: 400;
+		.line{
+			height: 17px;
+			width: 2px;
+			background:#dd2726;
+			position:absolute;
+			left: 0;
+			top:5px;
+		}
+	}
+	ul{
+		li{
+			height: 50px;
+			line-height: 50px;
+			border-bottom:1px dashed #e6e6e6;
+			padding:0 20px;
+			cursor: pointer;
+			transition: all ease-in-out .25s;
+		}
+		li:hover{
+			background:#f7f7f7;
+		}
+		.left{
+			span{
+				padding-left:27px;
+				padding-right:13px;
+				position:relative; 
+				
+			}
+			.icon{
+				width: 16px;
+				height: 16px;
+				position: absolute;
+				background-position:-50px 0;
+				top:3px;
+				left: 0;
+				color:#333;
+				cursor:pointer;
+			}
+			b{
+				color: #009959;
+				font-weight: 400;
+			}
+			span.check{
+				.icon{
+					background-position: -30px 0;
+				}
+			}
+		}
+		.right{
+			.prise{
+				b{
+					color: #e2383a;
+					font-weight: 400;
+					font-size: 16px;
+				}
+			}
+			a{
+				width: 120px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				display: inline-block;
+				span{
+					padding-left:20px;
+					position: relative;
+				}
+			}
+			.zc{
+				position:relative;
+				border:1px solid #e6e6e6;
+				border-radius:3px;
+				margin:  0 20px;
+				span{
+					color:#e2383a;	
+					transition: all ease-in-out .25s;
+				}
+				.icon{
+					width: 14px;
+					height: 14px;
+					background-position:-200px 0;
+					position: absolute;
+					top:3px;
+					left: 0;
+				}
+			}
+			.zc:hover{
+				background:#e2383a;
+				span{
+					color:#fff;
+				}
+				.icon{
+					background-position:-382px 0;
+				}
+			}
+			.car{
+				position:relative;
+				border:1px solid #e6e6e6;
+				border-radius:3px;
+				span{
+					color:#fe8431;
+				}
+				.icon{
+					width: 15px;
+					height: 15px;
+					background-position:-220px 0;
+					position: absolute;
+					top:3px;
+					left: 0;
+				}
+			}
+			.car.added{
+				background:#fe8431;
+				span{
+					color:#fff;
+				}
+				.icon{
+					background-position:-365px 0;
+				}
+			}
+		}
+	}
+	.more{
+		text-align: right;
+		height: 50px;
+		border-bottom:1px solid #e6e6e6;
+		padding:0 20px;
+		line-height: 50px;
+		span{
+			color:#008bcc;
+			padding-right:20px;
+			position:relative;
+			cursor: pointer;
+			transition: all ease-in-out .25s;
+			border-bottom:1px solid transparent;
+			.icon{
+				width: 12px;
+				height: 7px;
+				position:absolute;
+				background-position:-241px 0;
+				top:7px;
+				right: 0;
+			}
+		}
+		span:hover{
+			border-color:#008bcc;
+		}
+	}
+	.cz{
+		padding: 0 20px;
+		height: 75px;
+		line-height: 75px;
+		.all{
+			padding-left:25px;
+			position: relative;
+			cursor: pointer;
+			.icon{
+				position: absolute;
+				background-position:-50px 0;
+				width: 16px;
+				height:16px;
+				top:2px;
+				left: 0;
+			}
+		}
+		.all.check{
+			.icon{
+				background-position:-30px 0;
+			}
+		}
+		a{
+			margin-left: 20px;
+			padding:8px 22px;
+			border-radius:5px;
+			
+		}
+		.zc{
+			background:#dd2726;
+			color:#fff;
+		}
+		.cx{
+			background:#dddddd;
+			color:#999;
+		}
+	}
+	.yzc{
+		ul{
+			.left{
+				.icon{
+					background-position:-261px 0;
+					width: 17px;
+					height: 17px;
+				}
+				b{
+					color: #e2383a;
+				}
+			}
+			.right{
+				span{
+					color:#008bcc;
+				}
+			}
+		}
+	}
+}
+//广告
+.AD{
+	ul{
+		padding:50px 0;
+	}
+	li{
+		width: 379px;
+		height: 177px;
+		line-height: 177px;
+		text-align: center;
+		border:1px solid #e6e6e6;
+	}
+	li+li{
+		margin-left: 20px;
+	}
+}

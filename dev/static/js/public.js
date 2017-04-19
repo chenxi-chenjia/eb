@@ -1975,6 +1975,581 @@ $(function(){
 		batchregistered();
 	}
 
+	//域名注册-首页
+	function domainIndex (){
+		//常用cy,热hot,图片src,域名价格中的对象：po：sp,xf,zr,sh,域名价格中是否含有has
+		var data=[
+			{
+				name:'.com',
+				describe:'全球注册量第一，注册首选',
+				prise:'60',
+				cy:true,
+				hot:true,
+				has:true,
+				lp:'45',
+				src:'../static/img/ym/single_logo_com.png',
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.me',
+				describe:'代表"自己"，打造个性站点',
+				prise:'35',
+				cy:true,
+				hot:true,
+				has:true,
+				lp:'45',
+				src:'../static/img/ym/single_logo_me.png',
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.cn',
+				describe:'中国企业和个人的互联网标识',
+				type:0,
+				prise:'35',
+				cy:true,
+				hot:false,
+				has:true,
+				lp:'45',
+				src:'../static/img/ym/single_logo_cn.png',
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.win',
+				describe:'新购/续费/转入促销',
+				prise:'80',
+				src:'',
+				cy:false,
+				hot:false,
+				has:false,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.net',
+				describe:'为企业树立全球化商业品牌',
+				prise:'80',
+				src:'../static/img/ym/single_logo_net.png',
+				cy:true,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.link',
+				describe:'即刻链接世界',
+				prise:'150',
+				src:'',
+				cy:false,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.club',
+				describe:'俱乐部、会所专属域名',
+				prise:'80',
+				src:'',
+				cy:false,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.wang',
+				describe:'寓意网络，互联网域名首选',
+				prise:'46',
+				src:'',
+				cy:false,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.co',
+				describe:'代表公司和商业',
+				prise:'230',
+				src:'',
+				cy:false,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.tv',
+				describe:'媒体域名，视频服务首选',
+				prise:'80',
+				src:'../static/img/ym/single_logo_tv.png',
+				cy:true,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.ltd',
+				describe:'有限公司简称，公司专属域名',
+				prise:'105',
+				src:'',
+				cy:false,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.name',
+				describe:'个人品牌推广最佳选择',
+				prise:'99',
+				src:'',
+				cy:false,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.cc',
+				describe:'简单好记，极具商业潜力',
+				prise:'140',
+				src:'../static/img/ym/single_logo_cc.png',
+				cy:false,
+				hot:true,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.info',
+				describe:'信息时代的标识域名',
+				prise:'320',
+				src:'../static/img/ym/single_logo_info.png',
+				cy:false,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.store',
+				describe:'网上超市、便利网店的专属域名',
+				prise:'46',
+				src:'',
+				cy:false,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.asia',
+				describe:'含义为“亚洲”，标识强烈',
+				prise:'320',
+				src:'../static/img/ym/single_logo_asia.png',
+				cy:false,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.org',
+				describe:'非盈利组织或机构的首选',
+				prise:'320',
+				src:'../static/img/ym/single_logo_org.png',
+				cy:false,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.中国',
+				describe:'最具中国色彩的域名',
+				prise:'200',
+				src:'',
+				cy:false,
+				hot:true,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.vip',
+				describe:'尊贵、特权',
+				prise:'400',
+				src:'../static/img/ym/single_logo_vip.png',
+				cy:true,
+				hot:true,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.ren',
+				describe:'以人为本的域名，彰显团队力量',
+				prise:'140',
+				src:'',
+				cy:false,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.gov.cn',
+				describe:'中国政府机关/部门的专属域名',
+				prise:'100',
+				src:'',
+				cy:true,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.hk',
+				describe:'香港特别行政区域名',
+				prise:'330',
+				src:'',
+				cy:false,
+				hot:true,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.公司',
+				describe:'具有显著的标识作用',
+				prise:'180',
+				src:'',
+				cy:false,
+				hot:true,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.网络',
+				describe:'适合应用于网络服务',
+				prise:'230',
+				src:'',
+				cy:false,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.biz',
+				describe:'代表商业，最具竞争力的域名',
+				prise:'75',
+				src:'',
+				cy:false,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.mobi',
+				describe:'建立WAP网站的首选域名',
+				prise:'120',
+				src:'../static/img/ym/single_logo_mobi.png',
+				cy:false,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			},{
+				name:'.shop',
+				describe:'建立WAP网站的首选域名',
+				prise:'120',
+				src:'../static/img/ym/single_logo_shop.png',
+				cy:false,
+				hot:false,
+				has:true,
+				po:{
+					sp:60,
+					xf:80,
+					zr:60,
+					sh:1200
+				}
+			}
+		];
+		//节点轮播图数组
+		var img=new Array;
+		//域名价格数组
+		var pa=new Array;
+		$('.img-box ul').empty();
+		$.each(data,function(i,v){
+			if(v.src){
+				var el=$('<li class="fl">\
+								<a href="#">\
+									<div class="img"><img src="'+v.src+'" alt=""></div>\
+									<h4>'+v.describe+'</h4>\
+									<p class="prise">￥<span>'+v.prise+'</span></p>\
+								</a>\
+							</li>')
+				el.appendTo($('.floor1 .img-box ul'));
+			}
+			if(v.has){
+				var lp='';
+				if(v.lp){
+					lp=v.lp;
+				}
+				var el=$('<ul class="no-float">\
+						<li class="fl r1 blue"><a href="#">'+v.name.toLocaleUpperCase()+'</a></li>\
+						<li class="fl r2">'+v.describe+'</li>\
+						<li class="fl r3 red">'+'<del>'+lp+'</del>'+v.po.sp+'</li>\
+						<li class="fl r4 red ">'+v.po.xf+'</li>\
+						<li class="fl r5 red ">'+v.po.zr+'</li>\
+						<li class="fl r6 red">'+v.po.sh+'</li>\
+					</ul>')
+				el.appendTo($('.floor2 .yms'));
+			}
+		})
+
+		
+
+
+		//render函数
+		function render(data){
+			$('#domain-banner .yms ul').empty();
+			$.each(data,function(i,v){
+				var cm=''
+				if(v.cy){
+					cm='check';
+				}
+				var hot=''
+				if(v.hot){
+					hot='<i class="icon hot"></i>'
+				}
+				var el=$('<li class="fl">\
+								<span class="'+cm+'"><i class="icon nick"></i>'+hot+v.name+'</span>\
+							</li>')
+				el.appendTo($('.yms-box ul'));
+			})
+		}
+		render(data);
+
+		// 节点轮播
+		function jdlb(){
+			var num=$('.img-box ul').find('li').length;
+			var gw=$('.img-box ul').find('li').outerWidth();
+			var mw = num*gw+40*(num-1);
+			var obj=$('.jdlb');
+			$('.img-box ul').css('width',mw);
+			obj.hover(function(){
+				$('.btnl,.btnr').toggleClass('hover');
+				clearInterval(t);
+			},function(){
+				$('.btnl,.btnr').toggleClass('hover');
+				t=setInterval(move,5000);
+			})
+			//开关
+			var flag=true;
+
+			//正向移动函数
+			function move(){
+				if(flag){
+					flag=false;
+					$('ul',obj).animate({left:-(gw+40)},1500,function(){
+						$(this).find('li:first').insertAfter($('ul li:last',obj));
+						$(this).css('left',0);
+						flag=true;
+					})
+				}else{return}
+			}
+			function back () {
+				if(flag){
+					flag=false;
+					$('ul',obj).css({left:-(gw+40)});
+					$('ul',obj).find('li:last').insertBefore($('ul li:first',obj));
+					$('ul',obj).animate({left:0},1500,function(){
+						flag=true;
+					})
+				}else{return}
+			}
+			var t=setInterval(move,5000);
+			$('.btnr',obj).on('click',function(){
+				move();
+			});
+			$('.btnl',obj).on('click',function(){
+				back();
+			});
+		}
+		jdlb();
+
+		//banner下check选择
+
+		$('#domain-banner .yms ul').on('click','span',function(){
+			$('#domain-banner .yms .cz').find('.check').removeClass('check');
+			$(this).toggleClass('check');
+			var nn=$(this).closest('ul').find('.check').size();
+			var mn=$(this).closest('ul').find('li').size();
+			if(nn==mn){
+				$('#domain-banner .yms .cz').find('span.all').addClass('check');
+			}else if(nn==0){
+				$('#domain-banner .yms .cz').find('span.allnot').addClass('check');
+			}
+		})
+
+		$('#domain-banner .yms .cz').on('click','span.all',function(){
+			var f=$(this).parent();
+			$('.check',f).removeClass('check');
+			$(this).addClass('check');
+			$('#domain-banner .yms ul').find('span').addClass('check');
+		})
+		$('#domain-banner .yms .cz').on('click','span.allnot',function(){
+			var f=$(this).parent();
+			$('.check',f).removeClass('check');
+			$(this).addClass('check');
+			$('#domain-banner .yms ul').find('span').removeClass('check');
+		})
+		$('#domain-banner .yms .cz').on('click','span.cy',function(){
+			var f=$(this).parent();
+			$('.check',f).removeClass('check');
+			$(this).addClass('check');
+			render(data);
+		})
+
+	}
+	if($('#domainAresult').length>0){
+		domainIndex();
+	}
+
+	//域名查询结果页面
+	function domain_result(){
+		var slideflag=true;
+		$('#domain-banner .ck span').on('click',function(){
+			if(slideflag){
+				slideflag=!slideflag;
+				$('#domain-banner input').css('borderBottomLeftRadius','0px');
+				$('#domain-banner .yms-box').slideDown();
+			}else{
+				slideflag=!slideflag;
+				$('#domain-banner .yms-box').slideUp(function(){
+					$('#domain-banner input').css('borderBottomLeftRadius','10px');
+				});
+			}
+			return false;
+		})
+		$(document).on('click',function(){
+			$('#domain-banner .yms-box').slideUp(function(){
+				$('#domain-banner input').css('borderBottomLeftRadius','10px');
+			});
+		})
+		$('#domain-result .wzc').find('ul').on('click','.left span',function(){
+			$(this).toggleClass('check');
+		})
+		var cflag=true;
+		$('#domain-result .cz').find('span').on('click',function(){
+			if(cflag){
+				cflag=!cflag;
+				$(this).addClass('check');
+				$('#domain-result .wzc').find('.left span').addClass('check');
+			}else{
+				cflag=!cflag;
+				$(this).removeClass('check');
+				$('#domain-result .wzc').find('.left span').removeClass('check');
+			}
+			
+		})
+		$('#domain-result .wzc ul').on('click','.right .car',function(){
+			$(this).html('<span><i class="icon"></i>已加入购物车</span>');
+			$(this).addClass('added');
+		})
+	}
+	if($('#domain-result').length>0){
+		domain_result();
+	}
 
 
 

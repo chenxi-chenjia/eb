@@ -22,6 +22,9 @@ a{
 input{
 	outline:none;
 }
+textarea{
+	outline:none;
+}
 /* WebKit browsers */
 ::-webkit-input-placeholder {
 	color: #a9a9a9;
@@ -69,6 +72,7 @@ input{
 	@include nofloat;
 	*overflow:hidden;
 }
+
 
 // 头部
 .header{
