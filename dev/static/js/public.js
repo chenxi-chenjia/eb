@@ -1696,6 +1696,31 @@ $(function(){
 		buycar();
 	}
 
+	//单域名查询
+	function domain_single(){
+		//文本框
+		var domian_val=$('.domain-input').val();
+		$('.domain-input').blur(function(){
+			var val=$(this).val();
+			val=$.trim(val);
+			if(val){
+				$(this).val(val);
+			}else{
+				$(this).val(domian_val);
+			}
+			$(this).css('borderColor','#e6e6e6')
+		}).focus(function(){
+			if($(this).val()==domian_val){
+				$(this).val('').css('borderColor','#e2383a');
+			}else{
+				$(this).css('borderColor','#e2383a');
+			}
+		})
+	}
+	if($('#domain-single').length>0){
+		domain_single();
+	}
+
 	//注册
 	function registered (){
 		$('.floor2 .read').find('span').on('click',function(){
@@ -1967,6 +1992,25 @@ $(function(){
 				$(this).closest('.checkbox').find('.checked').removeClass('checked');
 				$(this).addClass('checked');
 				render(xdj);
+			}
+		})
+
+		//文本框
+		var domian_val=$('.domain-textarea').val();
+		$('.domain-textarea').blur(function(){
+			var val=$(this).val();
+			val=$.trim(val);
+			if(val){
+				$(this).val(val);
+			}else{
+				$(this).val(domian_val);
+			}
+			$(this).css('borderColor','#e6e6e6')
+		}).focus(function(){
+			if($(this).val()==domian_val){
+				$(this).val('').css('borderColor','#e2383a');
+			}else{
+				$(this).css('borderColor','#e2383a');
 			}
 		})
 			
@@ -2500,6 +2544,14 @@ $(function(){
 			render(data);
 		})
 
+		//下form hover效果
+		$('.floor2 .yms').find('ul').hover(function(){
+			$(this).find('li').css('borderRightColor','transparent');
+			$(this).find('li:last').css('borderRightColor','#e6e6e6');
+		},function(){
+			$(this).find('li').css('borderRightColor','#e6e6e6');
+		})
+
 	}
 	if($('#domainAresult').length>0){
 		domainIndex();
@@ -2507,24 +2559,13 @@ $(function(){
 
 	//域名查询结果页面
 	function domain_result(){
-		var slideflag=true;
-		$('#domain-banner .ck span').on('click',function(){
-			if(slideflag){
-				slideflag=!slideflag;
-				$('#domain-banner input').css('borderBottomLeftRadius','0px');
+		$('#domain-banner .input-box input').on('focus',function(){
+			$('#domain-banner input').css('borderBottomLeftRadius','0px');
 				$('#domain-banner .yms-box').slideDown();
-			}else{
-				slideflag=!slideflag;
-				$('#domain-banner .yms-box').slideUp(function(){
+		}).on('blur',function(){
+			$('#domain-banner .yms-box').slideUp(function(){
 					$('#domain-banner input').css('borderBottomLeftRadius','10px');
 				});
-			}
-			return false;
-		})
-		$(document).on('click',function(){
-			$('#domain-banner .yms-box').slideUp(function(){
-				$('#domain-banner input').css('borderBottomLeftRadius','10px');
-			});
 		})
 		$('#domain-result .wzc').find('ul').on('click','.left span',function(){
 			$(this).toggleClass('check');
@@ -2551,6 +2592,36 @@ $(function(){
 		domain_result();
 	}
 
+
+/////////////////////////////////////////////////////////////登录页
+	function load_index(){
+		$('.cz-left').on('click',function(){
+			$(this).find('span .icon').toggleClass('checked');
+		})	
+	}
+	if($('#loading').length>0){
+		load_index();
+	}	
+
+	function load_zc1(){
+		$('.lis.ydtk').on('click','span',function(){
+			$(this).find('.icon').toggleClass('checked');
+		})
+	}
+
+	if($('#load-zc1').length>0){
+		load_zc1()
+	}
+
+	function load_zc2(){
+		$('.lis.zzlx').on('click','span',function(){
+			$(this).find('.icon').toggleClass('checked');
+		})
+	}
+
+	if($('#load-zc2').length>0){
+		load_zc2()
+	}
 
 
 })
