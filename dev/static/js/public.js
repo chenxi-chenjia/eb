@@ -433,9 +433,9 @@ $(function(){
 		//楼层跳转
 		var boss=$('#virtual-homepage .floor-box .f3');
 		var bosstop=boss.offset().top;
-		var t2=$('#virtual-homepage .floor-box .f3 .jscs').offset().top-120;
-		var t3=$('#virtual-homepage .floor-box .f3 .cjwt').offset().top-120;
-		var t4=$('.footer').offset().top-120;
+		var t2=$('#virtual-homepage .floor-box .f3 .jscs').offset().top-60;console.log(t2,bosstop)
+		var t3=$('#virtual-homepage .floor-box .f3 .cjwt').offset().top-60;
+		var t4=$('.footer').offset().top-60;
 		$(window).scroll(function(){
 			if($(window).scrollTop()>=bosstop){
 				$('.fixbox',boss).css({'position':'fixed','top':0,'left':0,'width':'100%','zIndex':20});
@@ -1323,17 +1323,41 @@ $(function(){
 			$('.form-title',this).css('background','#f7f7f7').find('p').css('color','#999');
 		})
 
-		var mh=$('.form-right',obj).offset().top;
-		var mgMh=obj.outerHeight()-$('.form-right',obj).outerHeight();
-		var maxt=mh+mgMh;
+
+		// 楼层跳转
+		var boss=$('#cloudServer-buypage .other');
+		var bosstop=boss.offset().top;
+		var t2=$('#cloudServer-buypage .other .c2').offset().top-90;console.log(t2,bosstop)
+		var t3=$('#cloudServer-buypage .other .c3').offset().top-90;
+		var t4=$('.footer').offset().top;
 		$(window).scroll(function(){
-			if($(window).scrollTop()<mh){
-				$('.form-right',obj).css('top',0);
-			}else if($(window).scrollTop()>=mh&&$(window).scrollTop()<maxt){
-				$('.form-right',obj).css('top',$(window).scrollTop()-mh);
-			}else if($(window).scrollTop()>maxt){
-				$('.form-right',obj).css('top',mgMh);
+			if($(window).scrollTop()>=bosstop){
+				$('.other-choose',boss).css({'position':'fixed','top':0,'left':0,'width':'100%','zIndex':20});
+			}else{
+				$('.other-choose',boss).css('position','static');
 			}
+			if($(window).scrollTop()>=t2){
+				$('#cloudServer-buypage .other .other-choose ul').find('.now').removeClass('now').end().find('li').eq(1).addClass('now');
+			}else{
+				$('#cloudServer-buypage .other .other-choose ul').find('.now').removeClass('now').end().find('li').eq(0).addClass('now');
+			}
+			if($(window).scrollTop()>=t3){
+				$('#cloudServer-buypage .other .other-choose ul').find('.now').removeClass('now').end().find('li').eq(2).addClass('now');
+			}
+			if($(window).scrollTop()>=t4){
+				$('.other-choose',boss).css('position','static');
+			}
+		})
+		boss.on('click','.other-choose li',function(){
+			var index=$(this).index();
+			if(index==0){
+				$('body,html').animate({'scrollTop':bosstop});
+			}else if(index==1){
+				$('body,html').animate({'scrollTop':t2});
+			}else if(index==2){
+				$('body,html').animate({'scrollTop':t3});
+			}
+			
 		})
 
 	}
@@ -2621,6 +2645,108 @@ $(function(){
 
 	if($('#load-zc2').length>0){
 		load_zc2()
+	}
+
+
+	//找回密码
+	function load_zhmm1(){
+		$('input[name="phone"]').on('change',function(){
+			var v1=$.trim($(this).val());
+			var v2=$.trim($('input[name="yzm"]').val());
+			if(v1!=''&&v2!=''){
+				$('.button-box a.button').css('background','#dd2726').addClass('abble');
+			}else{
+				$('.button-box a.button').css('background','#e6e6e6').removeClass('abble');
+			}
+		})
+		$('input[name="yzm"]').on('change',function(){
+			var v1=$.trim($(this).val());
+			var v2=$.trim($('input[name="phone"]').val());
+			if(v1!=''&&v2!=''){
+				$('.button-box a.button').css('background','#dd2726').addClass('abble');
+			}else{
+				$('.button-box a.button').css('background','#e6e6e6').removeClass('abble');
+			}
+		})
+	}
+
+	if($('#load-zhmm1').length>0){
+		load_zhmm1()
+	}
+
+	//找回密码2
+	function load_zhmm2 (){
+
+		//更改验证方式
+		$('select').on('change',function(){
+			var v=$(this).val();
+			if(v=='phone'){
+				$('.form').find('.show').removeClass('show').end().find('.phone-validation').addClass('show');
+			}else{
+				$('.form').find('.show').removeClass('show').end().find('.email-validation').addClass('show');
+			}
+			$('input').val('');
+			$('.button-box a.button').css('background','#e6e6e6').removeClass('abble');
+		})
+
+		//短信验证
+		$('input[name="phoneyzm"]').on('change',function(){
+			var val=$.trim($(this).val());
+			if($(this).val()!=''){
+				$('.button-box a.button').css('background','#dd2726').addClass('abble');
+			}else{
+				$('.button-box a.button').css('background','#e6e6e6').removeClass('abble');
+			}
+		})
+		//邮箱验证
+		$('input[name="email"]').on('change',function(){
+			var v1=$.trim($(this).val());
+			var v2=$.trim($('input[name="emailyzm"]').val());
+			if(v1!=''&&v2!=''){
+				$('.button-box a.button').css('background','#dd2726').addClass('abble');
+			}else{
+				$('.button-box a.button').css('background','#e6e6e6').removeClass('abble');
+			}
+		})
+		$('input[name="emailyzm"]').on('change',function(){
+			var v1=$.trim($(this).val());
+			var v2=$.trim($('input[name="email"]').val());
+			if(v1!=''&&v2!=''){
+				$('.button-box a.button').css('background','#dd2726').addClass('abble');
+			}else{
+				$('.button-box a.button').css('background','#e6e6e6').removeClass('abble');
+			}
+		})
+
+		//下一步
+		$('#load-zhmm2 .button-box').on('click','.abble.button',function(){
+			$('#load-zhmm2').find('.show').removeClass('show').end().find('.success').addClass('show');
+		})
+
+
+	}
+	if($('#load-zhmm2').length>0){
+		load_zhmm2();
+	}
+
+	//找回密码3
+	function load_zhmm3(){
+		$('input').on('change',function(){
+			var v1=$.trim($('input[name="newpassword"]').val());
+			var v2=$.trim($('input[name="againpassword"]').val());
+			var v3=$.trim($('input[name="yzm"]').val());
+			if(v1!=''&&v2!=''&&v3!=''){
+				$('.button-box a.button').css('background','#dd2726').addClass('abble');
+			}else{
+				$('.button-box a.button').css('background','#e6e6e6').removeClass('abble');
+			}
+		})
+		
+	}
+
+
+	if($('#load-zhmm3').length>0){
+		load_zhmm3();
 	}
 
 
