@@ -67,20 +67,7 @@
 	<div id="application-urlService_form" class="application-form">
 		<div class="center">
 			<div class="top">
-				<ul>
-					<li class="t1">
-						<div class="icon"></div>
-						<h3>”.网址“域名查询</h3>
-					</li>
-					<li class="t2 now">
-						<div class="icon"></div>
-						<h3>填写注册信息</h3>
-					</li>
-					<li class="t3">
-						<div class="icon"></div>
-						<h3>完成</h3>
-					</li>
-				</ul>
+				<div class="img icon tx"></div>
 			</div>
 			<div class="form">
 				<div class="l1 floor">
@@ -95,7 +82,7 @@
 								<span class="total">购买价格：</span>
 								<span class="bind"> 2800元/年</span>
 							</li>
-							<li class="ip">
+							<li class="yearline">
 								<span class="total">注册年数：</span>
 								<span class="bind">
 									<i class="sub">
@@ -104,7 +91,7 @@
 										</div>
 										
 									</i>
-									<input type="text" name="time" value="1">
+									<input type="text" name="yearline" value="1">
 									<i class="add">
 										<div>
 											<b class="h"></b>
@@ -132,32 +119,32 @@
 								</span>
 							</li>
 							<li>
-								<span class="total">用户名称：</span>
-								<input type="text" name='idcard'>
-								<span class="ts"><b>*</b>填写个人姓名或企业名称</span>
+								<span class="total"><b>*</b>用户名称：</span>
+								<input type="text" name='username'>
+								<span class="ts">填写个人姓名或企业名称</span>
 							</li>
 							<li>
 								<span class="total">证件类型：</span>
-								<select name="subtraction" id="subtract">
-									<option value="none">请选择</option>
-									<option value="certificate ">身份证</option>
-									<option value="student ">学生证</option>
-									<option value="lao ">老年证</option>
-									<option value="nqr ">青年证</option>
+								<select name="cardtype">
+									<option value="0">请选择</option>
+									<option value="1 ">身份证</option>
+									<option value="2 ">学生证</option>
+									<option value="3 ">老年证</option>
+									<option value="4 ">青年证</option>
 								</select>
 							</li>
 							<li>
-								<span class="total">证件号码：</span>
-								<input type="text" name="idnum">
-								<span class="ts"> <b>*</b>证件号码</span>
+								<span class="total"> <b>*</b>证件号码：</span>
+								<input type="text" name="idcardnum">
+								<span class="ts">证件号码</span>
 							</li>
 							<li class="file">
-								<span class="total">上传证件：</span>
-								<span class="inputbox" id="picker">
+								<span class="total"> <b>*</b>上传证件：</span>
+								<span class="inputbox">
 									上传证件
 								</span>
 								<span class="filename"></span>
-								<span class="ts"> <b>*</b> 根据证件类型选择正确的文件上传</span>
+								<span class="ts"> 根据证件类型选择正确的文件上传</span>
 							</li>
 						</ul>
 					</div>
@@ -167,39 +154,44 @@
 					<div class="content">
 						<ul>
 							<li>
-								<span class="total">联系人姓名：</span>
+								<span class="total"><b>*</b>联系人姓名：</span>
 								<input type="text" name="lxrname">
-								<span class="ts"><b>*</b>联系人姓名</span>
+								<span class="ts">联系人姓名</span>
 							</li>
 							<li class="sh">
 								<span class="total">省市：</span>
 								<select name="sheng" id="sheng">
-									<option value="none">请选择</option>
-									<option></option>
-									<option></option>
-									<option></option>
-									<option></option>
-									<option></option>
-									<option></option>
+									<option value="0">请选择</option>
+									<option value="1">北京</option>
+									<option value="2">上海</option>
+									<option value="3">深圳</option>
+									<option value="4">广州</option>
+									<option value="5">浙江</option>
+									<option value="6">江苏</option>
 								</select>
 								<select name="shi" id="shi">
-									<option value="none">请选择</option>
+									<option value="0">请选择</option>
+									<option value="1">北京市</option>
+									<option value="2">上海市</option>
+									<option value="3">深圳市</option>
+									<option value="4">广东市</option>
+									<option value="5">杭州市</option>
 								</select>
 							</li>
 							<li>
-								<span class="total">地址：</span>
+								<span class="total"><b>*</b>地址：</span>
 								<input type="text" name="address">
-								<span class="ts"><b>*</b>联系地址</span>
+								<span class="ts">联系地址</span>
 							</li>
 							<li>
-								<span class="total">手机号码：</span>
+								<span class="total"><b>*</b>手机号码：</span>
 								<input type="text" name="mphone">
-								<span class="ts"><b>*</b>11位数字手机号码</span>
+								<span class="ts">11位数字手机号码</span>
 							</li>
 							<li>
-								<span class="total">电子邮箱：</span>
+								<span class="total"><b>*</b>电子邮箱：</span>
 								<input type="text" name="emile">
-								<span class="ts"><b>*</b>常用电子邮箱</span>
+								<span class="ts">常用电子邮箱</span>
 							</li>
 						</ul>
 					</div>
@@ -229,6 +221,24 @@
 				<div class="floor button">
 					<a href="#" class="go">提交</a>
 					<a href="#" class="back">重新查询</a>
+				</div>
+			</div>
+			<div class="tanchuang">
+				<div class="mask"></div>
+				<div class="zhanshi">
+					<div class="zhanshi-top">
+						<h5><i class="icon"></i>订单信息</h5>
+					</div>
+					<div class="zhanshi-form">
+						<div class="lis">
+							<div class="title">网址名称：</div>
+							<span class="bind"></span>
+						</div>
+					</div>
+					<div class="button-box">
+						<a href="javascript:;" class="sure">确定</a>
+						<a href="javascript:;" class="no">取消</a>
+					</div>
 				</div>
 			</div>
 		</div>

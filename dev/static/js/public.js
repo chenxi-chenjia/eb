@@ -1368,35 +1368,29 @@ $(function(){
 
 
 //////////////////////////////////////////////////////////////////////////增值应用
-	//网络移动服务
+
+	//网址移动服务
+	function appurlser(){
+		$('#application-urlService .left-nav').on('click','.lis',function(){
+			$(this).closest('.left-nav').find('.now').removeClass('now').css('borderTopColor','transparent');
+			var index=$(this).index();
+			$(this).find('a').addClass('now');
+			if(index>0){
+				$(this).find('a').css('borderTopColor','#e4e4e4');
+			}
+			$('.right-content').find('.now').removeClass('now').end().find('.right-lis').eq(index).addClass('now');
+		})
+	}
+	if($('#application-urlService').length>0){
+		appurlser();
+	}
+		
+
+	//网址移动服务
 	function netmoveser(obj){
-		var user={
-			time:1,
+		var user=new Array;
 
-			type:0,
-			mc:'',
-			idtype:'certificate',
-			idnum:'',
-			idname:'',
-			file:'',
 
-			name:'',
-			province:0,
-			city:0,
-			address:'',
-			mobile:'',
-			emile:'',
-
-			phone:'',
-			fax:'',
-			zipcode:''
-		}
-		//渲染函数
-		function ur(user){
-			
-
-			
-		}
 		$('input[name="time"]',obj).closest('li').find('.sub').find('b').css('background','#e4e4e4');
 		$('input[name="time"]',obj).on('change',function(){
 			var val=$(this).val();
@@ -1433,24 +1427,99 @@ $(function(){
 			$('.type',obj).find('.bingo').removeClass('bingo');
 			$(this).addClass('bingo');
 		})
-		$('input[name="idcard"]').on('change',function(){
-			user.mc=$(this).val();
-			ur(user)
-		})
-		$('#subtract').on('change',function(){
-			console.log($(this).val());
-		})
-		//文件上传// upload
-		var uploader = new WebUploader.Uploader({
-		    swf: './Uploader.swf',
-		    pick:'#picker',
-		    auto:false,
-		    resize: false
 
-		});
-		uploader.on('fileQueued',function(file){
-			$('#picker').closest('li').find('.filename').text(file.name);
+		//证件类型
+		function  cardtype(){
+			var val=$('select[name="cardtype"]').val();
+			var m=$('select[name="cardtype"]').find('option').eq(val).text();
+			return m;
+		}
+		//地址
+		function dizhi (){
+			var sh=$('select[name="sheng"]').val();
+			var s=$('select[name="shi"]').val();
+			var m=$('select[name="sheng"]').find('option').eq(sh).text()+$('select[name="shi"]').find('option').eq(s).text()+$('input[name="address"]').val();
+
+			return m;
+		}
+		//打开弹窗，传递数据
+		$('.floor.button a.go').on('click',function(e){
+			user=[
+				{
+					name:'注册年数：',
+					bind:$('input[name="yearline"]').val()+'年'
+				},
+				{
+					name:'用户名称：',
+					bind:$('input[name="username"]').val()
+				},
+				{
+					name:'证件类型：',
+					bind:$('select[name=""]').val()
+				},
+				{
+					name:'证件号码：',
+					bind:cardtype()
+				},
+				{
+					name:'联系人姓名：',
+					bind:$('input[name="lxrname"]').val()
+				},
+				{
+					name:'地址：',
+					bind:dizhi ()
+				},
+				{
+					name:'手机号码：',
+					bind:$('input[name="mphone"]').val()
+				},
+				{
+					name:'电子邮箱：',
+					bind:$('input[name="email"]').val()
+				},
+				{
+					name:'座机号码：',
+					bind:$('input[name="phone"]').val()
+				},
+				{
+					name:'传真：',
+					bind:$('input[name="fax"]').val()
+				},
+				{
+					name:'邮政编码：',
+					bind:$('input[name="zipcode"]').val()
+				}
+			];
+			$('.tanchuang .zhanshi-form').empty();
+			$.each(user,function(i,v){
+				if(v.bind){
+					var el=$('<div class="lis"><div class="title">'+v.name+'</div><span class="bind">'+v.bind+'</span></div>');
+					el.appendTo($('.tanchuang .zhanshi-form'));
+				}
+				
+			})
+			e.preventDefault();
+			$('body').css('overflow','hidden');
+			$('.tanchuang').css('display','block').delay().queue(function(){
+				$(this).addClass('show').dequeue();
+			})
+
 		})
+		$('#application-urlService_form').on('click','.tanchuang.show .button-box .no',function(){
+			if(window.navigator.userAgent.indexOf("MSIE")>=1){
+				$('.tanchuang').removeClass('show').css('display','none');
+			}else{
+				$('.tanchuang').removeClass('show')
+				.delay(500).queue(function(){
+					$(this).css('display','none').dequeue();
+				})
+				
+			}
+			$('body').css('overflow','auto');
+
+		})
+		
+		
 
 	}
 	if($("#application-urlService_form").length>0){
