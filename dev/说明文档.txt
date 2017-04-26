@@ -1,12 +1,62 @@
+application：增值应用
+    application-CNNIC：CNNIC服务器证书所需资料
+    application-qq：企业QQ（内页）
+    application-qq_form：企业QQ（表单）
+    application-serverCentificate:网址移动服务
+    application-serverCentificate_form:网址移动服务（表单）
+    application-trustedSite：可信网站
+    application-trustedSite_form：可信网站（表单）
+    application-urlService：服务器证书
+    application-urlService_form：服务器证书（表单）
+
+
+cloudServer：云服务器
+	cloud-buysuccess：云服务器购买成功
+	cloudServer：云服务主页
+
+
+domain：域名注册
+	domain-single：单个域名查询页面
+	batchregistered：批量注册
+	buycar：购物车
+	buysuccess：购买成功
+	domian：首页
+	registered：立即注册
+	result：查询结果页面
+	serch：查询页面
+
+
+
+
 helpCenter:帮助中心
+	helpCenter：帮助中心首页
 	aboutUs：关于我们
 	problem：常见问题
 	serchMine：搜索我的
 
 
+loading：登录注册页面
+	loading：登录页面
+	load-zc1：~load-zc3：注册页面流程
+	load-zhmm1 ~ load-zhmm4：找回密码
+
+
 
 news:新闻资讯
+	news：新闻资讯列表页
 	details：资讯详情
+
+
+postOffice：邮局
+	buypage:购买页面
+	buyresult：购买成功
+	homepage：主页
+
+
+rentEscrow：租用托管
+	rentEscrow：租用托管主页
+
+
 
 
 
@@ -23,5 +73,6 @@ serviceCenter:服务中心
 
 
 virtualHost:虚拟主机
+	virtual-buypage:购买页
+	buyresult：购买结果
 	homepage：虚拟主机主页
-	virtual-buyDatabase:购买数据库
