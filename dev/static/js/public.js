@@ -1389,37 +1389,35 @@ $(function(){
 	//网址移动服务
 	function netmoveser(obj){
 		var user=new Array;
-
-
-		$('input[name="time"]',obj).closest('li').find('.sub').find('b').css('background','#e4e4e4');
-		$('input[name="time"]',obj).on('change',function(){
+		$('input[name="yearline"]',obj).closest('li').find('.sub').find('b').css('background','#e4e4e4');
+		$('input[name="yearline"]',obj).on('change',function(){
 			var val=$(this).val();
 			var num=1;
 			var reg=/^[0-9]/;
-			$('input[name="time"]',obj).closest('li').find('.sub').find('b').css('background','#e4e4e4');
+			$('input[name="yearline"]',obj).closest('li').find('.sub').find('b').css('background','#e4e4e4');
 			if(reg.test(val)){
 				num=parseInt(val);
 				if(num>1){
 					num=Math.ceil(num);
-					$('input[name="time"]',obj).closest('li').find('.sub').find('b').css('background','#333');
+					$('input[name="yearline"]',obj).closest('li').find('.sub').find('b').css('background','#333');
 				}
 			}
 			$(this).val(num);
 		})
-		$('input[name="time"]',obj).closest('li').find('.sub').on('click',function(){
-			var num=parseInt($('input[name="time"]',obj).val());
+		$('input[name="yearline"]',obj).closest('li').find('.sub').on('click',function(){
+			var num=parseInt($('input[name="yearline"]',obj).val());
 			num--;
 			if(num<=1){
 				num=1;
-			$('input[name="time"]',obj).closest('li').find('.sub').find('b').css('background','#e4e4e4');
+			$('input[name="yearline"]',obj).closest('li').find('.sub').find('b').css('background','#e4e4e4');
 			}
-			$('input[name="time"]',obj).val(num);
+			$('input[name="yearline"]',obj).val(num);
 		})
-		$('input[name="time"]',obj).closest('li').find('.add').on('click',function(){
-			var num=parseInt($('input[name="time"]',obj).val());
+		$('input[name="yearline"]',obj).closest('li').find('.add').on('click',function(){
+			var num=parseInt($('input[name="yearline"]',obj).val());
 			num++;
-			$('input[name="time"]',obj).val(num);
-			$('input[name="time"]',obj).closest('li').find('.sub').find('b').css('background','#333');
+			$('input[name="yearline"]',obj).val(num);
+			$('input[name="yearline"]',obj).closest('li').find('.sub').find('b').css('background','#333');
 		})
 
 
@@ -1428,6 +1426,8 @@ $(function(){
 			$(this).addClass('bingo');
 		})
 
+
+		//弹窗设置
 		//证件类型
 		function  cardtype(){
 			var val=$('select[name="cardtype"]').val();
@@ -1442,6 +1442,9 @@ $(function(){
 
 			return m;
 		}
+
+
+
 		//打开弹窗，传递数据
 		$('.floor.button a.go').on('click',function(e){
 			user=[
@@ -1518,6 +1521,23 @@ $(function(){
 			$('body').css('overflow','auto');
 
 		})
+
+		//弹窗点击确定后购买成功
+		$('#application-urlService_form').on('click','.tanchuang.show .button-box .sure',function(){
+			if(window.navigator.userAgent.indexOf("MSIE")>=1){
+				$('.tanchuang').removeClass('show').css('display','none');
+			}else{
+				$('.tanchuang').removeClass('show')
+				.delay(500).queue(function(){
+					$(this).css('display','none').dequeue();
+				})
+			}
+			$('body').css('overflow','auto');
+			$('#application-urlService_form .top .icon').removeClass('tx').addClass('wc');
+			$('#application-urlService_form').find('.form').removeClass('now').end().find('.success').addClass('now');
+			$('body,html').scrollTop(0)
+
+		})
 		
 		
 
@@ -1531,6 +1551,54 @@ $(function(){
 		$('.sqcllx',obj).on('click','.bind',function(){
 			$(this).closest('.chose-box').find('.bingo').removeClass('bingo');
 			$(this).addClass('bingo');
+		})
+		var user=[];
+		$('.button a').on('click',function(e){
+			$('.tanchuang .zhanshi-form').empty();
+			e.preventDefault();
+			$.each(user,function(i,v){
+				if(v.bind){
+					var el=$('<div class="lis"><div class="title">'+v.name+'</div><span class="bind">'+v.bind+'</span></div>');
+					el.appendTo($('.tanchuang .zhanshi-form'));
+				}
+				
+			})
+
+			$('body').css('overflow','hidden');
+			$('.tanchuang').css('display','block').delay().queue(function(){
+				$(this).addClass('show').dequeue();
+			})
+		});
+
+		$('#application-trustedSite_form').on('click','.tanchuang.show .button-box .no',function(){
+			if(window.navigator.userAgent.indexOf("MSIE")>=1){
+				$('.tanchuang').removeClass('show').css('display','none');
+			}else{
+				$('.tanchuang').removeClass('show')
+				.delay(500).queue(function(){
+					$(this).css('display','none').dequeue();
+				})
+				
+			}
+			$('body').css('overflow','auto');
+
+		})
+
+		//弹窗点击确定后购买成功
+		$('#application-trustedSite_form').on('click','.tanchuang.show .button-box .sure',function(){
+			if(window.navigator.userAgent.indexOf("MSIE")>=1){
+				$('.tanchuang').removeClass('show').css('display','none');
+			}else{
+				$('.tanchuang').removeClass('show')
+				.delay(500).queue(function(){
+					$(this).css('display','none').dequeue();
+				})
+			}
+			$('body').css('overflow','auto');
+			$('#application-trustedSite_form .top .icon').removeClass('tx').addClass('wc');
+			$('#application-trustedSite_form').find('.form').removeClass('now').end().find('.success').addClass('now');
+			$('body,html').scrollTop(0)
+
 		})
 		
 		
@@ -1612,8 +1680,64 @@ $(function(){
 			ur(user);
 		})
 	}
-	if($('#application-qq').length>0){
-		qq($('#application-qq'));
+	if($('#application-qq1').length>0){
+		qq($('#application-qq1'));
+	}
+
+
+	//增值应用-服务器证书（表单）
+	function application_serverCertificate_form(){
+		var user=[];
+		$('.floor.button a.go').on('click',function(e){
+			$('.tanchuang .zhanshi-form').empty();
+			e.preventDefault();
+			$.each(user,function(i,v){
+				if(v.bind){
+					var el=$('<div class="lis"><div class="title">'+v.name+'</div><span class="bind">'+v.bind+'</span></div>');
+					el.appendTo($('.tanchuang .zhanshi-form'));
+				}
+				
+			})
+
+			$('body').css('overflow','hidden');
+			$('.tanchuang').css('display','block').delay().queue(function(){
+				$(this).addClass('show').dequeue();
+			})
+		});
+
+		$('#application-serverCertificate_form').on('click','.tanchuang.show .button-box .no',function(){
+			if(window.navigator.userAgent.indexOf("MSIE")>=1){
+				$('.tanchuang').removeClass('show').css('display','none');
+			}else{
+				$('.tanchuang').removeClass('show')
+				.delay(500).queue(function(){
+					$(this).css('display','none').dequeue();
+				})
+				
+			}
+			$('body').css('overflow','auto');
+
+		})
+
+		//弹窗点击确定后购买成功
+		$('#application-serverCertificate_form').on('click','.tanchuang.show .button-box .sure',function(){
+			if(window.navigator.userAgent.indexOf("MSIE")>=1){
+				$('.tanchuang').removeClass('show').css('display','none');
+			}else{
+				$('.tanchuang').removeClass('show')
+				.delay(500).queue(function(){
+					$(this).css('display','none').dequeue();
+				})
+			}
+			$('body').css('overflow','auto');
+			$('#application-serverCertificate_form .top .icon').removeClass('tx').addClass('wc');
+			$('#application-serverCertificate_form').find('.form').removeClass('now').end().find('.success').addClass('now');
+			$('body,html').scrollTop(0)
+
+		})
+	}
+	if($('#application-serverCertificate_form').length>0){
+		application_serverCertificate_form();
 	}
 
 
