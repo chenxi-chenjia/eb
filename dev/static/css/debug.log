@@ -1,2 +1,5 @@
 [0427/101806.879:ERROR:process_reader_win.cc(233)] ReadMemory at 0x5734d80 of 32768 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
 [0427/101806.879:WARNING:pe_image_annotations_reader.cc(65)] could not read simple annotations from C:\Program Files (x86)\Google\Chrome\Application\57.0.2987.133\chrome_elf.dll
+[0427/173031.437:ERROR:process_reader_win.cc(142)] SuspendThread: 拒绝访问。 (0x5)
+[0427/173031.438:ERROR:exception_snapshot_win.cc(87)] thread ID 4848 not found in process
+[0427/173031.438:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
