@@ -2843,24 +2843,7 @@ $(function(){
 
 	//找回密码
 	function load_zhmm1(){
-		$('input[name="phone"]').on('keyup',function(){
-			var v1=$.trim($(this).val());
-			var v2=$.trim($('input[name="yzm"]').val());
-			if(v1!=''&&v2!=''){
-				$('.button-box a.button').css('background','#dd2726').addClass('abble');
-			}else{
-				$('.button-box a.button').css('background','#e6e6e6').removeClass('abble');
-			}
-		})
-		$('input[name="yzm"]').on('keyup',function(){
-			var v1=$.trim($(this).val());
-			var v2=$.trim($('input[name="phone"]').val());
-			if(v1!=''&&v2!=''){
-				$('.button-box a.button').css('background','#dd2726').addClass('abble');
-			}else{
-				$('.button-box a.button').css('background','#e6e6e6').removeClass('abble');
-			}
-		})
+		
 	}
 
 	if($('#load-zhmm1').length>0){
@@ -2870,49 +2853,8 @@ $(function(){
 	//找回密码2
 	function load_zhmm2 (){
 
-		//更改验证方式
-		// $('select').on('keyup',function(){
-		// 	var v=$(this).val();
-		// 	if(v=='phone'){
-		// 		$('.form').find('.show').removeClass('show').end().find('.phone-validation').addClass('show');
-		// 	}else{
-		// 		$('.form').find('.show').removeClass('show').end().find('.email-validation').addClass('show');
-		// 	}
-		// 	$('input').val('');
-		// 	$('.button-box a.button').css('background','#e6e6e6').removeClass('abble');
-		// })
-
-		//短信验证
-		$('input[name="phoneyzm"]').on('keyup',function(){
-			var val=$.trim($(this).val());
-			if($(this).val()!=''){
-				$('.button-box a.button').css('background','#dd2726').addClass('abble');
-			}else{
-				$('.button-box a.button').css('background','#e6e6e6').removeClass('abble');
-			}
-		})
-		// //邮箱验证
-		// $('input[name="email"]').on('keyup',function(){
-		// 	var v1=$.trim($(this).val());
-		// 	var v2=$.trim($('input[name="emailyzm"]').val());
-		// 	if(v1!=''&&v2!=''){
-		// 		$('.button-box a.button').css('background','#dd2726').addClass('abble');
-		// 	}else{
-		// 		$('.button-box a.button').css('background','#e6e6e6').removeClass('abble');
-		// 	}
-		// })
-		// $('input[name="emailyzm"]').on('keyup',function(){
-		// 	var v1=$.trim($(this).val());
-		// 	var v2=$.trim($('input[name="email"]').val());
-		// 	if(v1!=''&&v2!=''){
-		// 		$('.button-box a.button').css('background','#dd2726').addClass('abble');
-		// 	}else{
-		// 		$('.button-box a.button').css('background','#e6e6e6').removeClass('abble');
-		// 	}
-		// })
-
 		//下一步
-		$('#load-zhmm2 .button-box').on('click','.abble.button',function(){
+		$('#load-zhmm2 .button-box').on('click','.button',function(){
 			$('#load-zhmm2').find('.show').removeClass('show').end().find('.success').addClass('show');
 		})
 
@@ -2924,16 +2866,7 @@ $(function(){
 
 	//找回密码3
 	function load_zhmm3(){
-		$('input').on('change',function(){
-			var v1=$.trim($('input[name="newpassword"]').val());
-			var v2=$.trim($('input[name="againpassword"]').val());
-			var v3=$.trim($('input[name="yzm"]').val());
-			if(v1!=''&&v2!=''&&v3!=''){
-				$('.button-box a.button').css('background','#dd2726').addClass('abble');
-			}else{
-				$('.button-box a.button').css('background','#e6e6e6').removeClass('abble');
-			}
-		})
+		
 		
 	}
 
