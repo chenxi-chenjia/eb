@@ -1,0 +1,1199 @@
+////////////////////////////////////////////////////////////////////
+//虚拟主机
+#virtual-homepage{
+	padding-bottom:23px;
+	h1{
+		padding:0;
+	}
+	.icon{
+		background-image:url(../../../img/VirtualHost.png);
+	}
+	.top-service{
+		background:#fff;
+		ul{
+			overflow: hidden;
+		}
+		.fl{
+			width: 25%;
+			*width:24%;
+			position:relative;
+			height: 118px;
+			h5{
+				padding-left:127px;
+				font-size: 16px;
+				font-weight: normal;
+				color:#333;
+				padding-top:35px;
+			}
+			h6{
+				padding-left:127px;
+				font-size: 12px;
+				color:#999;
+				font-weight: normal;
+				padding-top:8px;
+			}
+			.line{
+				position:absolute;
+				right: 0;
+				top:0;
+				bottom:0;
+				width: 1px;
+				height: 47px;
+				margin: auto;
+				background: #e4e4e4;
+			}
+			.line{
+				position: absolute;
+			}
+		}
+		.service1{
+			.icon{
+				background-position:0 -433px;
+				width: 53px;
+				height: 53px;
+				position:absolute;
+				left: 60px;
+				top:35px;
+			}
+		}
+		.service2{
+			.icon{
+				background-position:-79px -433px;
+				width: 44px;
+				height: 51px;
+				position:absolute;
+				left: 60px;
+				top:33px;
+			}
+		}
+		.service3{
+			.icon{
+				background-position:-148px -433px;
+				width: 50px;
+				height: 62px;
+				position:absolute;
+				left: 60px;
+				top:30px;
+			}
+		}
+		.service4{
+			.icon{
+				background-position:-231px -433px;
+				width: 52px;
+				height: 53px;
+				position:absolute;
+				left: 60px;
+				top:34px;
+			}
+		}
+	}
+	.floor-box{
+		.floor{
+			h1{
+				font-size: 32px;
+				color: #333;
+				height:130px;
+				line-height: 130px;
+			}
+			.classify{
+				overflow: hidden;
+				padding: 10px;
+				.classify-lis{
+					position:relative;
+					width: 360px;
+					padding:23px 0;
+					background:#fff;
+					cursor: pointer;
+					box-sizing:border-box;
+					border:1px solid #eee;
+					.ys{
+						position: absolute;
+						top:0;
+						right: 0;
+						width: 85px;
+						height: 85px;
+						background-position:0 -336px;
+						display: none;
+					}
+					.ys.xs{
+						display: block;
+					}
+					.title{
+						border-bottom:1px solid #eee;
+						h2{
+							font-size: 26px;
+							color:#333;
+							text-align: center;
+						}
+						p{
+							font-size: 12px;
+							color:#999;
+							text-align: center;
+							padding-top:10px;
+							padding-bottom: 20px;
+						}
+					}
+					.data-size{
+						ul{
+							overflow: hidden;
+						}
+						.data-sizelis{
+							width: 33.3333333%;
+							*width:33%;
+							padding:20px 0;
+							position:relative;
+							h3{
+								text-align: center;
+								font-size: 24px;
+								color: #333;
+								font-weight: 400;
+								span{
+									font-size: 12px;
+								}
+							}
+							p{
+								text-align: center;
+								color:#999;
+							}
+							.line{
+								position:absolute;
+								width: 1px;
+								height: 44px;
+								right:0;
+								top:20px;
+								background:#eee;
+							}
+						}
+						.discribe{
+							padding-left: 30px;
+							p{
+								color:#666;
+								padding-bottom:7px;
+							}
+						}
+					}
+					.data-prise{
+						padding:10px 0;
+						h3{
+							text-align: center;
+							font-size: 36px;
+							color:#f00909;
+							span{
+								font-size:14px;
+								color:#f00909;
+								font-weight: normal;
+							}
+							b{
+								font-weight: normal;
+								padding-left:5px;
+								color:#999;
+							}
+						}
+						p{
+							text-align: center;
+							padding-top:7px;
+							span{
+								position: relative;
+								color:#f8823d;
+								.icon{
+									position:absolute;
+									width: 15px;
+									height: 14px;
+									top:2px;
+									left: -20px;
+									background-position:-189px -739px;
+								}
+							}
+						}
+					}
+					.button{
+						a{
+							height: 44px;
+							width: 218px;
+							border:1px solid #e4e4e4;
+							display: block;
+							margin: 0 auto;
+							text-align: center;
+							line-height: 44px;
+							font-size: 16px;
+							color:#666;
+							border-radius:4px;
+						}
+					}
+				}
+				.classify-lis+.classify-lis{
+					margin-left: 30px;
+				}
+				.show{
+					border:1px solid #e84047;
+					box-shadow:0 0 10px rgba(240,9,9,0.85);
+					.button{
+						a{
+							border-color:#e84047;
+							background:#e84047;
+							color:#fff;
+						}
+					}
+				}
+			}
+		}
+		.f1{
+			background:#f2f2f2;
+		}
+		.f2{
+			background:#f2f2f2;
+			padding-bottom:50px;
+		}
+		.f3{
+			.top{
+				background:#f2f2f2;
+				height: 55px;
+				.fixbox{
+					height: 55px;
+				}
+				.center{
+					background:#fff;
+					height: 100%;
+					position: relative;
+					border:1px solid #ebebeb;
+					border-bottom:0;
+				}
+				.line{
+					position: absolute;
+					height: 2px;
+					width: 100%;
+					background:#e2383a;
+					left: 0;
+					bottom:0;
+					z-index: 0;
+				}
+				ul{
+					position: absolute;
+					height: 100%;
+					left: 0;
+					width: 100%;
+					top:0;
+					z-index: 1;
+				}
+				.f3-nav{
+					width: 198px;
+					height: 53px;
+					cursor:pointer;
+					line-height: 53px;
+					text-align: center;
+					font-size: 16px;
+					color:#666;
+				}
+				.now{
+					background:#fff;
+					border:2px solid #e2383a;
+					border-bottom:0;
+					color: #e2383a;
+				}
+			}
+			.content{
+				.top-title{
+					position:relative;
+					height: 117px;
+					h2{
+						width: 111px;
+						height: 117px;
+						top:0;
+						left:0;
+						position:absolute;
+						font-size: 22px;
+						line-height: 117px;
+						color: #333;
+						font-weight: 400;
+					}
+					.line-box{
+						height: 100%;
+						padding-left:111px;
+						position:relative;
+						overflow: hidden;
+						line-height: 117px;
+						.line{
+							background:#e4e4e4;
+							width: 100%;
+							height: 1px;
+							display: inline-block;
+							*background:#fff;
+							*border-bottom:1px solid #e4e4e4;
+							*margin-top: 58px;
+						}
+					}
+				}
+				.cpgs{
+					.tiny-box{
+						overflow: hidden;
+						.tiny-lis{
+							width: 283px;
+							height: 235px;
+							border:1px solid #ebebeb;
+							background:#f7f7f7;
+							margin-bottom: 28px;
+							.icon-box{
+								padding-top:20px;
+								padding-bottom:10px;
+								.icon{
+									width: 104px;
+									height: 104px;
+									margin: 0 auto;
+								}
+							}
+							h3{
+								font-size: 16px;
+								color:#666;
+								height: 30px;
+								line-height: 30px;
+								text-align: center;
+							}
+							p{
+								height: 28px;
+								line-height: 28px;
+								text-align: center;
+								font-size: 14px;
+								color:#666;
+							}
+						}
+						.tiny-lis+.tiny-lis{
+							margin-left: 20px;
+						}
+						.tiny-lis.lis5{
+							margin-left: 0;
+						}
+						.lis1{
+							.icon{
+								background-position:0 -502px;
+							}
+						}
+						.lis2{
+							.icon{
+								background-position:-128px -502px;
+							}
+						}
+						.lis3{
+							.icon{
+								background-position:-267px -502px;
+							}
+						}
+						.lis4{
+							.icon{
+								background-position:-426px -502px;
+							}
+						}
+						.lis5{
+							.icon{
+								background-position:-0 -613px;
+							}
+						}
+						.lis6{
+							.icon{
+								background-position:-127px -613px;
+							}
+						}
+						.lis7{
+							.icon{
+								background-position:-267px -613px;
+							}
+						}
+						.lis8{
+							.icon{
+								background-position:-426px -613px;
+							}
+						}
+					}
+				}
+				.jscs{
+					.tiny-box{
+						border-top:1px solid #eee;
+						box-sizing:border-box;
+						.clearfloat{
+							clear: both;
+						}
+						.tiny-same{
+							li{
+								border-bottom:1px solid #eee;
+								text-align: center;;
+								padding:15px 13px;
+								font-size: 12px;
+								color:#666;
+								box-sizing:border-box;
+								vertical-align: middle;
+							}
+							h4{
+								text-align: center;
+								height:40px;
+								line-height: 40px;
+								color:#333;
+								box-sizing:border-box;
+								background:#f2f2f2;
+							}
+							.prise{
+								p{
+									font-size: 30px;
+									color:#f00909;
+									font-weight: 700;
+									span{
+										font-size: 12px;
+										color:#f00909;
+									}
+								}
+								.button{
+									text-align: center;
+									a{
+										width: 130px;
+										height: 36px;
+										border:1px solid #eee;
+										display: inline-block;
+										font-size: 14px;
+										color: #333;
+										text-align: center;
+										line-height: 36px;
+										border-radius:4px;
+									}
+									
+
+								}
+							}
+						}
+						.t1{
+							width: 165px;
+							h4{
+								border-bottom:1px solid #eee;
+								border-left:1px solid #eee;
+								height: 41px;
+							}
+							li{
+								border-left:1px solid #eee;
+							}
+							.prise{
+								border-bottom:0;
+								height: 106px;
+								border-bottom:1px solid #eee;
+							}
+							.obtain{
+								border-right:1px solid #eee;
+							}
+						}
+						.t2{
+							h4{
+								border-left:1px solid #eee;
+							}
+							.prise{
+								border-bottom:0;
+							}
+						}
+						.t3{
+							h4{
+								border-left:1px solid #eee;
+							}
+							.prise{
+								border-bottom:0;
+							}
+						}
+						.t4{
+							h4{
+								border-left:1px solid #eee;
+								border-right:1px solid #eee;
+							}
+							.prise{
+								border-bottom:0;
+							}
+						}
+						.tiny-adapter{
+							width: 345px;
+							.obtain{
+								width: 50%;
+								*width:49%;
+								box-sizing: border-box;
+								border:1px solid #eee;
+								cursor: pointer;
+							}
+							.obtain:first-child{
+								border-left-color:#fff;
+							}
+							.obtain+.obtain{
+								border-left-color:#fff;
+							}
+							.hover.obtain{
+								position: relative;
+							    box-shadow: 0 0 13px rgba(6,0,1,0.14);
+							    border-color: #ff8281;
+								li{
+									border-color:#fff;
+								}
+								.prise{
+									.button{
+										a{
+											border:0;
+											background:#f00909;
+											color:#fff;
+										}
+									}
+								}
+							}
+						}
+					}
+				}	
+				.cjwt{
+					.content{
+						a{
+							display: inline-block;
+							width: 33%;
+							box-sizing:border-box;
+							padding-left:20px;
+							height: 34px;
+							line-height: 34px;
+							position:relative;
+							color: #666;
+							.point{
+								position:absolute;
+								display: block;
+								height: 2px;
+								width: 2px;
+								top:16px;
+								left: 9px;
+								background:#999;
+							}
+						}
+						a:hover{
+							color:#f00909;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//虚拟主机购买页面
+#virtual-buypage{
+	.icon{
+		background-image:url(../../../img/VirtualHost.png);
+	}
+	.buy-form{
+		background:#f2f2f2;
+		padding-bottom:48px;
+		.center{
+			padding-top:110px;
+			position:relative;
+			.tab{
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top:20px;
+				.lis{
+					position:relative;
+					width: 25%;
+					box-sizing:border-box;
+					text-align: center;
+					height: 70px;
+					line-height: 70px;
+					cursor: pointer;
+					background:#fff;
+					*width: 24%;
+					span{
+						padding-left:30px;
+						font-size: 16px;
+						color:#333;
+						position:relative;
+						.icon{
+							position: absolute;
+							display: block;
+							left: 0;
+						}
+						.liang{
+							display:none;
+						}
+					}
+					.jiao{
+						position:absolute;
+						width: 0;
+						height: 0;
+						border-top:8px solid #dd2726;
+						border-left:8px solid transparent;
+						border-right:8px solid transparent;
+						margin-left: -4px;
+						left: 50%;
+						bottom:-8px;
+						display: none;
+					}
+				}
+				.lis+.lis{
+					border-left:1px solid #d9d9d9;
+				}
+				.lis1{
+					.icon{
+						width: 23px;
+						height: 23px;
+						top:0;
+						background-position:0 -740px;
+					}
+					.liang{
+						width: 24px;
+						height: 24px;
+						top:0;
+						background-position:0 -774px;
+					}
+				}
+				.lis2{
+					.icon{
+						width: 26px;
+						height: 24px;
+						top:0;
+						background-position:-39px -739px;
+					}
+					.liang{
+						width: 25px;
+						height: 23px;
+						top:0;
+						background-position:-39px -774px;
+					}
+				}
+				.lis3{
+					.icon{
+						width: 26px;
+						height: 29px;
+						top:-2px;
+						background-position:-88px -739px;
+					}
+					.liang{
+						width: 25px;
+						height: 28px;
+						top:-2px;
+						background-position:-89px -770px;
+					}
+				}
+				.lis4{
+					.icon{
+						width: 23px;
+						height: 26px;
+						top:-1px;
+						background-position:-140px -742px;
+					}
+					.liang{
+						width: 23px;
+						height: 26px;
+						top:-1px;
+						background-position:-140px -772px;
+					}
+				}
+				.now.lis{
+					background:#dd2726;
+					span{
+						color:#fff;
+					}
+					.icon{
+						display:none; 
+					}
+					.liang{
+						display: block;
+					}
+					.jiao{
+						display: block;
+					}
+				}
+			}
+			.buybox{
+				overflow: hidden;
+				position:relative;
+				.form-left{
+					width: 865px;
+					.form-left-same{
+						position:relative;
+						background:#fff;
+						padding:25px 30px 25px 65px;
+						.checkout-information{
+							border-bottom:1px solid #f0f0f0;
+							.fl-box{
+								padding-left: 77px;
+								position:relative;
+								overflow: hidden;
+								margin-right: -30px;
+								.same-box{
+									overflow: hidden;
+								}
+								h4{
+									position:absolute;
+									height: 100%;
+									left: 0;
+									top: 0;
+									line-height:32px;
+									color:#999; 
+									font-weight: normal;
+									width: 70px;
+									text-align: right;
+								}
+								.fl-same-lis{
+									float: left;
+									height: 32px;
+									box-sizing:border-box;
+									min-width: 112px;
+									padding:0 15px;
+									position: relative;
+									text-align: center;
+									line-height: 32px;
+									border:1px solid #dcdcdc;
+									color:#666;
+									cursor: pointer;
+									.nick{
+										width: 17px;
+										height: 18px;
+										position: absolute;
+										right: 1px;
+										top:1px;
+										background-position:-355px -744px;
+										display: none;
+									}
+								}
+								.fl-same-lis+.fl-same-lis{
+									margin-left: 4px;
+								}
+								.bingo{
+									border: 1px solid #dd2726;
+									color: #cc0000;
+									.nick{
+									    background-image: url(../../../img/cloudServer.png);
+									    background-position: 0 -180px;
+										display: block;
+										top:0;
+										right: 0;
+									}
+								}
+							}
+							.engine-capacity{
+								margin-top: 15px;
+								padding-bottom: 26px;
+								.fl-same-lis{
+									*width:50px;
+									*min-width: 70px;
+								}
+							}
+						}
+						.total{
+							color:#999;
+						}
+						.bind{
+							color:#333;
+						}
+						.database-discribe{
+							padding-top:20px;
+							ul{
+								overflow: hidden;
+							}
+							li{
+								height: 40px;
+								width: 33.3333333%;
+								line-height: 40px;
+							}
+							p{
+								height: 40px;
+								line-height: 40px;
+							}
+						}
+						.product-discribe{
+							padding-top:20px;
+							overflow: hidden;
+							div{
+								height: 40px;
+								width: 50%;
+								line-height: 40px;
+							}
+						}
+							
+						.form-title{
+							width: 30px;
+							box-sizing:border-box;
+							height: 100%;
+							padding: 0 5px;
+							position:absolute;
+							left: 0;
+							top: 0;
+							background:#f7f7f7;
+							text-align: center;
+							*width:20px;
+							p{
+								vertical-align: middle;
+								font-size: 12px;
+								display: inline-block;
+								color:#999;
+								transition:color .1s ease-in-out;
+							}
+							b{
+								display: inline-block;
+								height: 100%;
+								vertical-align: middle;
+							}
+						}
+					}
+					.form-left-same+.form-left-same{
+						margin-top: 20px;
+					}
+					.form-left-middle{
+						.form-left-middle-same{
+							input{
+								width: 260px;
+								height: 26px;
+								box-sizing:border-box;
+								border:1px solid #d9d9d9;
+								padding-left:5px;
+								line-height: 26px;
+								margin-right: 20px;
+							}
+							.ts{
+								font-size: 12px;
+								color:#666;
+							}
+							.default{
+								color:#dd2726;
+								font-size: 12px;
+								padding-left:66px;
+								height: 20px;
+								line-height: 20px;
+								margin-top: 10px;
+							}
+						}
+						.ftpmm{
+							margin-top: 20px;
+						}
+					}
+					.form-left-bottom{
+						.yearline{
+							.yearBox{
+								display: inline;
+							}
+							.time{
+								width: 112px;
+								height: 32px;
+								box-sizing:border-box;
+								display: inline-block;
+								border:1px solid #dcdcdc;
+								text-align: center;
+								line-height: 32px;
+								position: relative;
+								cursor: pointer;
+								.icon{
+									position: absolute;
+									right: 1px;
+									top:1px;
+									background-position: -355px -744px;
+									display: none;
+									width: 17px;
+								    height: 18px;
+								}
+								.lw{
+									width: 15px;
+									height: 14px;
+									top:9px;
+									left: 23px;
+									background-position:-189px -739px;
+									display: none;
+								}
+								.song{
+									width: 44px;
+									height: 21px;
+									background-position:-239px -741px; 
+									top: -22px;
+									right: 0;
+									display: none;
+								}
+							}
+							.yh{
+								.lw{
+									display: block;
+								}
+								.xz{
+									display: none;
+									background-position:-190px -768px;
+								}
+								.song{
+									display: block;
+								}
+							}
+							.bingo{
+								    border: 1px solid #dd2726;
+
+								.gou{
+									display: block;
+								    background-image: url(../../../img/cloudServer.png);
+								    background-position: 0 -180px;
+								    display: block;
+								    top: 0;
+								    right: 0;
+								}
+								.lw{
+									display: none;
+								}
+								.xz{
+									display: block;
+								}
+							}
+						}
+					}
+					.supplement {
+						padding:23px 40px;
+						box-sizing:border-box;
+						border:1px solid #ffc8c8;
+						position:relative;
+						p{
+							text-indent:3em;
+							line-height: 25px;
+							
+						}
+						.icon{
+							width: 22px;
+							height: 19px;
+							background-position:-308px -743px;
+							position:absolute;
+							left: 48px;
+							top:22px;
+						}
+					}
+				}
+				.form-right{
+					width: 314px;
+					box-sizing:border-box;
+					background:#fff;
+					padding-left:24px;
+					padding-bottom:50px;
+					position:absolute;
+					right: 0;
+					top:0;
+					h2{
+						height: 67px;
+						line-height: 67px;
+						font-size: 16px;
+						color: #333;
+						margin-bottom: 15px;
+
+					}
+					.pzlis{
+						height: 30px;
+						line-height: 30px;
+						.total{
+							color:#999;
+						}
+						.bind{
+							color:#333;
+						}
+					}
+					.prise{
+						.bind{
+							font-size: 20px;
+							color:#cc0000;
+						}
+					}
+					.coupons{
+						margin-top: 10px;
+						margin-bottom: 25px;
+						select{
+							border:1px solid #e1e5ee;
+							outline: none;
+						}
+					}
+					.terms{
+						.kuang{
+							display: inline-block;
+						    width: 16px;
+						    height: 16px;
+						    background: #fff;
+						    box-sizing:border-box;
+						    border:1px solid #d9d9d9;
+						    position: relative;
+						    cursor: pointer;
+						    .icon{
+						    	background-image: url(../../../img/nick.png);
+							    display: none;
+							    width: 100%;
+							    height: 100%;
+								position:absolute;
+								top:0;
+								left: 0;
+						    }
+						}
+						.kuang.checked{
+							.icon{
+								display: block;
+							}
+						}
+						a{
+							color:#008bcc;
+						}
+					}
+					.buy-button{
+						margin-top: 20px;
+						margin-left: -24px;
+						text-align: center;
+						a{
+							display: inline-block;
+							width: 200px;
+							height: 36px;
+							line-height: 36px;
+							background:#dd2726;
+							color:#fff;
+							border-radius:4px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.value-added{
+		padding-bottom:50px;
+		h1{
+			padding-top: 20px;
+			height: 100px;
+			line-height: 100px;
+			color:30px;
+
+		}
+		.value-added-form{
+			overflow: hidden;
+			border-top:1px solid #e6e6e6;
+			box-sizing:border-box;
+			.value-added-form1{
+				width: 341px;
+			}
+			.value-added-form2{
+				width: 259px;
+			}
+			.br{
+				li{
+					border-left:1px solid #e6e6e6;
+				}
+			}
+			li{
+				border-right:1px solid #e6e6e6;
+				border-bottom:1px solid #e6e6e6;
+				box-sizing:border-box;
+				height: 51px;
+				line-height: 51px;
+				text-align: center;
+				color:#666;
+			}
+			li.total{
+				font-weight: 700;
+				color: #333;
+			}
+			li.last{
+				height: 153px;
+				line-height: 153px;
+			}
+			li.last2{
+				text-align: left;
+				line-height: 20px;
+				padding:17px 28px;
+			}
+		}
+	}
+}
+//虚拟主机购买结果
+#virtual-buyresult{
+	padding:40px 0 50px ;
+	background:#f2f2f2;
+	.content{
+		padding: 0 60px 50px 60px;
+	}
+	.center{
+		background:#fff;
+	}
+	.img{
+		padding:90px 0;
+		
+	}
+	h1{
+		position:relative;
+		width: 340px;
+		font-size: 22px;
+		height: 90px;
+		padding-left:140px;
+		line-height: 90px;
+		margin: 0 auto;
+		padding-top:0;
+		.icon{
+			background-position:-140px -321px;
+			background-image:url(../../../img/VirtualHost.png);
+			width: 115px;
+			height: 90px;
+			left: 0;
+			top:0;
+			position:absolute;
+		}
+	}
+	.ts{
+		border:1px solid #ffc8c8;
+		padding:20px 25px;
+		h3{
+			font-weight: normal;
+			position:relative;
+			padding-left:30px;
+			height: 30px;
+			line-height: 30px;
+			.icon{
+				background-position:-308px -743px;
+				background-image:url(../../../img/VirtualHost.png);
+				width: 22px;
+				height: 19px;
+				left: 0;
+				top:5px;
+				position:absolute;
+			}
+		}
+		p{
+			line-height: 25px;
+			padding-left:22px;
+			position: relative;
+			span{
+				position: absolute;
+				left: 0;
+				top:0;
+			}
+		}
+	}
+}
+
+#virtual-banner{
+	width:100%;
+	height:350px;
+	background:#2c343d;
+	position:relative;
+	.center{
+		position:relative;
+		.title{
+			padding:0;
+			text-align: left;
+			font-size: 60px;
+			color:#fff;
+			position: absolute;
+			top:75px;
+			left: 111px;
+			font-weight: 400;
+			animation: virtualBannerh1 1s ease-in-out;
+		}
+		h3{
+			padding:0;
+			font-size: 26px;
+			color:#fff;
+			position: absolute;
+			top:170px;
+			left: 111px;
+			font-weight: 400;
+			animation: virtualBannerh3 1s ease-in-out;
+		}
+		.icon{
+			position: absolute;
+			background-image:url(../../../img/VirtualHost.png);
+			background-position:0 0;
+			top:30px;
+			right: 134px;
+			width: 404px;
+			height: 284px;
+			animation: virtualBannerimg 1s ease-in-out;
+		}
+	}
+}
+
+
+
+

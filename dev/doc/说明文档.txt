@@ -28,23 +28,32 @@ domain：域名注册
 
 
 
-helpCenter:帮助中心
-	helpCenter：帮助中心首页
-	aboutUs：关于我们
-	problem：常见问题
-	serchMine：搜索我的
+center:三级介绍页面
+	serviceCenter:服务中心
+		contact：联系方式
+		download：常用下载
+		payment：付款方式
+		price：价格预览
+		registrar：注册商服务
+		renewal：产品续费
+		reprot：违规举报
+		terms：服务条款
+	news:新闻资讯
+		news：新闻资讯列表页
+		details：资讯详情
+	helpCenter:帮助中心
+		helpCenter：帮助中心首页
+		aboutUs：关于我们
+		problem：常见问题
+		serchMine：搜索我的
+
+
 
 
 loading：登录注册页面
 	loading：登录页面
 	load-zc1：~load-zc3：注册页面流程
 	load-zhmm1 ~ load-zhmm4：找回密码
-
-
-
-news:新闻资讯
-	news：新闻资讯列表页
-	details：资讯详情
 
 
 postOffice：邮局
@@ -58,21 +67,11 @@ rentEscrow：租用托管
 
 
 
-
-
-serviceCenter:服务中心
-	contact：联系方式
-	download：常用下载
-	payment：付款方式
-	price：价格预览
-	registrar：注册商服务
-	renewal：产品续费
-	reprot：违规举报
-	terms：服务条款
-
-
-
 virtualHost:虚拟主机
 	virtual-buypage:购买页
 	buyresult：购买结果
 	homepage：虚拟主机主页
+
+
+
+trademark:商标
