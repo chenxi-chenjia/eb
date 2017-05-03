@@ -1,3 +1,5 @@
+
+
 ////////////////////////////////////////////////////////////////////////////云服务器
 	//购买页
 	function cloudServer_buypage(obj){
@@ -8,7 +10,14 @@
 			network:['北京BGP','辽宁BJP','香港BGP'],
 			protect:['5G(免费)','6G','7G','8G','10G','15G','25G','35G','55G','105G','205G'],
 			protecttime:['1个月','2个月','3个月','4个月','5个月','6个月','7个月','8个月','9个月','1年','2年','3年'],
-			prise:[100,200,300,400,500,600,700]
+			prise:[100,200,300,400,500,600,700],
+			system_class:[
+				{
+					name:'',
+					id:'',
+					code:''
+				}
+			]
 		}
 		var user={
 			type:0,
@@ -48,6 +57,12 @@
 
 			$('.protect-time',obj).find('.bingo').removeClass('bingo').prev().removeClass('prev');
 			$('.protect-time',obj).find('.lis').eq(ptt).addClass('bingo').prev().addClass('prev');
+			$('.form-left select').empty();
+			$.each(data.system_class,function(i,v){
+				var el=$('<option value='+v.code+' data_id='+v.id+'>'+v.name+'</option>');
+				el.appendTo($('.form-left select'));
+			})
+			
 			//拖动条
 			// 磁盘
 			var left=0;
@@ -83,6 +98,32 @@
 			$('.form-right .pz',obj).find('div').eq(8).addClass('prise');
 			$('.form-right .pz',obj).find('div').eq(6).addClass('system');
 		}
+
+
+		//初始化form
+		var disk=[];
+		$.ajax({
+			type:'get',
+			url:'http://192.168.1.147/server/buy/getParams.html?sign=3&type=1&lineid=1&cpu=1&ram=2&harddisks%'+data.protect[0].substring(0,1)+'B%5D=10&bandwidth=1&defense=20&system_class_id=&systemID=&loginPassword=&loginPassword2=&months=1&number=1&&query=lines,defense,system_class,price,rams,discount,system_class&format=jsonp&jsoncallback=?',
+			dataType:'jsonp',
+			success:function(e){
+				var user={
+					type:0,
+					cpu:0,
+					memory:0,
+					disk:10,
+					network:0,
+					protect:0,
+					broadband:1,
+					system:'Windows Server 2008 64位 企业版',
+					protecttime:0
+				}
+				data.system_class=e.system_class;
+				ur(data,user);
+			}
+		})
+
+
 		ur(data,user);
 
 		$('.type',obj).on('click','.lis',function(){
