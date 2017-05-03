@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商标-服务</title>
+    <link rel="stylesheet" href="../../Static/css/public.css">
+    <script src='../../Static/js/jquery.min.js'></script>
+</head>
+<body>
+    <script src= '../../Static/js/jquery.SuperSlide.2.1.1.js'></script>
+    <link rel="stylesheet" href="../../Static/css/module/trademark/trademark.css">
+
+    <!--头部  -->
+    <div class="header">
+        <div class="center">
+            <div class="headerLeft">
+                第一商务欢迎你
+            </div>
+            <div class="headerRight">
+                <div class="link header-float show">
+                    <a href="#" class="login">登录</a>
+                    <div class="line"></div>
+                    <a href="#" class="registered">注册</a>
+                </div>
+                <div class="login-bingo header-float">
+                    <span>路人甲123456欢迎你</span>
+                    <a href="#">退出</a>
+                </div>
+                <ul class="header-float">
+                    <li><a href="#">购物车<span>0</span></a></li>
+                    <li><a href="#">备案</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                    <li><a href="#">服务中心</a></li>
+                    <li><a href="#">新闻资讯</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <div class="center">
+            <h1 class="logo"><a href="#"><img src="../../Static/img/logo.png" alt=""></a></h1>
+            <div class="navLis">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li class="now"><a href="#">域名注册</a></li>
+                    <li><a href="#">商标注册</a></li>
+                    <li><a href="#">虚拟主机</a></li>
+                    <li><a href="#">企业邮局</a></li>
+                    <li><a href="#">云主机</a></li>
+                    <!-- <li><a href="#">SSL证书</a></li>
+                    <li><a href="#">租用托管</a></li>
+                    <li><a href="#">增值应用</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- 内容区 -->
+   <div id="demark">
+        <div id="banner_tabs" class="flexslider">
+            <ul class="slides">
+                <li style="background-color: rgb(110, 173, 252); position: absolute; left: 0px; top: 0px; display: none;">
+                    <a title="商标注册，商标代持注册" href="/help"><img width="1000" height="300" src="../../Static/img/banner4.jpg"></a>
+                </li>
+                <li style="background-color: rgb(215, 238, 254); position: absolute; left: 0px; top: 0px; display: list-item;">
+                    <a title="国家商标局认证正规代理商，中华商标协会会员" href="javascript:void(0)"><img width="1000" height="300" src="../../Static/img/banner2.jpg"></a>
+                </li>
+            </ul>
+        <ol id="bannerCtrl" class="flex-control-nav flex-control-paging"><li class=""><a></a></li><li class="active"><a></a></li></ol></div>
+        <script src="../../Static/js/module/trademark/fw/slide.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                //$('#banner_tabs').append('<ul class="flex-direction-nav"><li><a class="flex-prev" href="javascript:;">Previous</a></li><li><a class="flex-next" href="javascript:;">Next</a></li></ul>');
+                var count = $("#banner_tabs ul.slides li").length;
+                if(count>0){
+                    var html = '<ol id="bannerCtrl" class="flex-control-nav flex-control-paging">';
+                    while(count-->0){
+                        html += '<li><a></a></li>';
+                    }
+                    html += '</ol>';
+                }
+                $('#banner_tabs').append(html);
+            
+                var bannerSlider = new Slider($('#banner_tabs'), {
+                    time: 5000,
+                    delay: 0,
+                    event: 'hover',
+                    auto: true,
+                    mode: 'fade',
+                    controller: $('#bannerCtrl'),
+                    activeControllerCls: 'active'
+                });
+            })
+        </script>
+        <style type="text/css">
+            .flexslider {
+                margin-bottom: 0px;
+            }
+        </style>
+        <div class="brand-service-bg services-index">
+            <div class="container">
+                <div class="content-newnav">
+                当前位置：<a href="/">首页</a> &gt; <span><a href="/services/xuzhan.html">商标服务</a></span>
+                </div>
+                <!--商标信息变更 start-->
+                <div class="mgt20">
+                    <div class="brand-service-title">商标信息变更</div>
+                    <div class="bg-white clearfix">
+                        <div class="brand-info-change-xz  bic-item bic-w">
+                            <div class="bic-hot"><img src="../../Static/img/hot.png"> </div>
+                            <img src="../../Static/img/icon_brand_xz.png">
+                            <h3 class="bic-title mgt10"><a href="/services/xuzhan.html">商标续展</a></h3>
+                            <p class="bic-text mgt10"><a href="/services/xuzhan.html">注册商标有效期（十年）满前，<br>需继续使用的在到期前12个月内<br>应申请商标续展。</a></p>
+                            <div class="bic-price mgt10"><a href="/services/xuzhan.html"> ¥2500<span>/件</span></a></div>
+                        </div>
+
+                        <div class="bic-w2 bic-item bic-xk">
+                        <ul>
+                            <li>
+                                <div class="bic-img"><img src="../../Static/img/icon_brand_xk.png"></div>
+                                <h3 class="mgt15">商标许可备案</h3>
+                                <div class="mgt10"><span class="bic-price orange">¥800</span>/起</div>
+                                <div class="bic-item-hover">
+                                    <h3 class="f18"><a href="/services/beian.html">商标许可备案</a></h3>
+                                    <p><a href="/services/beian.html">商标注册人通过签订商标使用许可合同，许可他人使用其注册商标。</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bic-img"><img src="../../Static/img/icon_brand_bg.png"></div>
+                                <h3 class="mgt15">商标变更</h3>
+                                <div class="mgt10"><span class="bic-price orange">¥1000</span>/起</div>
+                                <div class="bic-item-hover">
+                                    <h3 class="f18"><a href="/services/biangeng.html">商标变更</a></h3>
+                                    <p><a href="/services/biangeng.html">注册商标需要变更注册人的信息（名义、地址等），应当提出变更申请。</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bic-img"><img src="../../Static/img/icon_brand_zr.png"></div>
+                                <h3 class="mgt15">商标转让</h3>
+                                <div class="mgt10"><span class="bic-price orange">¥1500</span>/起</div>
+                                <div class="bic-item-hover">
+                                    <h3 class="f18"><a href="/services/zhuanrang.html">商标转让</a></h3>
+                                    <p><a href="/services/zhuanrang.html">转让注册商标的，应向商标局提出申请。</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bic-img"><img src="../../Static/img/icon_brand_zx.png"></div>
+                                <h3 class="mgt15">商标注销</h3>
+                                <div class="mgt10"><span class="bic-price orange">¥500</span>/起</div>
+                                <div class="bic-item-hover">
+                                    <h3 class="f18"><a href="/services/zhuxiao.html">商标注销</a></h3>
+                                    <p><a href="/services/zhuxiao.html">持有人放弃或部分放弃商标权，应当向商标局申请商标注销。</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                        </div><!--bic-w2 end-->
+
+                    <div class="bic-info bic-w2">
+                        <ul>
+                                <li>
+                                    <div class="bic-info-pic"><a href="/news/detail/35.html" title="上海已查处迪士尼注册商标案件十多件" target="_blank"><img width="214" height="164" src="http://tm.22.cn/Public/Images/20160613095404-3488.jpg" title="上海已查处迪士尼注册商标案件十多件"></a></div>
+                                    <div class="bic-info-text">
+                                        <h3><a href="/news/detail/35.html" title="上海已查处迪士尼注册商标案件十多件" target="_blank">上海已查处迪士尼注册商标案件十多件</a></h3>
+                                        <p><a href="/news/detail/35.html" title="上海已查处迪士尼注册商标案件十多件" target="_blank">图说：上海已查处迪士尼注册商标案件十多件。网络图　　【新民晚报·新民网】上海迪士尼乐园开园在即。昨天</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bic-info-pic"><a href="/news/detail/33.html" title="贵州同济堂制药有限公司诉商标评审委员会商标驳回复审行政纠纷案" target="_blank"><img width="214" height="164" src="http://tm.22.cn/Public/Images/20160613100029-1739.jpg" title="贵州同济堂制药有限公司诉商标评审委员会商标驳回复审行政纠纷案"></a></div>
+                                    <div class="bic-info-text">
+                                        <h3><a href="/news/detail/33.html" title="贵州同济堂制药有限公司诉商标评审委员会商标驳回复审行政纠纷案" target="_blank">贵州同济堂制药有限公司诉商标评审委员会商标驳回复审行政纠纷案</a></h3>
+                                        <p><a href="/news/detail/33.html" title="贵州同济堂制药有限公司诉商标评审委员会商标驳回复审行政纠纷案" target="_blank">　　&nbsp;（一）基本案情　　&nbsp;同济堂公司向国家工商行政管理总局商标局申请注册“同濟堂</a></p>
+                                    </div>
+                                </li>
+
+                        </ul>
+                    </div>
+
+
+                    </div>
+                </div>
+                <!--商标信息变更 end-->
+
+
+                <!--商标争议服务 start-->
+                <div class="brand-info-change">
+                    <div class="brand-service-title">商标争议服务</div>
+                    <div class="bg-white clearfix">
+
+
+                        <div class="bic-w3 bic-item bic-xk">
+                            <ul>
+                                <li>
+                                    <div class="bic-img"><img src="../../Static/img/icon_brand_yy.png"></div>
+                                    <h3 class="mgt15">商标异议</h3>
+                                    <div class="mgt10"><span class="bic-price orange">¥3499</span>/起</div>
+                                    <div class="bic-item-hover">
+                                        <h3 class="f18"><a href="/services/yiyi.html">商标异议</a></h3>
+                                        <p><a href="/services/yiyi.html">他人商标违反相关条例的，可向商标局提出异议申请。</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bic-img"><img src="../../Static/img/icon_brand_cs.png"></div>
+                                    <h3 class="mgt15">商标撤三申请</h3>
+                                    <div class="mgt10"><span class="bic-price orange">¥2499</span>/起</div>
+                                    <div class="bic-item-hover">
+                                        <h3 class="f18"><a href="/services/chexiao.html">商标撤三申请</a></h3>
+                                        <p><a href="/services/chexiao.html">以连续三年不使用为由向商标局申请撤销已注册商标。</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bic-img"><img src="../../Static/img/icon_brand_zr.png"></div>
+                                    <h3 class="mgt15">商标驳回复审</h3>
+                                    <div class="mgt10"><span class="bic-price orange">¥3499</span>/起</div>
+                                    <div class="bic-item-hover">
+                                        <h3 class="f18"><a href="/services/bohui.html">商标驳回复审</a></h3>
+                                        <p><a href="/services/bohui.html">对驳回申请，不予公告的商标，可向商标评审委员会提出复审。</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bic-img"><img src="../../Static/img/icon_brand_wx.png"></div>
+                                    <h3 class="mgt15">商标无效宣告</h3>
+                                    <div class="mgt10"><span class="bic-price orange">¥4000</span>/起</div>
+                                    <div class="bic-item-hover">
+                                        <h3 class="f18"><a href="/services/wuxiao.html">商标无效宣告</a></h3>
+                                        <p><a href="/services/wuxiao.html">他人已注册的商标，在5年内，可向商标局请求宣告该商标无效。</a></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!--bic-w3 end-->
+
+                        <div class="bic-info bic-w2">
+                            <ul>
+                                <li>
+                                    <div class="bic-info-pic"><a href="/news/detail/27.html" title="网友热议“方大同”商标无效之争" target="_blank"><img width="214" height="164" src="http://tm.22.cn/Public/Images/20160613095616-2583.jpg" title="网友热议“方大同”商标无效之争"></a></div>
+                                    <div class="bic-info-text">
+                                        <h3><a href="/news/detail/27.html" title="网友热议“方大同”商标无效之争" target="_blank">网友热议“方大同”商标无效之争</a></h3>
+                                        <p><a href="/news/detail/27.html" title="网友热议“方大同”商标无效之争" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;6月1日，当全球儿童都在欢庆节日时，明星方大同和郑州</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bic-info-pic"><a href="/news/detail/26.html" title="从“莫言”商标注册被驳回案看品牌保护" target="_blank"><img width="214" height="164" src="http://tm.22.cn/Public/Images/20160613095850-6677.jpg" title="从“莫言”商标注册被驳回案看品牌保护"></a></div>
+                                    <div class="bic-info-text">
+                                        <h3><a href="/news/detail/26.html" title="从“莫言”商标注册被驳回案看品牌保护" target="_blank">从“莫言”商标注册被驳回案看品牌保护</a></h3>
+                                        <p><a href="/news/detail/26.html" title="从“莫言”商标注册被驳回案看品牌保护" target="_blank">　　北京知识产权法院于近日发布2015年十大知识产权创新案例，其中“莫言”商标驳回复审行政诉讼案入选</a></p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!--商标争议服务 end-->
+
+
+                <!--商标新闻 start-->
+                <div class="brand-info-change brand-new bic-w5 ">
+                    <div class="brand-service-title">商标新闻</div>
+                        <div class="bic-info bg-white bic-new">
+                            <ul>
+                                    <li class="clearfix">
+                                        <div class="bic-info-text">
+                                            <h3><a href="/news/detail/22.html" title="特朗普好忙！ 既竞选总统又打商标官司" target="_blank">特朗普好忙！ 既竞选总统又打商标官司</a></h3>
+                                            <p><a href="/news/detail/22.html" title="特朗普好忙！ 既竞选总统又打商标官司" target="_blank">美国共和党总统候选人特朗普&nbsp;&nbsp;&nbsp;&nbsp;美国共和党总统参选人唐纳德·特朗普近日真的好忙！不仅要竞选总统，还要打商标官司。这不最近他在澳门打赢了一场漫长的商标官司。　　据《南华早报》5月31日报道，澳门特区法院作出最终判决，判当地一家名为“特朗普有</a></p>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="bic-info-text">
+                                            <h3><a href="/news/detail/21.html" title="苹果醋是不是“醋”  海天告7被告侵权" target="_blank">苹果醋是不是“醋”  海天告7被告侵权</a></h3>
+                                            <p><a href="/news/detail/21.html" title="苹果醋是不是“醋”  海天告7被告侵权" target="_blank">&nbsp;&nbsp;&nbsp;苹果醋究竟是饮料还是调味品？原告佛山市海天调味食品股份有限公司(下称“佛山海天”)与淮安海纳百川饮品有限公司(下称“淮安海纳百川”)等7被告就此问题争论不休。佛山海天认为，7被告共同生产、销售印有“海天”商标的苹果醋，侵害了其商标权及构成不正当</a></p>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="bic-info-text">
+                                            <h3><a href="/news/detail/20.html" title="揭开滴滴打车的三大“商疤”" target="_blank">揭开滴滴打车的三大“商疤”</a></h3>
+                                            <p><a href="/news/detail/20.html" title="揭开滴滴打车的三大“商疤”" target="_blank">&nbsp;&nbsp;&nbsp;滴滴一下，美好出行。这是滴滴打车的广告语，不过近来这句广告语颇有些讽刺意味。滴滴乘客权益遭受侵害的事件屡屡发生，更有数千名有前科的滴滴司机被查出并被封号。不过，滴滴打车摊上的事儿可不止这些。&nbsp;&nbsp;&nbsp;&nbsp;201</a></p>
+                                        </div>
+                                    </li>
+
+                            </ul>
+                        </div>
+                </div>
+                <!--商标新闻 end-->
+
+                <!--成功案例 start-->
+                <div class="brand-info-change bic-w5 ">
+                    <div class="brand-service-title">成功案例</div>
+                    <div class="bic-info bg-white bic-success-case clearfix">
+                        <ul>
+                            <li>
+                                <h3><a href="/news/detail/35.html" title="上海已查处迪士尼注册商标案件十多件" target="_blank">上海已查处迪士尼注册商标案件十多件</a></h3>
+                                <a href="/news/detail/35.html" title="上海已查处迪士尼注册商标案件十多件" target="_blank"><img width="220" height="130" src="http://tm.22.cn/Public/Images/20160613095404-3488.jpg" title="上海已查处迪士尼注册商标案件十多件"></a>
+                            </li>
+                            <li>
+                                <h3><a href="/news/detail/33.html" title="贵州同济堂制药有限公司诉商标评审委员会商标驳回复审行政纠纷案" target="_blank">贵州同济堂制药有限公司诉商标评审委员会商标驳回复审行政纠纷案</a></h3>
+                                <a href="/news/detail/33.html" title="贵州同济堂制药有限公司诉商标评审委员会商标驳回复审行政纠纷案" target="_blank"><img width="220" height="130" src="http://tm.22.cn/Public/Images/20160613100029-1739.jpg" title="贵州同济堂制药有限公司诉商标评审委员会商标驳回复审行政纠纷案"></a>
+                            </li>
+                            <li>
+                                <h3><a href="/news/detail/27.html" title="网友热议“方大同”商标无效之争" target="_blank">网友热议“方大同”商标无效之争</a></h3>
+                                <a href="/news/detail/27.html" title="网友热议“方大同”商标无效之争" target="_blank"><img width="220" height="130" src="http://tm.22.cn/Public/Images/20160613095616-2583.jpg" title="网友热议“方大同”商标无效之争"></a>
+                            </li>
+                            <li>
+                                <h3><a href="/news/detail/26.html" title="从“莫言”商标注册被驳回案看品牌保护" target="_blank">从“莫言”商标注册被驳回案看品牌保护</a></h3>
+                                <a href="/news/detail/26.html" title="从“莫言”商标注册被驳回案看品牌保护" target="_blank"><img width="220" height="130" src="http://tm.22.cn/Public/Images/20160613095850-6677.jpg" title="从“莫言”商标注册被驳回案看品牌保护"></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <!--成功案例 end-->
+
+                <!--注册流程 start-->
+                <div class="brand-info-change brand-regiater-chart bg-white">
+                    <h3>注册流程</h3>
+                    <div class="brc-cont">
+
+                    <a class="brand-service-bnt bs-bnt-register" href="/form.html">注册申请</a>
+                        <a class="brand-service-bnt bs-bnt-bhfs" href="/services/bohui.html">驳回复审</a>
+                        <div class="bs-bnt-right">
+                            <a class="brand-service-bnt" href="/services/xuzhan.html">商标续展</a>
+                            <a class="brand-service-bnt" href="/services/beian.html">许可备案</a>
+                            <a class="brand-service-bnt" href="/services/biangeng.html">商标变更</a>
+                            <a class="brand-service-bnt" href="/services/wuxiao.html">无效宣告</a>
+                            <a class="brand-service-bnt" href="/services/zhuxiao.html">商标注销</a>
+                            <a class="brand-service-bnt" href="/services/chexiao.html">撤三申请</a>
+                            <a class="brand-service-bnt" href="/services/zhuanrang.html">商标转让</a>
+                            <a class="brand-service-bnt" href="/services/yiyi.html">异议申请</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--注册流程 end-->
+
+
+                <div class="brand-service-list clearfix">
+                    <ul>
+                        <li class="tm-services-list">
+                            <i class="list1"></i><label>费用省  服务优</label>
+                        </li>
+                        <li class="tm-services-list">
+                            <i class="list2"></i><label>报件快  效率高</label>
+                        </li>
+                        <li class="tm-services-list">
+                            <i class="list3"></i><label>更专业  真可靠</label>
+                        </li>
+                        <li class="tm-services-list">
+                            <i class="list4"></i><label>正规 权威 实力</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="top">
+            <div class="center">
+                <img src="../../Static/img/serviceNav.png" alt="">
+                <div>
+                    <h1 class="same ">
+                        您的业务还没有展开？马上
+                    </h1>
+                    <div class="create same btn-same "><a href="#">创建业务</a></div>
+                    <h1 class="same">或者</h1>
+                    <div class="become same btn-same"><a href="#">成为代理商</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="service-lis">
+            <div class="center">
+                <ul>
+                    <li class="first">
+                        <dl>
+                            <dt>服务技术</dt>
+                            <dd><a href="#">联系客服</a></dd>
+                            <dd><a href="#">常用下载</a></dd>
+                            <dd><a href="#">帮助中心</a></dd>
+                            <dd><a href="#">违规举报</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>新手指导</dt>
+                            <dd><a href="#">注册第一商务</a></dd>
+                            <dd><a href="#">域名注册申请</a></dd>
+                            <dd><a href="#">购买虚拟主机</a></dd>
+                            <dd><a href="#">主机邮局续费</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>付款方式</dt>
+                            <dd><a href="#">在线支付</a></dd>
+                            <dd><a href="#">银行汇款</a></dd>
+                            <dd><a href="#">邮局汇款</a></dd>
+                            <dd><a href="#">上门缴收</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>快速入口</dt>
+                            <dd><a href="#">域名控制面板</a></dd>
+                            <dd><a href="#">虚拟主机管理</a></dd>
+                            <dd><a href="#">云主机管理</a></dd>
+                            <dd><a href="#">数据库管理</a></dd>
+                        </dl>
+                    </li>
+                    <li class="last">
+                        <dl>
+                            <dt><h3>客服热线：<span>4006-035-001</span></h3></dt>
+                            <dd class="show"><i class="icon same show1 wxshow"></i><i class="icon same show2 wx"></i><a href="#">第一商务官方微信</a></dd>
+                            <dd><i class="icon same show1 xlshow"></i><i class="icon same show2 xl"></i><a href="#">第一商务官方微博</a></dd>
+                            <dd><i class="icon same show1 qqshow"></i><i class="icon same show2 qq"></i><a href="#">第一商务官方客服</a></dd>
+                        </dl>
+                        <div>
+                            <i class="icon wxewm show-hide-icon show"></i>
+                            <i class="icon xlewm show-hide-icon"></i>
+                            <i class="icon qqewm show-hide-icon"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="center">
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">网站地图</a></li>
+                    <li><a href="#">人才招聘</a></li>
+                    <li><a href="#">客服中心</a></li>
+                    <li><a href="#">友情链接</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">付款方式</a></li>
+                    <li><a href="#">有问必答</a></li>
+                    <li><a href="#">价格总览</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>
+            客服热线：0571-87756803&nbsp;&nbsp; 87756807 &nbsp;&nbsp;&nbsp;&nbsp;合作热线：0571-87756822&nbsp;&nbsp;&nbsp;&nbsp;  网络备案：0571-87756883&nbsp;&nbsp; 87756809&nbsp;&nbsp;&nbsp;&nbsp;传真：0571-87756868
+        </p>
+        <p>
+            第一商务投诉电话：0571-87756866&nbsp;&nbsp;国家域名注册服务投诉中心投诉受理电话：010-58813000
+        </p>
+        <p>
+            地址：浙江省杭州市西湖区紫霞街176号杭州互联网创新创业园2号楼11楼(310030)
+        </p>
+        <p>
+            信息产业部域名注册服务批文号：信部电函[2008]224号&nbsp;&nbsp;&nbsp;&nbsp;经营许可证：浙B1.B2-20120241&nbsp;&nbsp;&nbsp;&nbsp; 浙公网安备33010602000268号
+        </p>
+        <p>
+            Copyright© 1999-2016 第一商务 版权所有
+        </p>
+        <p class="logo">
+            <a href="#" class="l1"></a>
+            <a href="#" class="l2"></a>
+            <a href="#" class="l3"></a>
+            <a href="#" class="l4"></a>
+            <a href="#" class="l5"></a>
+            <a href="#" class="l6"></a>
+            <a href="#" class="l7"></a>
+            <a href="#" class="l8"></a>
+        </p>    
+        <p class="link">
+            <span>友情链接：</span>
+            <a href="#">爱名网</a><span class="line">|</span><a href="#">域名抢注</a><span class="line">|</span><a href="#">商务网</a><span class="line">|</span><a href="#">电商网 </a><span class="line">|</span><a href="#">成都网建设 </a><span class="line">|</span><a href="#">折800</a><span class="line">|</span><a href="#">中网</a><span class="line">|</span><a href="#">步淘网</a><span class="line">|</span><a href="#">九赢广告联盟</a>
+        </p>
+    </div>
+    <script src="../../Static/js/module/trademark/trademark.js"></script>
+   
+
+</body>
+</html>

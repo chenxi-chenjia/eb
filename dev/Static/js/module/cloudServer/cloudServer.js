@@ -1,11 +1,10 @@
 
-
 ////////////////////////////////////////////////////////////////////////////云服务器
 	//购买页
 	function cloudServer_buypage(obj){
 		var data={
 			type:['入门型','标准型','商务型','舒适型','企业型','豪华型'],
-			cpu:[],
+			cpu:[1,2,4,8,16],
 			memory:['1GB','2GB','4GB','8GB'],
 			protect:['5G(免费)','6G','7G','8G','10G','15G','25G','35G','55G','105G','205G'],
 			protecttime:['1个月','2个月','3个月','4个月','5个月','6个月','7个月','8个月','9个月','1年','2年','3年'],
@@ -19,7 +18,7 @@
 			network:0,
 			protect:0,
 			broadband:1,
-			system:'Windows Server 2008 64位 企业版',
+			system:0,
 			protecttime:0
 		}
 		//渲染
@@ -38,7 +37,20 @@
 
 			$('.cpu',obj).find('.bingo').removeClass('bingo').prev().removeClass('prev');
 			$('.cpu',obj).find('.lis').eq(cpu).addClass('bingo').prev().addClass('prev');
+			
 
+			$('.memory',obj).find('.lis-box-same').empty();
+			if(user.cpu<4){
+				for(var i=1;i<5;i++){
+					var el=$('<div class="lis l1">'+data.cpu[user.cpu]*Math.pow(2,i)+'GB<i class="icon nick"></i><i class="icon lw"></i><i class="icon song"></i></div>')
+					el.appendTo($('.memory',obj).find('.lis-box-same'));
+				}
+			}else if(user.cpu==4){
+				for(var i=1;i<4;i++){
+					var el=$('<div class="lis l1">'+data.cpu[user.cpu]*Math.pow(2,i)+'GB<i class="icon nick"></i><i class="icon lw"></i><i class="icon song"></i></div>')
+					el.appendTo($('.memory',obj).find('.lis-box-same'));
+				}
+			}
 			$('.memory',obj).find('.bingo').removeClass('bingo').prev().removeClass('prev');
 			$('.memory',obj).find('.lis').eq(mm).addClass('bingo').prev().addClass('prev');
 
@@ -50,16 +62,14 @@
 			$('.network',obj).find('.bingo').removeClass('bingo').prev().removeClass('prev');
 			$('.network',obj).find('.lis').eq(nw).addClass('bingo').prev().addClass('prev');
 
+			
+			
 			$('.protect',obj).find('.bingo').removeClass('bingo').prev().removeClass('prev');
 			$('.protect',obj).find('.lis').eq(pt).addClass('bingo').prev().addClass('prev');
 
 			$('.protect-time',obj).find('.bingo').removeClass('bingo').prev().removeClass('prev');
 			$('.protect-time',obj).find('.lis').eq(ptt).addClass('bingo').prev().addClass('prev');
-			$('.form-left select').empty();
-			$.each(data.system_class,function(i,v){
-				var el=$('<option value='+v.code+' data_id='+v.id+'>'+v.name+'</option>');
-				el.appendTo($('.form-left select'));
-			})
+			
 			
 			//拖动条
 			// 磁盘
@@ -79,17 +89,16 @@
 			$('.broadband',obj).find('input').val(bb);
 
 			//右边框渲染
-			console.log(prise)
 			var uc={
-				a:{total:'CPU：',bind:data.cpu[cpu]},
-				b:{total:'内存：',bind:data.memory[mm]},
+				a:{total:'CPU：',bind:data.cpu[cpu]+'核'},
+				b:{total:'内存：',bind:$('.memory').find('.bingo').text()},
 				c:{total:'磁盘：',bind:disk+'GB'},
 				d:{total:'网络：',bind:data.lines[nw].name},
-				e:{total:'网络防护：',bind:data.protect[pt].substring(0,2)},
+				e:{total:'网络防护：',bind:data.protect[pt]},
 				f:{total:'带宽：',bind:bb+'Mbps'},
-				g:{total:'操作系统：',bind:st},
+				g:{total:'操作系统：',bind:data.system_class[st].name},
 				h:{total:'时长：',bind:data.protecttime[ptt]},
-				i:{total:'费用：',bind:prise+'元'}
+				i:{total:'费用：',bind:prise}
 				
 			}
 			rander.base(uc,$('.form-right .pz',obj));
@@ -101,9 +110,10 @@
 
 		//初始化form
 		var disk=[];
+		var url='http://192.168.1.147/server/buy/getParams.html&query=lines,defense,system_class,price,rams,discount&format=jsonp&jsoncallback=?'
 		$.ajax({
 			type:'get',
-			url:'http://192.168.1.147/server/buy/getParams.html?format=jsonp&jsoncallback=?',
+			url:url,
 			dataType:'jsonp',
 			data:{
 				status:0
@@ -119,82 +129,114 @@
 					broadband:1,
 					system:0,
 					protecttime:0,
-					prise:e.price.price
+					prise:e.price.price+'元'
 				}
 				data.system_class=e.system_class;
 				data.lines=e.lines;
 				data.rams=e.rams;
 				ur(data,user);
+				$('.form-left select').empty();
+				$.each(data.system_class,function(i,v){
+					var el=$('<option value='+i+'>'+v.name+'</option>');
+					el.appendTo($('.form-left select'));
+				})
 			},
 			error:function(){
+
 			}
 		})
 
-
+		
+		// 转换提取ajax传输数据
 		function getdata(user){
-			var ndata={
-				cup:data.cpu[user.cpu].substring(0,1),
-				rams:data.memory[user.memory].substring(0,1),
-				lines:data.lines
+			var protecttime=parseInt(data.protecttime[user.protecttime]);
+			var l=data.protecttime[user.protecttime].length;
+			if(data.protecttime[user.protecttime].substring(l-1,l)=='年'){
+				protecttime=parseInt(data.protecttime[user.protecttime])*12;
 			}
+			var ndata={
+				status:1,
+				number:1,
+				cpu:data.cpu[user.cpu],
+				ram:data.memory[user.memory].substring(0,1),
+				lineid:data.lines[user.network].id,
+				harddisks:[user.disk],
+				defense:parseInt(data.protect[user.protect]),
+				months:protecttime,
+				bandwidth:user.broadband,
+				systemID:data.system_class[user.system].id
+			}
+			return ndata;
+		}
+		
+		//发送ajax
+		function faj(user){
+			user.prise='正在计算中...';
+			ur(data,user);
+			$.ajax({
+				url:url,
+				type:'get',
+				data:getdata(user),
+				dataType:'jsonp',
+				success:function(e){
+					user.prise=e.price.price+'元';
+					ur(data,user);
+				},
+				error:function(){
+
+				}
+			})
 		}
 
 
 
 		$('.type',obj).on('click','.lis',function(){
-			var data={
-				cpu:
-			}
-			$.get({
-				data:{
-
-				}
-			})
-			var index=$(this).index();
-			user.type=index;
-			ur(data,user);
+			
 		});
 		$('.cpu',obj).on('click','.lis',function(){
 			var index=$(this).index();
 			user.cpu=index;
-			ur(data,user);
+			user.memory=0;
+			faj(user);
+			
 		});
 		$('.memory',obj).on('click','.lis',function(){
 			var index=$(this).index();
 			user.memory=index;
-			ur(data,user);
+
+			faj(user);
 		});
 		$('.network',obj).on('click','.lis',function(){
 			var index=$(this).index();
 			user.network=index;
-			ur(data,user);
+			faj(user);
 		});
 
 		$('.protect .frd:first',obj).on('click',' .lis',function(){
 			var index=$(this).index();
-			user.protect=index;
-			ur(data,user);
+			user.protect=index;console.log()
+			faj(user);
 		});
 		$('.protect .frd:last',obj).on('click',' .lis',function(){
 			var index=$(this).index()+6;
 			user.protect=index;
-			ur(data,user);
+			faj(user);
 		});
 
 		$('.protect-time .frd:first',obj).on('click','.lis',function(){
 			var index=$(this).index();
 			user.protecttime=index;
-			ur(data,user);
+			faj(user);
 		});
 		$('.protect-time .frd:last',obj).on('click','.lis',function(){
 			var index=$(this).index()+6;
 			user.protecttime=index;
-			ur(data,user);
+			faj(user);
 		});
 		$('.system',obj).on('change','select',function(){
-			var val=this.value;
-			user.system=val;
-			ur(data,user);
+			var index=parseInt(this.value);
+			user.system=index;
+			faj(user);
 		});
 		//磁盘
 		$('.disk',obj).on('mousedown','.article',function(e){
@@ -213,8 +255,8 @@
 					num=1000;
 				}
 				num=Math.ceil(num/10)*10;
-				
 				user.disk=num;
+				user.prise='正在计算中...';
 				ur(data,user);
 			$(document).on('mousemove',function(e){
 				var mw=e.clientX-$(that).offset().left;
@@ -231,7 +273,7 @@
 					num=1000;
 				}
 				num=Math.ceil(num/10)*10;
-				
+				user.prise='正在计算中...';
 				user.disk=num;
 				ur(data,user);
 			})
@@ -254,13 +296,16 @@
 					num=1000;
 				}
 				num=Math.ceil(num/10)*10;
-				
+				user.prise='正在计算中...';
 				user.disk=num;
 				ur(data,user);
 			})
 		})
 		$(document).on('mouseup',function(e){
 			$(document).unbind('mousemove');
+		})
+		$('.article').on('mouseup',function(){
+			faj(user);
 		})
 		$('.disk',obj).on('change','input',function(e){
 			var val=$(this).val();
@@ -281,7 +326,7 @@
 			
 			$(this).val(num);
 			user.disk=num;
-			ur(data,user);
+			faj(user);
 		})
 		$('.broadband',obj).on('change','input',function(e){
 			var val=$(this).val();
@@ -358,6 +403,8 @@
 			})
 		})
 
+
+
 		//hover
 		$('.fenlei',obj).hover(function(){
 			$('.form-title',this).css('background','#dd2726').find('p').css('color','#fff');
@@ -400,6 +447,27 @@
 				$('body,html').animate({'scrollTop':t3});
 			}
 			
+		})
+
+		//右边滚动
+		var mh=$('.form-right').offset().top;
+		var mgMh=$('.buybox').outerHeight()-$('.form-right').outerHeight();
+		var maxt=mh+mgMh;
+		if($(window).scrollTop()<mh){
+			$('.form-right').css('top',0);
+		}else if($(window).scrollTop()>=mh&&$(window).scrollTop()<maxt){
+			$('.form-right').css('top',$(window).scrollTop()-mh);
+		}else if($(window).scrollTop()>maxt){
+			$('.form-right').css('top',mgMh);
+		}
+		$(window).scroll(function(){
+			if($(window).scrollTop()<mh){
+				$('.form-right').css('top',0);
+			}else if($(window).scrollTop()>=mh&&$(window).scrollTop()<maxt){
+				$('.form-right').css('top',$(window).scrollTop()-mh);
+			}else if($(window).scrollTop()>maxt){
+				$('.form-right').css('top',mgMh);
+			}
 		})
 
 	}

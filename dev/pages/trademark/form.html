@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商标-填写注册人信息</title>
+    <link rel="stylesheet" href="../../Static/css/public.css">
+    <script src='../../Static/js/jquery.min.js'></script>
+</head>
+<body>
+    <script src= '../../Static/js/jquery.SuperSlide.2.1.1.js'></script>
+    <link rel="stylesheet" href="../../Static/css/module/trademark/trademark.css">
+
+    <!--头部  -->
+    <div class="header">
+        <div class="center">
+            <div class="headerLeft">
+                第一商务欢迎你
+            </div>
+            <div class="headerRight">
+                <div class="link header-float show">
+                    <a href="#" class="login">登录</a>
+                    <div class="line"></div>
+                    <a href="#" class="registered">注册</a>
+                </div>
+                <div class="login-bingo header-float">
+                    <span>路人甲123456欢迎你</span>
+                    <a href="#">退出</a>
+                </div>
+                <ul class="header-float">
+                    <li><a href="#">购物车<span>0</span></a></li>
+                    <li><a href="#">备案</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                    <li><a href="#">服务中心</a></li>
+                    <li><a href="#">新闻资讯</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <div class="center">
+            <h1 class="logo"><a href="#"><img src="../../Static/img/logo.png" alt=""></a></h1>
+            <div class="navLis">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li class="now"><a href="#">域名注册</a></li>
+                    <li><a href="#">商标注册</a></li>
+                    <li><a href="#">虚拟主机</a></li>
+                    <li><a href="#">企业邮局</a></li>
+                    <li><a href="#">云主机</a></li>
+                    <!-- <li><a href="#">SSL证书</a></li>
+                    <li><a href="#">租用托管</a></li>
+                    <li><a href="#">增值应用</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- 内容区 -->
+    <div id="demark">
+        <script src='../../static/js/module/trademark/form/common-jquery.js'></script>
+        <div id="tm-form">
+            <div class="container">
+                <h3 class="dc-brand-title">商标注册</h3>
+                <div class="tm-step-content">
+                    <form name="tmfrm" method="post" action="/reg/">
+                        <input type="hidden" name="orderid" value="3b58f807f9cb4192a308f2aac67ef6d5">
+                        <input type="hidden" name="producttype" value="zhuce">
+                        <div class="tm-step-form brand-height" id="page1" style="display:block;">
+                            <div class="table-row height-auto brand-height-con">
+                                <div class="table-row-e table-row-title">申请人：</div>
+                                <div class="table-row-content left">
+                                    <div class="applyer-chose">
+                                        <a target="_blank" href="/User/Applyer/Add"><i class="icon iconfont iconfont-gray" style=" font-size:20px;">&#xe62f;</i>新增申请人</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="applyerid" value="0">
+                        </div>
+                        <div class="tm-step-form" id="page2" style="display:block;">
+                            <div class="table-row height-80">
+                                <div class="table-row-e table-row-title" id="tmzcr.name">商标名称：</div><div class="table-row-e table-row-content">
+                                    <input name="tmzcr.name" type="text" value="为了您的商标安全，请登录后填写。" disabled="disabled"> <span class="tm-required">*</span> <i class="tips" data-content="img:../../static/img/tmlogo.png"></i>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-row-e table-row-title" id="fileWtName">代理委托书：</div>
+                                <div class="table-row-e table-row-content">
+                                    <input type="hidden" name="fileWtName">
+                                    <div class="uploader">
+                                        <img src="../../static/img/marquee-upload.png" class="layer-input"><input class="file-input" name="file1" type="file" onchange="OpenFileUploadDialog('代理委托书', 'fileWtName', '3b58f807f9cb4192a308f2aac67ef6d5', this);" title="请上传文件">
+                                        
+                                    <a href="javascript:void(0)" onclick="DownLoadWTS()" class="file">下载委托书</a>
+                                    &nbsp;<a href="../../static/img/weituoshu.png" class="file" target="_blank">示例</a>
+                                        <i class="tips" data-content="委托书已经自动生成。请下载并打印后，企业盖章（个体工商户签字）后扫描彩色件并上传。Jpg格式，小于2M。"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-step-form" id="page3" style="display:block;">
+                            
+                            <div class="table-row height-80">
+                                <div class="table-row-e table-row-title" id="tmzcr.tmDesignDeclare">商标说明：</div>
+                                <div class="table-row-e table-row-content line-height-100">
+                                    <textarea id="tm-declare-textarea" name="tmzcr.tmDesignDeclare" cols="60" rows="4" placeholder="最多输入180字节(1个中文算2字节)"></textarea>
+                                    <i class="tips" data-content="中文商标请描述字体名称，图形商标请描述设计要素，英文商标请描述中文含义，非必填"></i>
+                                    <p style="color:#999; font-size:12px;">还可以输入 <span id="tm-declare-remaining-count" style="color: #FF0000;">180</span> 个字节</p>
+                                </div>
+                            </div>
+                            <div class="table-row" style="display:none">
+                                <div class="table-row-e table-row-title" id="tmzcr.ifSolidTm">商标特性：</div><div class="table-row-e table-row-content">
+                                    <label>
+                                        <input type="checkbox" name="tmzcr.ifSolidTm" value="1"> 三维标志
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="tmzcr.tmFormType" value="0100" onclick="loadpage3();"> 声音商标
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tm-step-form" id="page4" style="display:none;">
+                            <div class="table-row">
+                                <div class="table-row-e table-row-title" id="tmzcr.tmFormType">是否共同申请：</div><div class="table-row-e table-row-content">
+                                    <label>
+                                        <input type="radio" name="tmzcr.ifShareTm" value="1" onclick="loadpage4();">是
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="tmzcr.ifShareTm" checked="" value="0" onclick="loadpage4();">否
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="table-row gongtong line15" style="display: none;">
+                                <div class="table-row-e table-row-title">共同申请人：</div>
+                                <div class="table-row-content">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<a onclick="ShowSimpleDialogo2('选择共同申请人');"><i class="icon iconfont iconfont-gray"></i>选择申请人</a>
+                                    <div class="applyer-share-chose" style="margin:10px 0;display:inline-block;">
+                                    </div>
+                                    <a href="/User/Applyer/Add" target="_blank"><i class="icon iconfont iconfont-gray" style=" font-size:18px;"></i>新增联系人</a>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="/User/Applyer" class="blue">管理申请人</a>
+                                </div>
+                                <input type="hidden" name="shareapplyerid">
+                            </div>
+                            <div class="table-row">
+                                <div class="table-row-e table-row-title">以肖像作为商标申请注册：</div><div class="table-row-e table-row-content">
+                                    <label><input type="radio" name="isPersonPhoto" value="" onclick="before7();" checked="">否</label>
+                                    <label><input type="radio" name="isPersonPhoto" value="yes" onclick="before10();">是</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tm-step-form" id="page5" style="display:none;">
+                            <div class="table-row">
+                                <div class="table-row-e table-row-title" id="yx.priorityType">优先权声明：</div><div class="table-row-e table-row-content">
+                                    <label><input type="radio" name="yx.priorityType" value="0" checked="checked" onclick="before5();">无</label>
+                                    <label><input type="radio" name="yx.priorityType" value="1" onclick="before5();">在先优先权</label>
+                                    <label><input type="radio" name="yx.priorityType" value="2" onclick="before5();">展会优先权</label>
+                                </div>
+                            </div>
+                            <div class="table-row yx" style="display: none;">
+                                <div class="table-row-e table-row-title" id="yx.priorityBaseCrty">申请/展出国家/地区：</div><div class="table-row-e table-row-content">
+                                    <input type="text" name="yx.priorityBaseCrty"> <span class="tm-required">*</span>
+                                </div>
+                            </div>
+                            <div class="table-row yx" style="display: none;">
+                                <div class="table-row-e table-row-title" id="yx.priorityAppDate">申请/展出日期：</div><div class="table-row-e table-row-content">
+                                    <input type="text" id="priorityAppDate" readonly="" name="yx.priorityAppDate"> <span class="tm-required">*</span>
+                                </div>
+                            </div>
+                            <div class="table-row yx" style="display: none;">
+                                <div class="table-row-e table-row-title" id="yx.priorityNum">申请号：</div><div class="table-row-e table-row-content">
+                                    <input type="text" name="yx.priorityNum"> <span class="tm-required">*</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-step-form" id="page7" style="display:block;">
+                            <div class="table-row">
+                                <div class="table-row-e table-row-title" id="tmzcr.ifcolored">商标图样：</div><div class="table-row-e table-row-content" id="iscolored-input">
+                                    
+                                    <label>
+                                        <input type="radio" name="iscolored" value="1" checked=""> 黑白
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="iscolored" value="2"> 着色
+                                    </label><i class="tips" data-content="以着色图样申请商标注册的，应分别上传着色图样及黑白图样，不指定颜色的，只上传黑白图样即可。"></i>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="table-row-e table-row-title">黑白图样：</div>
+                                <div class="table-row-e table-row-content">
+                                    <input type="hidden" id="imageShow1" name="imageShow1">
+                                    <div class="uploader">
+                                        <img id="img-imageShow1" src="../../static/img/marquee-upload.png" class="layer-input"><input class="file-input" name="file1" type="file" onchange="OpenFileUploadDialog('图样1', 'imageShow1', '3b58f807f9cb4192a308f2aac67ef6d5', this);" title="请上传文件">
+                                        <span class="tm-required">*</span><span class="tm-images-show-tips">您可以上传黑白商标图样或点击按钮自动生成</span>
+                                        <button type="button" class="normal-btn" style="margin-left:20px" onclick="if(!this.form['tmzcr.name'].value){alert('请先填写商标名称！');return;}CreateTMImage(this,this.form['tmzcr.name'].value);">生成图样</button>
+                                        <span id="img-imageShow1-view"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-row colored" style="display:none;">
+                                <div class="table-row-e table-row-title">着色图样&nbsp;<i onclick="ShowHelp('a23');"></i></div><div class="table-row-e table-row-content">
+                                    <input type="hidden" name="imageShow2">
+                                    <div class="uploader">
+                                        <img src="../../static/img/marquee-upload.png" class="layer-input"><input class="file-input" name="file1" type="file" onchange="OpenFileUploadDialog('图样2', 'imageShow2', '3b58f807f9cb4192a308f2aac67ef6d5', this);" title="请上传文件">
+                                        <span class="tm-required">*</span>上传着色商标图样
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-row audio" style="display:none;">
+                                <div class="table-row-e table-row-title" id="fileSyName">声音文件 <i onclick="ShowHelp('a23');"></i></div><div class="table-row-e table-row-content">
+                                    <input type="hidden" name="fileSyName">
+                                    <div class="uploader">
+                                        <img src="../../static/img/marquee-upload.png" class="layer-input"><input class="file-input" name="file1" type="file" onchange="OpenFileUploadDialog('声音文件', 'fileSyName', '3b58f807f9cb4192a308f2aac67ef6d5', this);" title="请上传文件">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-row xiaoxiang" style="display:none;">
+                                <div class="table-row-e table-row-title">肖像证明文件 <i onclick="ShowHelp('a23');"></i></div><div class="table-row-e table-row-content">
+                                    <input type="hidden" name="fileTpName">
+                                    <div class="uploader">
+                                        <img src="../../static/img/marquee-upload.png" class="layer-input"><input class="file-input" name="file1" type="file" onchange="OpenFileUploadDialog('肖像证明文件', 'fileTpName', '3b58f807f9cb4192a308f2aac67ef6d5', this);" title="请上传文件">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+            <script src="../../Static/js/module/trademark/form/ESONCalendar.js" type="text/javascript"></script>
+            <link href="../../Static/css/module/trademark/form/dialog.min.css" type="text/css" rel="stylesheet">
+            <script src="../../Static/js/module/trademark/form/common-dialog.js" type="text/javascript"></script>
+            <div class="tm-step-form" style="display:block;">
+                <div style="padding:10px 0">
+                    
+                    <div class="table-row table-row-re" style="height:auto !important; ">
+                        <div class="table-row-e table-row-title table-row-pad" id="selector-tips">选择商品类别：</div>
+                        <div class="table-row-e table-row-content">
+                            <div class="clearfix">
+                                <div class="search_form clearfix selector-self" style="float:left;width:460px">
+                                    <input name="sortName" type="text" id="sortName" value="" title="" class="input" autocomplete="off" placeholder="请输入关键词搜索">
+                                    <button type="button" class="search_btn" id="search" hidefocus="hidefocus">查询</button>
+                                </div>
+                                <div class="selector-auto" style="display: none; float: left; width: 460px">
+                                    <select id="selector-hy" onchange="SelectClass(this.value);">
+                                        <option value="">请选择领域</option>
+                                    <option value="0">IT|通信.电子.互联网等</option><option value="1">服饰|服装.珠宝.化妆品等</option><option value="2">食品饮料|生鲜.保健.烟酒茶等</option><option value="3">医保化工|医药.化工.能源等</option><option value="4">交通运输|运输.物流.仓储等</option><option value="5">房产建材|房产.建筑.物管等</option><option value="6">商业服务|广告.法律.金融等</option><option value="7">机械制造|机械.车辆等</option><option value="8">农业领域|农.林.牧.渔等</option><option value="9">服务业|餐饮.维修等</option><option value="10">文教娱|文化.传媒.娱乐.教育</option></select>
+                                    <select id="selector-cls" onchange="SelectProduct(this.value);">
+                                        <option value="">请选择行业</option>
+                                    </select>
+                                </div>
+                                <div style="float:left" class="selector-controls">
+                                    <a href="javascript:void(0)" onclick="Selector.call(this, false);" class="selector-control selector-control-left on">自助选择</a><a href="javascript:void(0)" onclick="Selector.call(this, true);" class="selector-control selector-control-right">智能推荐</a>
+                                </div>
+                           </div>
+                        </div>
+                        <div class="selector-self">
+                            <ul class="drop_list" id="listTotals" style="display: none;"><li><a data-classes="18,23,24,25,26,27,35">服装纺织</a></li><li><a data-classes="29,30,31,32,33,40,39">食品饮料</a></li><li><a data-classes="29,30,31,32,33,35,40,43">餐饮酒店</a></li><li><a data-classes="03,05,10,21,30,44">化妆美容</a></li><li><a data-classes="05,10,35,40,44">医药设备</a></li><li><a data-classes="02,03,05,06,08,09,16,34,35,40">日常用品</a></li><li><a data-classes="20,21,37,40">家具用具</a></li><li><a data-classes="09,16,35,38,41,42">IT互联网</a></li><li><a data-classes="01,02,04,07,11,16,17,22,40,42">化工能源</a></li><li><a data-classes="09,11">电子仪器</a></li><li><a data-classes="06,07,11,37">机械制造</a></li><li><a data-classes="02,06,14,17,19,37,40,42">建材五金</a></li><li><a data-classes="36,37,42,40,41,42,45">房产金融</a></li></ul>
+                        </div>
+                        <div class="type_list">
+                            <ul class="clearfix"><li class="optional"><a id="01" title="化学原料">01 化学原料</a></li><li class="optional"><a id="02" title="颜料油漆">02 颜料油漆</a></li><li class="optional"><a id="03" title="化妆品">03 化妆品</a></li><li class="optional"><a id="04" title="燃料油脂">04 燃料油脂</a></li><li class="optional"><a id="05" title="医药">05 医药</a></li><li class="optional"><a id="06" title="五金金属">06 五金金属</a></li><li class="optional"><a id="07" title="机械设备">07 机械设备</a></li><li class="optional"><a id="08" title="手工器械">08 手工器械</a></li><li class="optional"><a id="09" title="电子电脑">09 电子电脑</a></li><li class="optional"><a id="10" title="医疗器械">10 医疗器械</a></li><li class="optional"><a id="11" title="家用电器">11 家用电器</a></li><li class="optional"><a id="12" title="运输工具">12 运输工具</a></li><li class="optional"><a id="13" title="军火烟火">13 军火烟火</a></li><li class="optional"><a id="14" title="珠宝钟表">14 珠宝钟表</a></li><li class="optional"><a id="15" title="乐器">15 乐器</a></li><li class="optional"><a id="16" title="办公文具">16 办公文具</a></li><li class="optional"><a id="17" title="橡胶制品">17 橡胶制品</a></li><li class="optional"><a id="18" title="皮革箱包">18 皮革箱包</a></li><li class="optional"><a id="19" title="建筑材料">19 建筑材料</a></li><li class="optional"><a id="20" title="家具">20 家具</a></li><li class="optional"><a id="21" title="厨房洁具">21 厨房洁具</a></li><li class="optional"><a id="22" title="绳网袋篷">22 绳网袋篷</a></li><li class="optional"><a id="23" title="纺织纱线">23 纺织纱线</a></li><li class="optional"><a id="24" title="布料床单">24 布料床单</a></li><li class="optional"><a id="25" title="服装鞋帽">25 服装鞋帽</a></li><li class="optional"><a id="26" title="花边配饰">26 花边配饰</a></li><li class="optional"><a id="27" title="地毯席垫">27 地毯席垫</a></li><li class="optional"><a id="28" title="体育玩具">28 体育玩具</a></li><li class="optional"><a id="29" title="食品">29 食品</a></li><li class="selected"><a id="30" title="小食配料">30 小食配料</a></li><li class="optional"><a id="31" title="水果花木">31 水果花木</a></li><li class="optional"><a id="32" title="啤酒饮料">32 啤酒饮料</a></li><li class="optional"><a id="33" title="酒">33 酒</a></li><li class="optional"><a id="34" title="烟草烟具">34 烟草烟具</a></li><li class="optional"><a id="35" title="广告贸易">35 广告贸易</a></li><li class="optional"><a id="36" title="金融物管">36 金融物管</a></li><li class="optional"><a id="37" title="建筑修理">37 建筑修理</a></li><li class="optional"><a id="38" title="通讯传媒">38 通讯传媒</a></li><li class="optional"><a id="39" title="运输旅行">39 运输旅行</a></li><li class="optional"><a id="40" title="材料加工">40 材料加工</a></li><li class="optional"><a id="41" title="教育娱乐">41 教育娱乐</a></li><li class="optional"><a id="42" title="技术服务">42 技术服务</a></li><li class="optional"><a id="43" title="餐饮酒店">43 餐饮酒店</a></li><li class="optional"><a id="44" title="医疗园艺">44 医疗园艺</a></li><li class="optional"><a id="45" title="法律">45 法律</a></li></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="choose clearfix">
+                    <div class="left choose_main">
+                        <div class="total top_total">
+                            <span class="total_span">订单数：<span>0个</span></span>
+                            费用总计：<span class="jiage" style="color: #fe4c4c;">¥ 0.00 元</span>
+                        </div>
+                        <ul class="class_info" id="class_info"></ul>
+                        <div class="main-bottom">
+                                <div class="bottom_total">付款信息<span>注：若超过10个项目，超过部分每个多加50元，付款后不能修改。</span></div>
+                                <div class="bottom-con" style="margin-bottom:20px"><span class="bottom-l bottom-c">应付款金额：</span><span class="bottom-r bottom-d jiage">¥ 0.00 元</span></div>
+                                                <input type="button" value="提交审核并付款" onclick="DoSubmit(this.form, true)" class="red">
+                                <input type="button" value="提交审核" onclick="DoSubmit(this.form, false)" class="blue">
+                        </div>
+
+                        <div class="tm-warning">
+                            <p><span>1</span>商标查询存在盲期，从商标局接受注册申请到录入数据库，其中有3-4个月的延迟期。</p>
+                            <p><span>2</span>在查询盲期内，可能会存在已有相同或类似的商标提交。</p>
+                            <p><span>3</span>商标总局对申请商标采用在先原则和近似原则的审核方式。</p>
+                            <p><span>4</span>本系统目前暂不支持集体商标、证明商标、三维标志、颜色组合和声音商标的注册，不支持共同商标和优先权声明。</p>
+                        </div>
+                    </div>
+                    <div class="right choose_list">
+                        <div class="quick-insert"><input id="quick-no" type="text" value="请输入商品编号 例如：030091" onblur="if (this.value == '') this.value = '请输入商品编号 例如：030091';" onfocus="if (this.value == '请输入商品编号 例如：030091') this.value = '';"><button type="button" onclick="return quick_search();" hidefocus="hidefocus">快速添加</button></div>
+                        <h2 class="list_tit"><span id="tm-history-action"></span>第30类 小食配料</h2>
+                        <div class="list_main">
+                            <dl class="list_sec" ims="30"><dt onclick="showthird('3001','30',this)"><span class="icon"></span><a href="javascript:void(0);">3001  咖啡，咖啡代用品，可可</a></dt><dd style="display:none;" id="3001"><ul></ul></dd><dt onclick="showthird('3002','30',this)"><span class="icon"></span><a href="javascript:void(0);">3002  茶、茶饮料</a></dt><dd style="display:none;" id="3002"><ul></ul></dd><dt onclick="showthird('3003','30',this)"><span class="icon"></span><a href="javascript:void(0);">3003  糖</a></dt><dd style="display:none;" id="3003"><ul></ul></dd><dt onclick="showthird('3004','30',this)"><span class="icon"></span><a href="javascript:void(0);">3004  糖果，南糖，糖</a></dt><dd style="display:none;" id="3004"><ul></ul></dd><dt onclick="showthird('3005','30',this)"><span class="icon"></span><a href="javascript:void(0);">3005  蜂蜜，蜂王浆等营养食品</a></dt><dd style="display:none;" id="3005"><ul></ul></dd><dt onclick="showthird('3006','30',this)"><span class="icon"></span><a href="javascript:void(0);">3006  面包，糕点</a></dt><dd style="display:none;" id="3006"><ul></ul></dd><dt onclick="showthird('3007','30',this)"><span class="icon"></span><a href="javascript:void(0);">3007  方便食品</a></dt><dd style="display:none;" id="3007"><ul></ul></dd><dt onclick="showthird('3008','30',this)"><span class="icon"></span><a href="javascript:void(0);">3008  米，面粉（包括五谷杂粮）</a></dt><dd style="display:none;" id="3008"><ul></ul></dd><dt onclick="showthird('3009','30',this)"><span class="icon"></span><a href="javascript:void(0);">3009  面条及米面制品</a></dt><dd style="display:none;" id="3009"><ul></ul></dd><dt onclick="showthird('3010','30',this)"><span class="icon"></span><a href="javascript:void(0);">3010  谷物膨化食品</a></dt><dd style="display:none;" id="3010"><ul></ul></dd><dt onclick="showthird('3011','30',this)"><span class="icon"></span><a href="javascript:void(0);">3011  豆粉，食用预制面筋</a></dt><dd style="display:none;" id="3011"><ul></ul></dd><dt onclick="showthird('3012','30',this)"><span class="icon"></span><a href="javascript:void(0);">3012  食用淀粉及其制品</a></dt><dd style="display:none;" id="3012"><ul></ul></dd><dt onclick="showthird('3013','30',this)"><span class="icon"></span><a href="javascript:void(0);">3013  食用冰，冰制品</a></dt><dd style="display:none;" id="3013"><ul></ul></dd><dt onclick="showthird('3014','30',this)"><span class="icon"></span><a href="javascript:void(0);">3014  食盐</a></dt><dd style="display:none;" id="3014"><ul></ul></dd><dt onclick="showthird('3015','30',this)"><span class="icon"></span><a href="javascript:void(0);">3015  酱油，醋</a></dt><dd style="display:none;" id="3015"><ul></ul></dd><dt onclick="showthird('3016','30',this)"><span class="icon"></span><a href="javascript:void(0);">3016  芥末，味精，沙司，酱等调味品</a></dt><dd style="display:none;" id="3016"><ul></ul></dd><dt onclick="showthird('3017','30',this)"><span class="icon"></span><a href="javascript:void(0);">3017  酵母</a></dt><dd style="display:none;" id="3017"><ul></ul></dd><dt onclick="showthird('3018','30',this)"><span class="icon"></span><a href="javascript:void(0);">3018  食用香精，香料</a></dt><dd style="display:none;" id="3018"><ul></ul></dd><dt onclick="showthird('3019','30',this)"><span class="icon"></span><a href="javascript:void(0);">3019  单一商品</a></dt><dd style="display:none;" id="3019"><ul></ul></dd></dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript" src="../../static/js/module/trademark/form/quick-data.js"></script>
+            <script type="text/javascript">
+                MWIN.options('autoFix', 0);
+                var IsLogin = false, oldHtml = '';
+                for (var i = 0; i < QUICK.length; i++) {
+                    $("#selector-hy").append('<option value="' + i + '">' + QUICK[i].Name + '</option>');
+                }
+                function NewHead(src){
+                    oldHtml = src.innerHTML;
+                    src.innerHTML='<input type=\"text\" name=\"fphead\" style=\"height: 32px;line-height: 32px;font-size: 16px;border: 1px #cccccc solid;padding: 0 5px;width: 330px;color: #999;\" />' +
+                        '&nbsp; <a class="blue" onclick="OldHead(this.parentNode);">选择已有抬头</a>';
+                }
+                function OldHead(src){
+                    src.innerHTML=oldHtml;
+                }
+                function Selector(isauto) {
+                    if (isauto) {
+                        $('.selector-self').hide(); $('.selector-auto').show(); $(this).addClass('on').siblings().removeClass('on');
+                        $("#selector-tips").html("选择领域/行业：");
+                    } else {
+                        $('.selector-self').show(); $('.selector-auto').hide(); $(this).addClass('on').siblings().removeClass('on');
+                        $("#selector-tips").html("选择商品类别：");
+                    }
+                }
+                function SelectProduct(id) {
+                    if (!id) return;
+                    var idp = $("#selector-hy").val();
+                    if (!idp) return;
+                    var Items = QUICK[parseInt(idp)];
+                    if (!Items) return;
+                    var Item = Items.Items[parseInt(id)];
+                    if (!Item) return;
+                    $("#class_info").empty();
+                    update();
+                    var Products = Item.Items;
+                    for (var i = 0; i < Products.length; i++) {
+                        Item = Products[i];
+                        if(Item && Item.length==4){
+                            addgoods_1.call(null, Item[0],Item[1],Item[2],Item[3], null, true);
+                        }
+                    }
+                }
+                function SelectClass(id) {
+                    $("#selector-cls").empty().append('<option value="">请选择行业</option>');
+                    if (!id) return;
+                    var Items = QUICK[parseInt(id)];
+                    if (!Items) return;
+                    Items = Items.Items;
+                    
+                    for (var i = 0; i < Items.length; i++) {
+                        $("#selector-cls").append('<option value="' + i + '">' + Items[i].Name + '</option>');
+                    }
+                }
+                $(document).ready(function () {
+                    $("div.quick-insert input").on('paste', function (e) {
+                        if (e.originalEvent && e.originalEvent.clipboardData) {
+                            var text = e.originalEvent.clipboardData.getData("text");
+                            if (text) {
+                                var exp = /(\w+)/g,m;
+                                while (m = exp.exec(text)) {
+                                    searchno(m[1], false);
+                                }
+                                return false;
+                            }
+                        }
+                    });
+                });
+            </script>
+                    </form>
+                </div>
+            </div>
+            <div id="tmdialog"></div>
+            <iframe name="hideframe" frameborder="0" width="0" height="0" src="about:blank"></iframe>
+            <script type="text/javascript">
+                var items = data['00'].item, 
+                    lastgtindex = -1, 
+                    orderid = '3b58f807f9cb4192a308f2aac67ef6d5', 
+                    itemid =parseInt(0), 
+                    old_goods = '', 
+                    codes = {},
+                    base = 499.0000, 
+                    add = 50,
+                    producytype = 'zhuce',
+                    is_contains_fapiao = true,
+                    isguakao = false,
+                    order_is_payed = false;
+                $(document).ready(function () {
+                    var frm = document.forms['tmfrm'];
+                    if ($("input[name='yx.priorityAppDate']").length > 0) {
+                        ESONCalendar.bind("priorityAppDate");
+                    }
+                    $("div.table-row-content input[type=text]").focus(function () {
+                        $(this).parent().parent().removeClass("error");
+                    });
+                    loadpage3();
+                    loadpage4();
+                    before5();
+                    before7();
+                    before10();
+                    $('#iscolored-input').on('click', 'input', ChangeColored);
+                    $('#iscolored-input input').each(ChangeColored);
+                    $('#tm-declare-textarea').on('keyup change', checkTmDeclare);
+                    HookUploader();
+                });
+                function ChangeColored(){
+                    if (this.checked && this.value == '1'){
+                        $('div.colored').hide();
+                        $('#img-imageShow1').siblings('span.tm-images-show-tips').html('您可以上传黑白商标图样或点击按钮自动生成');
+                        $('#img-imageShow1').siblings('button').show();
+                        $('#img-imageShow1-view').show();
+                    }
+                    if (this.checked && this.value == '2'){
+                        $('#img-imageShow1').siblings('span.tm-images-show-tips').html('上传黑白商标图样');
+                        $('#img-imageShow1').siblings('button').hide();
+                        $('div.colored').show();
+                        $('#img-imageShow1-view').hide();
+                    }
+                }
+                
+                function checkTmDeclare(){
+                    var str = $('#tm-declare-textarea').val();
+                        strLen = str.length,
+                        realLength = 0,
+                        charCode = -1,
+                        tmDeclareMax =  180;
+                    for(var i = 0; i < strLen; i++){
+                        charCode = str.charCodeAt(i);
+                        if (charCode >= 0 && charCode <= 128) { 
+                            realLength += 1;
+                        }else{ 
+                            realLength += 2;
+                        }
+                    }
+                    $('#tm-declare-remaining-count').html(tmDeclareMax - realLength);
+                    return tmDeclareMax >= realLength;
+                }
+            </script>
+            <style type="text/css">
+                #tmtipscontainer {
+                    width: 430px;
+                    border: 1px solid #e1e1e1;
+                    background: #fff;
+                    padding: 5px 8px;
+                    line-height: 24px;
+                    color: #444;
+                    font-size: 12px;
+                }
+                #tmtipscontainer b.ar {
+                    border: 6px solid #000;
+                    top: 8px;
+                    left: -13px;
+                    border-color: transparent #e1e1e1 transparent transparent;
+                    border-style: dashed dashed solid solid;
+                    line-height: 0;
+                    _border-style: solid dashed dashed dashed;
+                    position:absolute;
+                }
+                #tmtipscontainer b.br {
+                    border: 6px solid #000;
+                    top: 8px;
+                    left: -11px;
+                    border-color: transparent #fff transparent transparent;
+                    border-style: dashed dashed solid solid;
+                    line-height: 0;
+                    _border-style: solid dashed dashed dashed;
+                    position: absolute;
+                }
+            </style>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('div.table-row-content i.tips').hover(TipsOn, TipsOff);
+                    $("input[name='tmzcr.name'],textarea[name='tmzcr.tmDesignDeclare']").on('blur', function(){
+                        TipsOff.apply($(this).parent().find('i.tips').get(0),[]);
+                    }).on('focus', function(){
+                        TipsOn.apply($(this).parent().find('i.tips').get(0),[]);
+                    });
+                });
+                function TipsOn(){
+                    var pos = COM.offset(this);
+                    var ele=document.getElementById('tmtipscontainer');
+                    if(!ele){
+                        ele = document.createElement('div');
+                        ele.id = 'tmtipscontainer';
+                        ele.style.display='none';
+                        ele.style.position='absolute';
+                        document.body.appendChild(ele);
+                    }
+                    var content = $(this).data('content'), offset = $(this).data('offset');
+                    if (!offset) {
+                        offset = 0;
+                    }else{
+                        offset = parseInt(offset);
+                    }
+                    if(content.substr(0,4)=='img:'){
+                        ele.innerHTML='<b class="ar"></b><b class="br"></b><img src="' + content.substr(4) + '" />';
+                    }else{
+                        ele.innerHTML='<b class="ar"></b><b class="br"></b>'+content;
+                    }
+                    ele.style.top = parseInt(pos.top-8 + offset) + 'px';
+                    ele.style.left = parseInt(pos.left+30) + 'px';
+                    ele.style.display='block';
+                }
+                function TipsOff(){
+                    var ele=document.getElementById('tmtipscontainer');
+                    if(ele){
+                        ele.style.display='none';
+                    }
+                }
+            </script>;
+        </div>
+        <script>
+            function ShowSimpleDialogo(title, field) {
+                ShowTipsDialog("正在查找申请人。。。");
+                GetApplyers(1, title, field);
+            }
+            function ShowSimpleDialogo2(title) {
+                var applyerid = $("input:hidden[name='applyerid']").val();
+                if (applyerid == "" || applyerid == "0") {
+                    alert("请先选择申请人");
+                    return;
+                }
+                ShowTipsDialog("正在查找共同申请人。。。");
+                GetShareApplyer(1, applyerid);
+            }
+
+            function GetApplyers(pageindex, title, field) {
+                $.post("/User/Applyer/GetList?t=" + Math.random(), { page: pageindex }, function (result) {
+                    if (result.Data == null || result.Data.length == 0) {
+                        alert("请先新建申请人");
+                    } else {
+                        var html = "<table width='100%' border='0' class='brand-tb brand-wz' style=' margin-top:20px;'> ";
+                        html += "<thead><tr><th>申请人模板名称</th><th>申请人 </th><th>类型 </th><th>操作 </th></tr></thead>";
+                        html += '<tbody>';
+                        $.each(result.Data, function (i, item) {
+                            if (field == item.id) {
+                                html += "<tr><td>" + item.tn + "</td><td>" + item.n + "</td><td>" + item.t + "</td><td>当前已选</td></tr>";
+                            } else {
+                                html += "<tr><td>" + item.tn + "</td><td>" + item.n + "</td><td>" + item.t + "</td><td><a class='chose-applyer-a blue' id='ca_" + item.id + "'>选择</a></td></tr>";
+                            }
+                        });
+                        html += " </tbody><tfoot><tr><td colspan='4' style='text-align: center;'>";
+                        if (pageindex > 1) {
+                            html += '<a href="javascript:void(0)" class="blue" onclick="GetApplyers(' + (pageindex - 1) + ', \'更换申请人\', \'' + field + '\');return false;">上一页</a>';
+                        }
+                        if (pageindex < result.TotalPage) {
+                            html += '<a href="javascript:void(0)" class="blue" onclick="GetApplyers(' + (pageindex + 1) + ', \'更换申请人\', \'' + field + '\');return false;">下一页</a>';
+                        }
+                        html += "";
+                        html += "</td></tr></tfoot></table>";
+                        html += "<p style=\"text-align:center;font-size:16px; padding-top:20px;\"><a class=\"blue\" target=\"_blank\" href=\"/User/Applyer/Add\">新增申请人</a></p>";
+                        F("#tmdialog").attr("title", title).html(html).dialog({
+                            height: 184, width: 700, top: 150, showClose : true
+                        });
+                        $(".chose-applyer-a").click(function () {
+                            var id = $(this).attr("id").replace("ca_", "");
+                            var tn = $(this).parent().parent().find("td")[0].innerHTML;
+                            var aphtml = '<a href="/User/Applyer/Details/' + id + '" target="_blank">' + tn + '</a>';
+                            aphtml += '&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="ShowSimpleDialogo(\'更换申请人\',' + id + ');" class="blue">更换申请人</a>';
+                            aphtml += '&nbsp;&nbsp;&nbsp;&nbsp;<a href="/User/Applyer" target="_blank" class="blue">管理申请人</a>';
+                            $(".applyer-chose").html(aphtml);
+                            $("input:hidden[name='applyerid']").val(id);
+
+                            var ids = GetShareApplyerIds();
+                            $("#shareapplyer_" + id).remove();
+                            $("input:hidden[name='shareapplyerid']").val(GetShareApplyerIds().join(","));
+
+                            F("#tmdialog").dialog("close");
+                            return false;
+                        });
+                    }
+                }, "JSON").error(function () { alert("获取申请人出错") });
+            }
+
+            function GetShareApplyer(pageindex, applyerid) {
+                var ids = GetShareApplyerIds();
+                ids.push(parseInt(applyerid));
+                $.post("/User/Applyer/GetList?t=" + Math.random(), { page: pageindex, ids: ids.join(",") }, function (result) {
+                    if (result.Data == null || result.Data.length == 0) {
+                        alert("没有可用的申请人，请新建申请人");
+                        return
+                    } else {
+                        var html = "<table width='100%' border='0' class='brand-tb brand-wz' style=' margin-top:20px;'> ";
+                        html += "<thead><tr><th>申请人模板名称</th><th>申请人 </th><th>类型 </th><th>操作 </th></tr></thead>";
+                        html += '<tbody>';
+                        var ishav = false;
+                        $.each(result.Data, function (i, item) {
+                            if ($.inArray(item.id, ids) == -1) {
+                                html += "<tr><td>" + item.tn + "</td><td>" + item.n + "</td><td>" + item.t + "</td><td><a class='chose-applyer-a blue' id='ca_" + item.id + "'>选择</a></td></tr>";
+                                ishav = true;
+                            }
+                        });
+                        html += " </tbody><tfoot><tr><td colspan='4' style='text-align: center;'>";
+                        if (pageindex > 1) {
+                            html += "<a href='#' class='blue' onclick='GetShareApplyer(" + (pageindex - 1) + "," + applyerid + ");return false;'>上一页</a>";
+                        }
+                        if (pageindex < result.TotalPage) {
+                            html += "<a href='#' class='blue' onclick='GetShareApplyer(" + (pageindex + 1) + "," + applyerid + ");return false;'>下一页</a>";
+                        }
+                        html += "";
+                        html += "</td></tr></tfoot></table>";
+                        if (ishav == false) {
+                            alert("没有可用的申请人，请新建申请人");
+                            return;
+                        }
+                        F("#tmdialog").attr("title", "选择共同申请人").html(html).dialog({
+                            height: 184, width: 700, top: 50, showClose : true
+                        });
+                        $(".chose-applyer-a").click(function () {
+                            var id = $(this).attr("id").replace("ca_", "");
+                            var tn = $(this).parent().parent().find("td")[0].innerHTML;
+                            var aphtml = '<div  id="shareapplyer_' + id + '" style="background-color:#fe9b1c; color:#fff; padding:0 10px; height:28px; line-height:28px; float:left; margin-right:15px;border-radius: 5px;"><a style="color: #fff; margin-right: 20px;" onclick="RemoveShareApplyer(' + id + ')">' + tn + '</a><a  onclick="RemoveShareApplyer(' + id + ')">×</a></div>';
+                            $(".applyer-share-chose").append(aphtml);
+                            $("input:hidden[name='shareapplyerid']").val(GetShareApplyerIds().join(","));
+                            F("#tmdialog").dialog("close");
+                            return false;
+                        });
+                    }
+                }, "JSON").error(function () { alert("获取申请人出错") });
+            }
+
+            function RemoveShareApplyer(id) {
+                
+                var ids = GetShareApplyerIds();
+                var intid = parseInt(id);
+                if ($.inArray(intid, ids) == -1) {
+                    $("#shareapplyer_" + id).remove();
+                    return;
+                }        
+                if (confirm("是否要移除该共享联系人")) {
+                    $("#shareapplyer_" + intid).remove();
+                    $("input:hidden[name='shareapplyerid']").val(GetShareApplyerIds().join(","));
+                }
+            }
+
+            function GetShareApplyerIds() 
+            {
+                var ids=new Array();
+                $(".applyer-share-chose div").each(function(i,item){
+                    var id=$(item).attr("id").replace("shareapplyer_","");
+                    var intid=parseInt(id);
+                    if(!isNaN(intid))  
+                        ids.push(intid);
+                });
+                return ids;
+            }
+
+            function DownLoadWTS(){
+                var applyerid=$("input:hidden[name='applyerid']").val();
+                if(applyerid==""||applyerid=="0")
+                {
+                    alert("请先选择联系人");
+                    return false;
+                }
+                var trademarkname=$("input[name='tmzcr.name']").val();
+                if(trademarkname=="")
+                {
+                    alert("请先填写商标名称");
+                    return false;
+                }
+                
+                $("#downloadweituo input[name='applyerid']").val(applyerid);
+                $("#downloadweituo input[name='trademarkname']").val(trademarkname);
+                $("#downloadweituo").submit();
+            }
+        </script>
+        <form action="/DownLoad/WeiTuo" target="_blank" style="display:none;" id="downloadweituo" method="post">
+            <input type="hidden" name="applyerid">
+            <input type="hidden" name="trademarkname">
+        </form>
+        <div id="F42824372911633923" class="mo-dialog-box mo-dialog-box-radius" style="width: 400px; height: auto; position: absolute; left: 760px; top: 1407px; z-index: 1002; display: none;"><div class="mo-dialog-title-container mo-dialog-box-radius-top" style="display: block;"><span class="mo-dialog-button-close" style="display: none;">&nbsp;</span><span class="mo-dialog-title">提示</span></div><div class="mo-dialog-content-container"><div class="mo-dialog-content"><div id="tmdialog" title="提示" modialog="F42824372911633923" style="display: block;"><div style="padding:15px;">请上传黑白图样</div></div></div></div><div class="mo-dialog-buttons" style="display: block;"><div class="mo-dialog-buttonsset"><button class="mo-dialog-button-self mo-dialog-box-radius-5 mo-dialog-button-self-1">确定</button></div></div></div>
+        <div class="slider clearfix" id="s-slider">
+            <div class="s-left">在<br>线<br>咨<br>询</div>
+            <div class="s-right">
+                <h3> 咨询客服</h3>
+                <div class="s-top">
+                <link rel="stylesheet" href="../../Static/css/module/trademark/iconfont/iconfont.css">
+                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=89931608&amp;site=qq&amp;menu=yes" title="在线客服"><i class="iconfont icon-xin">&#xe604;</i>商标客服 小吕</a>
+                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=89931676&amp;site=qq&amp;menu=yes" title="在线客服"><i class="iconfont">&#xe604;</i>商标客服 小伶</a>
+                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=89931686&amp;site=qq&amp;menu=yes" title="在线客服"><i class="iconfont">&#xe604;</i>商标客服 小梅</a>
+
+                </div>
+                <h3> 咨询电话</h3>
+                <div class="s-bottom">
+                    <p>4006-035-001</p>
+                </div>
+            </div>
+        </div>
+        <div class="goto-top" style="width:40px;height:30px; text-align:center; line-height:30px;border:1px #ddd solid; position:fixed;bottom:10px; right:10px; background-color:#fff">
+            <a href="#top"><img src="../../Static/img/top.png" width="24" height="13" alt="返回顶部"></a>
+        </div>
+    </div>
+
+
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="top">
+            <div class="center">
+                <img src="../../Static/img/serviceNav.png" alt="">
+                <div>
+                    <h1 class="same ">
+                        您的业务还没有展开？马上
+                    </h1>
+                    <div class="create same btn-same "><a href="#">创建业务</a></div>
+                    <h1 class="same">或者</h1>
+                    <div class="become same btn-same"><a href="#">成为代理商</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="service-lis">
+            <div class="center">
+                <ul>
+                    <li class="first">
+                        <dl>
+                            <dt>服务技术</dt>
+                            <dd><a href="#">联系客服</a></dd>
+                            <dd><a href="#">常用下载</a></dd>
+                            <dd><a href="#">帮助中心</a></dd>
+                            <dd><a href="#">违规举报</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>新手指导</dt>
+                            <dd><a href="#">注册第一商务</a></dd>
+                            <dd><a href="#">域名注册申请</a></dd>
+                            <dd><a href="#">购买虚拟主机</a></dd>
+                            <dd><a href="#">主机邮局续费</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>付款方式</dt>
+                            <dd><a href="#">在线支付</a></dd>
+                            <dd><a href="#">银行汇款</a></dd>
+                            <dd><a href="#">邮局汇款</a></dd>
+                            <dd><a href="#">上门缴收</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>快速入口</dt>
+                            <dd><a href="#">域名控制面板</a></dd>
+                            <dd><a href="#">虚拟主机管理</a></dd>
+                            <dd><a href="#">云主机管理</a></dd>
+                            <dd><a href="#">数据库管理</a></dd>
+                        </dl>
+                    </li>
+                    <li class="last">
+                        <dl>
+                            <dt><h3>客服热线：<span>4006-035-001</span></h3></dt>
+                            <dd class="show"><i class="icon same show1 wxshow"></i><i class="icon same show2 wx"></i><a href="#">第一商务官方微信</a></dd>
+                            <dd><i class="icon same show1 xlshow"></i><i class="icon same show2 xl"></i><a href="#">第一商务官方微博</a></dd>
+                            <dd><i class="icon same show1 qqshow"></i><i class="icon same show2 qq"></i><a href="#">第一商务官方客服</a></dd>
+                        </dl>
+                        <div>
+                            <i class="icon wxewm show-hide-icon show"></i>
+                            <i class="icon xlewm show-hide-icon"></i>
+                            <i class="icon qqewm show-hide-icon"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="center">
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">网站地图</a></li>
+                    <li><a href="#">人才招聘</a></li>
+                    <li><a href="#">客服中心</a></li>
+                    <li><a href="#">友情链接</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">付款方式</a></li>
+                    <li><a href="#">有问必答</a></li>
+                    <li><a href="#">价格总览</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>
+            客服热线：0571-87756803&nbsp;&nbsp; 87756807 &nbsp;&nbsp;&nbsp;&nbsp;合作热线：0571-87756822&nbsp;&nbsp;&nbsp;&nbsp;  网络备案：0571-87756883&nbsp;&nbsp; 87756809&nbsp;&nbsp;&nbsp;&nbsp;传真：0571-87756868
+        </p>
+        <p>
+            第一商务投诉电话：0571-87756866&nbsp;&nbsp;国家域名注册服务投诉中心投诉受理电话：010-58813000
+        </p>
+        <p>
+            地址：浙江省杭州市西湖区紫霞街176号杭州互联网创新创业园2号楼11楼(310030)
+        </p>
+        <p>
+            信息产业部域名注册服务批文号：信部电函[2008]224号&nbsp;&nbsp;&nbsp;&nbsp;经营许可证：浙B1.B2-20120241&nbsp;&nbsp;&nbsp;&nbsp; 浙公网安备33010602000268号
+        </p>
+        <p>
+            Copyright© 1999-2016 第一商务 版权所有
+        </p>
+        <p class="logo">
+            <a href="#" class="l1"></a>
+            <a href="#" class="l2"></a>
+            <a href="#" class="l3"></a>
+            <a href="#" class="l4"></a>
+            <a href="#" class="l5"></a>
+            <a href="#" class="l6"></a>
+            <a href="#" class="l7"></a>
+            <a href="#" class="l8"></a>
+        </p>    
+        <p class="link">
+            <span>友情链接：</span>
+            <a href="#">爱名网</a><span class="line">|</span><a href="#">域名抢注</a><span class="line">|</span><a href="#">商务网</a><span class="line">|</span><a href="#">电商网 </a><span class="line">|</span><a href="#">成都网建设 </a><span class="line">|</span><a href="#">折800</a><span class="line">|</span><a href="#">中网</a><span class="line">|</span><a href="#">步淘网</a><span class="line">|</span><a href="#">九赢广告联盟</a>
+        </p>
+    </div>
+    
+</body>
+</html>

@@ -29,14 +29,7 @@
 	}
 
 
-	//找回密码
-	function load_zhmm1(){
-		
-	}
-
-	if($('#load-zhmm1').length>0){
-		load_zhmm1()
-	}
+	
 
 	//找回密码2
 	function load_zhmm2 (){

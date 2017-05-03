@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>商标</title>
+    <title>商标-查询</title>
     <link rel="stylesheet" href="../../Static/css/public.css">
     <script src='../../Static/js/jquery.min.js'></script>
 </head>
 <body>
     <script src= '../../Static/js/jquery.SuperSlide.2.1.1.js'></script>
     <link rel="stylesheet" href="../../Static/css/module/trademark/trademark.css">
+    <link rel="stylesheet" href="../../Static/css/module/trademark/search/search.css">
 
     <!--头部  -->
     <div class="header">
@@ -190,154 +191,31 @@
 
     <!-- 内容区 -->
    <div id="demark">
-        <div class="index-zhuce">
-            <div class="center">
-                <h2><span>您所需要的 正是我们擅长的</span></h2>
-                <div class="index-zhuce-left">
-                    <i class="icon03 icon"></i>
-                    <div class="index-zhuce-text">
-                        <span class="span-a">普通注册</span>
-                        <span class="span-b"><span>499</span>元/件</span>
-                        <p>自助提交，1-2个工作日拿到申请号企业：营业执照、委托书<br>个体工商户：身份证正反面签字扫描件、个体户执照扫描件</p>
-                    </div>
-                    <a href="/form.html">立即注册</a>
-                </div>
-                <div class="index-zhuce-right">
-                    <i class="icon04 icon"></i>
-                    <div class="index-zhuce-text">
-                        <span class="span-a">保姆注册</span>
-                        <span class="span-b"><span>699</span>元/件</span>
-                        <p>专属1对1顾问，申请前近似查询，避免风险。<br>申报材料整理与填报，官文免费快递送达。</p>
-                    </div>
-                    <a href="/baomu.html">立即注册</a>
-                </div>
-            </div>
+       <div id="tm-details">
+    <div class="container">
+        <div class="content-show">
+            <ul class="clearfix">
+                <li class="first"><div class="showa"><img src="../../Static/img/showa-icon.png" alt=""></div><p>免费查询</p>免费查询，享受畅快搜索</li>
+                <li><div class="showb"><img src="../../Static/img/showb-icon.png" alt=""></div><p>一键速达</p>告别客服，自己也能查商标</li>
+                <li><div class="showc"><img src="../../Static/img/showc-icon.png" alt=""></div><p>精确搜索</p>精准到每一个符号，搜你想要</li>
+                <li><div class="showd"><img src="../../Static/img/showd-icon.png" alt=""></div><p>资源丰富</p>与商标局信息同步，海量资源</li>
+            </ul>
         </div>
-        <div class="index-fuwu bgnone">
-            <div class="common">
-                <h2><span>热门服务项目</span></h2>
-                <ul class="index-fuwu-list">
-                    <li>
-                        <div class="small-img"><img src="../../Static/img/icon_brand_zr.png"></div>
-                        <h3>商标转让</h3>
-                        <p>转让注册商标的<br>应向商标局提出申请</p>
-                        <div class="mgt10"><span class="bic-price orange">¥1500</span>/起</div>
-                        <div class="tijiao"><a href="/services/zhuanrang.html" class="tjiao-btn" target="_blank">查看详情</a></div>
-                    </li>
-                    <li><div class="small-img"><img src="../../Static/img/icon_brand_bg.png"></div>
-                        <h3>商标变更</h3>
-                        <p>注册商标变更信息<br>需提交变更申请</p>
-                        <div class="mgt10"><span class="bic-price orange">¥1000</span>/起</div>
-                        <div class="tijiao"><a href="/services/biangeng.html" class="tjiao-btn" target="_blank">查看详情</a></div>
-                    </li>
-                    <li><div class="small-img"><img src="../../Static/img/icon_brand_xz_index.png"></div>
-                        <h3>商标续展</h3>
-                        <p>注册商标有效期满前<br>需继续使用的应申请商标续展</p>
-                        <div class="mgt10"><span class="bic-price orange">¥2500</span>/起</div>
-                        <div class="tijiao"><a href="/services/xuzhan.html" class="tjiao-btn" target="_blank">查看详情</a></div>
-                    </li>
-                    <li><div class="small-img"><img src="../../Static/img/icon_brand_yy.png"></div>
-                        <h3>商标异议</h3>
-                        <p>他人商标违反相关条例的<br>可向商标局提出异议申请</p>
-                        <div class="mgt10"><span class="bic-price orange">¥3499</span>/起</div>
-                        <div class="tijiao"><a href="/services/yiyi.html" class="tjiao-btn" target="_blank">查看详情</a></div>
-                    </li>
-                    <li><div class="small-img"><img src="../../Static/img/icon_brand_cs.png"></div>
-                        <h3>商标撤三申请</h3>
-                        <p>以连续三年不使用为由<br>向商标局申请撤销已注册商标</p>
-                        <div class="mgt10"><span class="bic-price orange">¥2499</span>/起</div>
-                        <div class="tijiao"><a href="/services/chexiao.html" class="tjiao-btn" target="_blank">查看详情</a></div>
-                    </li>
-                    <li><div class="small-img"><img src="../../Static/img/icon_brand_zr.png"></div>
-                        <h3>商标驳回复审</h3>
-                        <p>对驳回，不予注册的商标<br>可向商标评审委员会提出复审</p>
-                        <div class="mgt10"><span class="bic-price orange">¥3499</span>/起</div>
-                        <div class="tijiao"><a href="/services/bohui.html" class="tjiao-btn" target="_blank">查看详情</a></div>
-                    </li>
-                </ul>
-            </div>
+        <div class="tm-chiming">
+            驰名商标：
+            <a href="/Check/Search?type=1&amp;keyword=%E7%BA%A2%E5%A1%94%E5%B1%B1" target="_blank">红塔山</a>
+            <a href="/Check/Search?type=1&amp;keyword=%E4%BA%94%E7%B2%AE%E6%B6%B2" target="_blank">五粮液</a>
+            <a href="/Check/Search?type=1&amp;keyword=%E8%81%94%E6%83%B3" target="_blank">联想</a>
+            <a href="/Check/Search?type=1&amp;keyword=%E6%B5%B7%E5%B0%94" target="_blank">海尔</a>
+            <a href="/Check/Search?type=1&amp;keyword=%E4%B8%9C%E9%A3%8E" target="_blank">东风</a>
+            <a href="/Check/Search?type=1&amp;keyword=%E9%95%BF%E8%99%B9" target="_blank">长虹</a>
+            <a href="/Check/Search?type=1&amp;keyword=%E5%A8%83%E5%93%88%E5%93%88" target="_blank">娃哈哈</a>
+            <a href="/Check/Search?type=1&amp;keyword=%E6%A0%BC%E5%85%B0%E4%BB%95" target="_blank">格兰仕</a>
+            <a href="/Check/Search?type=1&amp;keyword=%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0" target="_blank">贵州茅台</a>
+            <a href="/Check/Search?type=1&amp;keyword=%E9%87%91%E5%85%AD%E7%A6%8F" target="_blank">金六福</a> 
         </div>
-        <div class="index-news">
-            <div class="common">
-                <h2><span>资讯早知道</span></h2>
-                <div class="index-news-list">
-                    <p class="news-title">公告动态 <span><a href="/news/notice" target="_blank">更多&gt;&gt;</a></span></p>
-                    <ul class="news-list">
-                            <li><a href="/news/detail/274.html">商标局:2017启用尼斯分类第11版</a><i>2016-12-26</i></li>
-                    </ul>
-                </div>
-                <div class="index-news-list">
-                    <p class="news-title">行业资讯 <span><a href="/news/zixun" target="_blank">更多&gt;&gt;</a></span></p>
-                    <ul class="news-list">
-                            <li><a href="/news/detail/306.html">关于第7888693号“年份原浆”商标不予注册复审决定书 </a><i>2017-02-07</i></li>
-                            <li><a href="/news/detail/305.html">“晴隆糯薏仁”获得国家地理标志证明商标</a><i>2017-01-22</i></li>
-                            <li><a href="/news/detail/304.html">全年商标申请量369.1万件，同比增长28.4%</a><i>2017-01-20</i></li>
-                            <li><a href="/news/detail/302.html">“今日头条”商标纠纷终审有果</a><i>2017-01-18</i></li>
-                            <li><a href="/news/detail/301.html">顺昌海鲜菇成功注册地理标志证明商标</a><i>2017-01-17</i></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="index-issue">
-            <div class="common">
-                <h2><span>商标注册·常见问题</span></h2>
-                <div class="content" id="issueList">
-                    <div class="hd">
-                        <a class="next"></a>
-                        <!--<ul></ul>-->
-                        <a class="prev"></a>
-                        <!--<span class="pageState"></span>-->
-                    </div>
-                    <div class="bd">
-                        <div class="tempWrap" style="overflow:hidden; position:relative; width:1228px"><ul class="slidesList" style="width: 2456px; left: -1228px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
-                            <li style="float: left; width: 221px;">
-                                <div class="slides_header">注册商标需要多长时间？ </div>
-                                <div class="slides_section" style="font-size: 12px;">商标局大约5个月发出受理通知书、初审公告期3个月、商标注册完成整个时间大约需要12个月、除初审公告期3个月是法定期限外，其它时间均为预估时间，因为法律没有对商标审查的完成时间做出明确规定，最终以商标局的完成时间为准。</div>
-                            </li>
-                            <li style="float: left; width: 221px;">
-                                <div class="slides_header">哪些字体注册商标不构成字体侵权？ </div>
-                                <div class="slides_section" style="font-size: 12px;">字体商用须取得字体版权所属方授权，部分免费商用字体：思源黑体、文泉驿、方正黑体/书宋方/仿宋/楷体以及无主字体（字体前未冠所有人）。具体字体授权情况请以字体所有人发布信息为准。 </div>
-                            </li>
-                            <li style="float: left; width: 221px;">
-                                <div class="slides_header">我提交的商标能注册下来吗？</div>
-                                <div class="slides_section">注册商标存在一定的风险，主要风险为商标局有3-6个月的盲查期，我们会尽力帮您规避风险。 </div>
-                            </li>
-                            <li style="float: left; width: 221px;">
-                                <div class="slides_header">商标的有效期限是多久？ </div>
-                                <div class="slides_section">商标自核准注册之日起可以使用10年，10年中无任何费用，到期前一年需要续展。 </div>
-                            </li>
-                            <li style="float: left; width: 221px;">
-                                <div class="slides_header"> 我应该申请哪些类别？ </div>
-                                <div class="slides_section">您可以在商标分类页面中查看：
-                                    <a href="classes.html" target="_blank">商标类别</a>，信息仅供参考，如有疑问，可以联系我们客服。 </div>
-                            </li>
-                            <li style="float: left; width: 221px;">
-                                <div class="slides_header">着色商标和黑白商标什么区别？ </div>
-                                <div class="slides_section">着色商标，注册成功后就只能使用申请时的着色，不得更换颜色。黑白商标，您可任意着色使用。 </div>
-                            </li>
-                            <li style="float: left; width: 221px;">
-                                <div class="slides_header">营业执照地址与邮寄地址的区别？ </div>
-                                <div class="slides_section">商标注册提交地址以营业执照为准，但商标局下发的材料会邮寄到代理处，我们收到材料后会及时与您联系并跟您确认邮寄地址。 </div>
-                            </li>
-                            <li style="float: left; width: 221px;">
-                                <div class="slides_header">TM和R的区别？ </div>
-                                <div class="slides_section">“TM”指已收到商标局下发的受理通知书，但还未取得商标证的商标；而“R”是指已经注册成功并取得商标证书的商标。 </div>
-                            </li>
-                        </ul></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="index-issue index-flow">
-            <div class="common">
-                <h2><span>商标注册流程</span></h2>
-                <div class="content">
-                    <a href="#">
-                       <div class="flow-img"></div> 
-                    </a>
-                </div>
-            </div>
-        </div>
+    </div>
+</div>
 
     </div>
 
