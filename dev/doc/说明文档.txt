@@ -75,3 +75,12 @@ virtualHost:虚拟主机
 
 
 trademark:商标
+	class:分类查询
+	form：商标注册页
+	fw：服务首页
+	news-leader：新人引导
+	news-list：新闻列表
+	news：新闻详情
+	search：查询页面
+	services：服务文档
+	trademark：商标首页
