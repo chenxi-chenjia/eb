@@ -1,0 +1,96 @@
+.dem-text-sel td {cursor: pointer;}
+.dem-text-sel-selected {background: rgb(254, 132, 49) none repeat scroll 0% 0%;color: rgb(255, 255, 255);}
+
+.mid .content-left{width: 920px;float: left;margin-right: 10px;border-top: 1px solid #cccccc;}
+.mid .content-right{width: 260px;float: right;margin-bottom: 30px;}
+.mid .content-right .tipshow{margin-bottom: 10px;}
+.mid .tiptext{clear: both;}
+.mid .tiptext .tiplist{border: 1px solid #cccccc;padding: 0 5px;border-top: none;}
+.mid .tiptext .tipnav{height: 40px;line-height: 40px;background: #f8f8f8;border: 1px solid #cccccc;}
+.mid .tiptext .tipnav a{display: inline-block;width: 88px;height: 40px;text-align: center;float: left;}
+.mid .tiptext .tipnav a.on{background: #FFF;border-top: 2px solid #fe8431;position: relative;top: -1px;border-right: 1px solid #cccccc;}
+.mid .tiptext .tipnav .tipnav-bbs{border-right: 1px solid #cccccc;}
+.mid .tiptext .tiplist{clear: both;}
+.mid .tiptext .tiplist li{height: 36px;border-bottom: 1px dashed #cccccc;line-height: 36px;}
+.mid .tiptext .tiplist .tiplist-left{float: left;width: 160px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;} 
+.mid .tiptext .tiplist .tiplist-right{float: right;}
+
+.mid .content-more{display: inline-block;height: 40px;border: 1px solid #cccccc;background: #f0f0f0;line-height: 40px;text-align: center;width: 920px;border-radius: 6px;margin-top: 10px;font-size: 16px;}
+.mid .content-more img{margin-left: 12px;}
+.mid .content-more:hover{color: #666666;}
+
+  .slideshow{position:relative;zoom:1;width:260px; height:260px;overflow:hidden;float:right;bottom:0px;margin-bottom: 10px;}
+  .slideshow .image{position:relative;width:260px;height:260px;overflow:hidden;color:#fff;}
+  .slideshow .image ul{position:absolute;top:0;width:260px;height:300px;overflow:hidden;}
+  .slideshow .image li{position:relative;float:left;width:260px;height:260px;overflow:hidden;}
+  .slideshow .image a{display:block;}
+  .slideshow .caption{position:absolute;bottom:0;width:260px;padding:5px;line-height:14px;color:#fff;background:#000;opacity: 0.6;filter:alpha(opacity=60);}
+  .slideshow .trigger{position:absolute;bottom:5px;right:3px;font-size:12px;}
+  .slideshow .trigger li{float:left;text-align:center; line-height:14px;font-weight:bold;margin:0 3px 0 0;padding:0 3px;color:#000;background:#fff;cursor:pointer; *width:7px;}
+  .slideshow .trigger li{*letter-spacing:-4px;}
+  .slideshow .trigger li.current{color:#fff;background:#ff7d01;}
+
+.content-left h2{height: 72px;line-height: 72px;text-align: center;}
+.content-left .content-bar{line-height: 32px;text-align: center;font-size: 12px;position: relative;}
+.content-left .content-bar img{margin-left: 130px;vertical-align:middle;}
+.content-left .content-bar .org{color: #fe8431;font-size: 14px;}
+.content-left .content-bar span{margin-right: 18px;}
+.content-left .content-p p,.content-left .content-p div{margin-top: 18px;text-align: left; line-height:180%}
+.content-left .content-p{ margin-bottom: 60px;}
+.content-left .content-p img{margin-top: 18px;}
+.content-left .content-p p.center {display: none; text-align: center;}
+.content-left .content-b{height: 36px;line-height: 36px;text-align: left;border-bottom: 1px dashed #cccccc;}
+.content-left .content-b a{color: #0066cc;}
+.content-left .content-b a:hover{color: #fe8431;}
+.content-left .content-b span{float: right;color: #ff0000;}
+.content-left .content-share{height: 56px;line-height: 56px;}
+.content-left .bdsharebuttonbox a{display: inline-block;height: 28px;width: 28px;}
+.content-left .content-share .share-right{float: right;}
+.content-left .content-share .share-right span{margin-right: 16px;}
+.content-interest{border: 1px solid #cccccc;margin-bottom: 58px;padding: 18px 22px;}
+.content-interest li{float: left;text-align: center;width: 220px;}
+.content-interest li>a {width:172px; display: block; margin: auto;}
+.content-interest h3 a{float: right;font-size: 14px;color: #999999;}
+.content-interest h3 a:hover{color: #fe8431;}
+.content-interest h3{font-size: 18px;margin-bottom: 12px;}
+
+.content-bar ul{position: absolute;border: 1px solid #cccccc;background: #FFF;left: 445px;display: none;}
+.content-bar ul li{float: left;}
+.mid .content-list{padding: 20px 0;border-bottom: 1px dashed #cccccc;}
+.mid .content-list img{float: left;margin-right: 15px; padding: 5px; border:1px #eee solid; box-shadow:2px 2px 1px 0 #f6f6f6}
+.mid .content-list a.content-h{color: #333333;font-size: 20px;}
+.mid .content-list a.content-h:hover{color: #fe8431;}
+.mid .content-list span{font-size: 12px;color: #999;margin-right: 18px;}
+.mid .content-list span.text-right{float: right;}
+.mid .content-list p{margin-top: 14px;margin-bottom: 6px;text-overflow: -o-ellipsis-lastline;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.mid .content-list-last{border-bottom: 1px solid #cccccc;}
+
+.mid .content-list span.content-text-icon{float: right;width: 20px;height: 20px;border-radius: 10px;line-height: 19px;text-align: center;color: #FFF;margin-top: 5px;}
+.mid .content-list span.content-text-icon.icon-hot { background: url("/Content/images/news/images/red.png") no-repeat;}
+.mid .content-list span.content-text-icon.icon-up { background: url("/Content/images/news/images/blue.png") no-repeat;}
+
+@media screen and (max-width:480px){
+	body { text-align: center;}
+	.mid .content-left {width:100%; margin-right: 0;border-top:0px;}
+	.mid .content-right{width:100%}
+	.slideshow,.content-interest,.footer-text,.content-share,.content-b,#header-banner,#s-slider,.goto-top,#header>ul.clearfix,.content-newnav {display: none;}
+	.container {width:95%; margin: auto; text-align: left;}
+    div.content-left h2 {
+        line-height:120%;
+        height:auto; margin:20px auto;
+        font-weight:bold;
+        font-size:24px;
+    }
+    .content-left .content-bar{
+	    line-height:120%;font-size:16px
+    }
+    .content-left .content-p {
+        line-height:180%; font-size:18px
+    }
+    .mid .content-more{width:95%; margin-left: auto;margin-right: auto;}
+    .content-left .content-p p.center { display: block;}
+    .content-left .content-p img { width:100%;}
+    .mid .tiptext .tipnav a.tab-bbs,.list-bbs {display: none;}
+    .tab-rel{display: inline-block; *display:inline;zoom:1;background: #FFF;border-top: 2px solid #fe8431;position: relative;top: -1px;border-right: 1px solid #cccccc;}
+    .list-rel {display: block !important; }
+}

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商标-新闻列表</title>
+    <link rel="stylesheet" href="../../Static/css/public.css">
+    <script src='../../Static/js/jquery.min.js'></script>
+</head>
+<body>
+    <script src= '../../Static/js/jquery.SuperSlide.2.1.1.js'></script>
+    <link rel="stylesheet" href="../../Static/css/module/trademark/trademark.css">
+
+    <!--头部  -->
+    <div class="header">
+        <div class="center">
+            <div class="headerLeft">
+                第一商务欢迎你
+            </div>
+            <div class="headerRight">
+                <div class="link header-float show">
+                    <a href="#" class="login">登录</a>
+                    <div class="line"></div>
+                    <a href="#" class="registered">注册</a>
+                </div>
+                <div class="login-bingo header-float">
+                    <span>路人甲123456欢迎你</span>
+                    <a href="#">退出</a>
+                </div>
+                <ul class="header-float">
+                    <li><a href="#">购物车<span>0</span></a></li>
+                    <li><a href="#">备案</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                    <li><a href="#">服务中心</a></li>
+                    <li><a href="#">新闻资讯</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <div class="center">
+            <h1 class="logo"><a href="#"><img src="../../Static/img/logo.png" alt=""></a></h1>
+            <div class="navLis">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li class="now"><a href="#">域名注册</a></li>
+                    <li><a href="#">商标注册</a></li>
+                    <li><a href="#">虚拟主机</a></li>
+                    <li><a href="#">企业邮局</a></li>
+                    <li><a href="#">云主机</a></li>
+                    <!-- <li><a href="#">SSL证书</a></li>
+                    <li><a href="#">租用托管</a></li>
+                    <li><a href="#">增值应用</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- banner -->
+    <link rel="stylesheet" href="../../Static/css/module/trademark/news/news.css">
+    <div id="demark-banner">
+        <div class="bg-img"></div>
+        <div class="content">
+            <div class="center">
+               <h1 class="icon"></h1>
+                <div class="input-box">
+                    <div class="mask"></div>
+                    <div class="input">
+                        <input type="text" placeholder="请输入您要查询的商标">
+                        <div class="slide-button">
+                            全部分类
+                            <div class="jiao"></div>
+                        </div>
+                    </div>
+                    <div class="button-box">
+                        <a href="#" class="button">
+                            <span><i class="icon"></i>商标查询</span>
+                        </a>
+                    </div>
+                    <div class="slide-box">
+                        <div class="slide-top">
+                            <span class="cursor"><i class="icon"></i>使用优惠码的域名</span>
+                            <span>已选择<b>0</b>个分类</span>
+                        </div>
+                        <ul class="form-table no-float">
+                            <li class="fl" data-value="01">01.化学原料</li>
+                            <li class="fl" data-value="02">02.颜料油漆</li>
+                            <li class="fl" data-value="03">03.日化用品</li>
+                            <li class="fl" data-value="04">04.燃料油脂</li>
+                            <li class="fl" data-value="05">05.医药卫生</li>
+                            <li class="fl" data-value="06">06.五金金属</li>
+                            <li class="fl" data-value="07">07.机械设备</li>
+                            <li class="fl" data-value="08">08.手工器械</li>
+                            <li class="fl" data-value="09">09.科学仪器</li>
+                            <li class="fl" data-value="10">10.医疗器械</li>
+                            <li class="fl" data-value="11">11.家用电器</li>
+                            <li class="fl" data-value="12">12.运输工具</li>
+                            <li class="fl" data-value="13">13.军用烟花</li>
+                            <li class="fl" data-value="14">14.珠宝钟表</li>
+                            <li class="fl" data-value="15">15.乐器</li>
+                            <li class="fl" data-value="16">16.文化用品</li>
+                            <li class="fl" data-value="17">17.橡胶制品</li>
+                            <li class="fl" data-value="18">18.皮革皮具</li>
+                            <li class="fl" data-value="19">19.建筑材料</li>
+                            <li class="fl" data-value="20">20.家具</li>
+                            <li class="fl" data-value="21">21.家用器具</li>
+                            <li class="fl" data-value="22">22.绳网袋篷</li>
+                            <li class="fl" data-value="23">23.纺织纱线</li>
+                            <li class="fl" data-value="24">24.床单布料</li>
+                            <li class="fl" data-value="25">25.服装鞋帽</li>
+                            <li class="fl" data-value="26">26.花边拉链</li>
+                            <li class="fl" data-value="27">27.地毯席垫</li>
+                            <li class="fl" data-value="28">28.体育玩具</li>
+                            <li class="fl" data-value="29">29.食品罐头</li>
+                            <li class="fl" data-value="30">30.调味茶糖</li>
+                            <li class="fl" data-value="31">31.水果花木</li>
+                            <li class="fl" data-value="32">32.啤酒饮料</li>
+                            <li class="fl" data-value="33">33.酒</li>
+                            <li class="fl" data-value="34">34.烟草烟具</li>
+                            <li class="fl" data-value="35">35.广告贸易</li>
+                            <li class="fl" data-value="36">36.金融物管</li>
+                            <li class="fl" data-value="37">37.建筑修理</li>
+                            <li class="fl" data-value="38">38.通讯电信</li>
+                            <li class="fl" data-value="39">39.运输旅行</li>
+                            <li class="fl" data-value="40">40.材料处理</li>
+                            <li class="fl" data-value="41">41.教育娱乐</li>
+                            <li class="fl" data-value="42">42.科研服务</li>
+                            <li class="fl" data-value="43">43.餐饮酒店</li>
+                            <li class="fl" data-value="44">44.医疗园艺</li>
+                            <li class="fl" data-value="45">45.社会法律</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="checked-box">
+                    <label><input type="radio" name="select_type" value="模糊查询" checked="checked"> 模糊查询（商标名/申请号）</label>
+                    <label class="selector-ex"><input type="radio" name="select_type" value="近似查询"> 近似查询</label>
+                    <label class="selector-ex"><input type="radio" name="select_type" value="精确查询"> 精确查询</label>
+                    <label><input type="radio" name="select_type" value="商标申请人"> 商标申请人</label>
+                    <div class="fr">
+                        <span>2016版<b>商标分类表</b>免费商标查询</span>
+                    </div>
+                </div> 
+            </div>
+                
+        </div>
+        <div class="bottom">
+            <div class="mask"></div>
+            <div class="center no-float">
+                <i class="icon"></i>
+                <ul class="gonggao1 fl">
+                    <li>
+                        [公告] 这里是公告一这里是公告一
+                    </li>
+                     <li>
+                        [公告] 这里是公告一这里是公告一
+                    </li>
+                     <li>
+                        [公告] 这里是公告一这里是公告一
+                    </li>
+                     <li>
+                        [公告] 这里是公告一这里是公告一
+                    </li>
+                </ul>
+                <ul class="gonggao2 fl">
+                    <li>
+                        [公告] 这里是公告二这里是公告二
+                        <i class="icon"></i>
+                    </li>
+                     <li>
+                        [公告] 这里是公告二这里是公告二
+                        <i class="icon"></i>
+                    </li>
+                     <li>
+                        [公告] 这里是公告二这里是公告二
+                        <i class="icon"></i>
+                    </li>
+                     <li>
+                        [公告] 这里是公告二这里是公告二
+                        <i class="icon"></i>
+                    </li>
+                </ul>
+                <div class="fr no-float">
+                    <span>在线客服</span>
+                    <div class="icon i1 fl"></div>
+                    <div class="icon i2 fr"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 内容区 -->
+   <div id="demark">
+        <div id="tm-form">
+            <div class="container clerfix mid">
+                <div class="content-newnav">
+                    当前位置：<a href="/">首页</a> &gt; <span><a href="/news/zixun">新闻资讯</a></span> &gt; <span><a href="/news/detail/306.html">关于第7888693号“年份原浆”商标不予注册复审决定书 </a></span>
+                </div>
+
+                <div class="content-left">
+                    <h2>关于第7888693号“年份原浆”商标不予注册复审决定书 </h2>
+                    <div class="content-bar">
+                        阅读：<span class="org">334</span><span>2017-02-07 12:01</span>来源：<span>第一商务</span>作者：<span>爱名网</span>
+                    </div>
+                    <div class="content-p">
+                        <table border="0" cellspacing="0" cellpadding="0" width="700" align="center">
+        <tbody>
+        <tr>
+        <td style="font-size: 16px;" id="zoom" height="134" valign="top" align="left"><div>
+        <p style="text-align: center;" align="center"><b><span style="">关于第7888693号“年份原浆”商标</span></b></p>
+        <p style="text-align: center;" align="center"><b><span style="">不予注册复审决定书</span></b></p>
+        <p style="text-align: right;" align="right"><span style="">商评字[2016]第0000097177号</span></p>
+        <p><span style="">&nbsp;</span></p>
+        <p><span style="">&nbsp;&nbsp;&nbsp;&nbsp;申请人：安徽古井贡酒股份有限公司</span></p>
+        <p><span style="">　　委托代理人：北京安度知识产权代理有限公司</span></p>
+        <p><span style="">　　原异议人：四川绵竹剑南春酒厂有限公司</span></p>
+        <p><span style="">　　委托代理人：四川超凡知识产权服务股份有限公司</span></p>
+        <p><span style="">　　</span></p>
+        <p><span style="">　　申请人因第7888693号“年份原浆”商标（以下称被异议商标）异议一案，不服商标局(2015)商标异字第0000048427号不予注册决定，于2015年11月26日向我委申请复审。我委依法受理后，依照《商标评审规则》第六条的规定，组成合议组依法进行了审理，现已审理终结。</span></p>
+        <p><span style="">　　商标局不予注册决定认为：</span></p>
+        <p><span style="">　　被异议商标“年份原浆”指定使用商品为第33类“酒(饮料)、葡萄酒”等。“原浆”,常指未加浆（加水）进行勾兑、调味的酒，直接表示指定使用商品的品质等特点，且该商标为酒类行业通用的商贸用语，用作商标缺乏显著性，不具备商标识别作用。依据《商标法》第十一条第一款第（二）项、第十一条第一款第（三）项、第三十五条规定对被异议商标不予注册。</span></p>
+        <p><span style="">　　申请人复审的主要理由：</span></p>
+        <p><span style="">　　1、 
+        “年份原浆”并非国家标准白酒工业术语中确定的基本术语及定义，使用在第33类葡萄酒等商品上并未仅直接表示指定使用商品的品质等特点，具备商标的显著性。申请人通过大量的宣传使用的，已经使“年份原浆”具备了区分商品来源的作用。被异议商标的申请注册未违反《商标法》第十一条第一款第（二）项、第十一条第一款第（三）项的规定。</span></p>
+        <p><span style="">　　2、商标局作出的另一件异议决定书中，认定申请人的“年份原浆”商标指定使用在第33类葡萄酒等商品并未违反《商标法》第十一条第一款第（二）项、第十一条第一款第（三）项的规定，根据行政审查一致性的原则，被异议商标应当予以核准注册。</span></p>
+        <p><span style="">　　申请人向我委提交了以下主要证据（均为复印件）：</span></p>
+        <p><span style="">　　1、商标局作出的准予第7079302号“年份原浆”商标注册的决定书以及商标注册证。</span></p>
+        <p><span style="">　　2、申请人的“年份原浆”获得的荣誉证书。</span></p>
+        <p><span style="">　　3、“年份原浆”品牌商品的销售合同及发票。</span></p>
+        <p><span style="">　　4、“年份原浆”商品的广告合同及发票。</span></p>
+        <p><span style="">　　5、“年份原浆”品牌广告宣传照片资料。</span></p>
+        <p><span style="">　　6、“年份原浆”2015年知识产权注册情况。</span></p>
+        <p><span style="">　　7、“年份原浆”2015年度部分维权判决书、行政处罚决定书。</span></p>
+        <p><span style="">　　原异议人向我委提交了以下复审意见：</span></p>
+        <p><span style="">　　1、被异议商标的文字“年份原浆”是酒类行业通用的描述性词汇，指定使用在酒类商品上仅直接表示了商品的窖藏时间、生产工艺等特点，缺乏商标应有的显著性和识别性，违反了《商标法》第十一条第一款第（二）项、第十一条第一款第（三）项的规定。</span></p>
+        <p><span style="">　　2、申请人将“年份原浆”商标注册使用在第33类酒类商品上阻碍了市场的良性竞争，极易造成不良的社会影响。根据个案审查的原则，本案与申请人所称的关于第7079302号“年份原浆”商标的异议决定无关。</span></p>
+        <p><span style="">　　原异议人向我委提交了以下主要证据：</span></p>
+        <p><span style="">　　1、《白酒生产技术全书》。</span></p>
+        <p><span style="">　　2、市场上存在的“年份原浆”酒产品的照片。</span></p>
+        <p><span style="">　　3、其他被驳回的“年份原浆”商标档案信息。</span></p>
+        <p><span style="">　　原异议人申请异议的主要理由：</span></p>
+        <p><span style="">　　被异议商标的文字“年份原浆”本身所表达的含义以及目前白酒市场的发展状态决定了其具有夸大宣传并带有欺骗性，违反了《商标法》第十条第一款第（七）项、第十条第一款第（八）项的规定。 
+        “年份原浆”是酒类行业通用的描述性词汇，指定使用在酒类商品上仅直接表示了商品的窖藏时间、生产工艺等特点，缺乏商标应有的显著性和识别性，违反了《商标法》第十一条第一款第（二）项、第十一条第一款第（三）项的规定。综上，原异议人请求对被异议商标不予注册。</span></p>
+        <p><span style="">　　申请人在异议阶段提交的答辩意见与在本案中向我委提交的答辩意见基本一致，申请人在异议阶段提交的证据如下：</span></p>
+        <p><span style="">　　1、2010至2012年的销售合同、销售发票。</span></p>
+        <p><span style="">　　2、2010至2012年的广告合同、广告发票。</span></p>
+        <p><span style="">　　我委经审理查明：</span></p>
+        <p><span style="">　　1、被异议商标由申请人于2009年12月4日向商标局提出注册申请，指定使用在第33类葡萄酒等商品上，被初步审定并公告后，本案原异议人在规定期限内向商标局提出异议申请，商标局裁定原异议人异议理由成立，被异议商标不予注册。本案申请人不服商标局的异议决定，于法定期限内提出不予注册复审申请。</span></p>
+        <p><span style="">　　2、申请人提交的销售协议和销售发票显示申请人的“年份原浆”酒商品在河南、浙江、山东、河北等多个省、自治区、直辖市进行了较大数量的销售。申请人提交的广告合同及广告发票显示申请人对“年份原浆”品牌的酒类商品进行了范围较广、投入较大的广告宣传，结合申请人提交的证据可知《安徽日报》、《东方酒业》、《糖烟酒周刊》、《安徽经济报》、《中国青年报》等报刊、杂志对“年份原浆”品牌的酒类商品进行了宣传报道，申请人还通过广播、电视广告、户外展牌、公交车车体广告等多种方式对“年份原浆”品牌进行宣传推广。申请人的“古井贡酒?年份原浆”酒多次被指定为全国政协会议、上海合作组织等会议以及跳水明星系列赛等体育赛事指定用酒。</span></p>
+        <p><span style="">　　3、2015年9月7日，商标局作出的（2015）商标异字第35468号异议决定书认为，“年份原浆”一词非国家标准白酒工业术语中确定的基本术语及定义。申请人通过大量使用和广泛宣传，已使“年份原浆”具备了区分商品来源的识别作用。至本案审理之时，上述异议决定书已经生效，第7079302号“年份原浆”商标已为有效注册商标。</span></p>
+        <p><span style="">　　我委认为：</span></p>
+        <p><span style="">　　根据申请人提交的在案证据以及我委查明的事实可知，申请人的“年份原浆”品牌的酒类商品在国内多个省、市、直辖市的销售数量较大、销售金额较高，并且申请人通过报刊、杂志、户外展牌、车体广告、广播、电视等多种途径对被异议商标进行了长时间、大范围、高强度的宣传报道，使消费者将被异议商标与申请人之间建立了对应关系，进而被异议商标能够起到区分商品来源的作用。此外，并无直接证据表明 
+        “年份原浆”属于国家标准“白酒工业术语”中确定的基本术语及定义，并且在商标局作出的（2015）商标异字第35468号异议决定书中亦认为“年份原浆”一词非国家标准白酒工业术语中确定的基本术语及定义，申请人通过大量使用和广泛宣传，已使“年份原浆”具备了区分商品来源的识别作用。因此，被异议商标指定使用在第33类葡萄酒等商品上并未仅直接表示商品的窖藏时间、生产工艺、品质等特点，经过申请人的宣传、使用能够起到区分商品来源的作用，故被异议商标的申请注册未违反《商标法》第十一条第一款第（二）项、第十一条第一款第（三）项的规定。</span></p>
+        <p><span style="">　　综上所述，申请人所提复审理由成立。</span></p>
+        <p><span style="">　　依照《商标法》第三十五条第三款的规定，我委决定如下：</span></p>
+        <p><span style="">　　被异议商标予以核准注册，由我委移交商标局办理相关事宜。</span></p>
+        <p><span style="">依照《商标法》第三十五条的规定，原异议人如对本决定不服，可以依照《商标法》第四十四条、第四十五条的规定向我委请求宣告该注册商标无效。</span></p>
+        <p><span style="">&nbsp;</span></p>
+        <p><span style="">&nbsp;</span></p>
+        <p><span style="">&nbsp;</span></p>
+        <p><span style="">&nbsp;</span></p>
+        <p><span style="">&nbsp;</span></p>
+        <p style="text-align: right;" align="right"><span style="">合议组成员：庞 &nbsp;磊</span></p>
+        <p style="text-align: right;" align="right"><span style="">张亚军</span></p>
+        <p style="text-align: right;" align="right"><span style="">姚旭祺</span></p>
+        <p style="text-align: right;" align="right"><span style="">&nbsp;</span></p>
+        <p style="text-align: right;" align="right"><span style="">2016年11月21日</span></p>
+        <p style="text-align: right;" align="right"><span style="">&nbsp;</span></p></div></td></tr></tbody></table>
+
+                        <p class="center"><a href="/news/zixun">本类更多&gt;&gt;</a> | <a href="/news/">全部文章&gt;&gt;</a></p>
+                    </div>
+                    <div class="content-b"><span>版权：凡注明“第一商务”来源的，未经许可不得转载</span>关键词： </div>
+                    <div class="content-share">
+                        <div class="share_mes" style="height:36px; line-height:36px; border-bottom:0px dashed #ddd; font-size:14px; padding:0 0 8px 0; margin-top:15px; ">
+                            <div class="bdsharebuttonbox bdshare-button-style0-24" style="display:inline-block;float:right; margin-left:20px;" data-bd-bind="1493866428417"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+                            <script type="text/javascript">
+                                window._bd_share_config = {
+                                    "common": {
+                                        "bdSnsKey": {},
+                                        "bdText": "关于第7888693号“年份原浆”商标不予注册复审决定书  - tm.eb.com.cn",
+                                        "bdDesc": "关于第7888693号“年份原浆”商标不予注册复审决定书商评字[2016]第0000097177号&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;申请人：安徽古井贡酒股份有限公司　　委托代理人：北京安度知识产权代理有限公司　　原异议人：四川绵竹剑南春酒厂有限公司　　委托代理人：四川超凡知。",
+                                        "bdUrl": "http://tm.eb.com.cn/news/detail/306.html?u=0",
+                                        "bdPic": "",
+                                        "bdMini": "2",
+                                        "bdMiniList": false,
+                                        "bdPic": "",
+                                        "bdStyle": "0",
+                                        "bdSize": "24",
+                                        "bdSign" : "off"
+                                    }, "share": {}
+                                }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+                            <span style=" display:inline-block; float:right;">小编码字不容易，帮分享到朋友圈吧 → </span>
+                        </div>
+                        <style type="text/css">
+                            .bdsharebuttonbox a {
+                                padding-left:0px !important;
+                            }
+                        </style>
+                    </div>
+                    
+                    
+                </div>
+                
+        <div class="content-right">
+
+            <div class="tiptext">
+                <div class="tipnav">
+                        <a class="tipnav-bbs tab-rel on" data-value="rel">相关文章</a>
+                </div>
+                <div class="tiplist relist">
+                        <ul data-value="rel" class="list-rel">
+                                <li><span class="tiplist-left"><a href="/news/detail/306.html">关于第7888693号“年份原浆”商标不予注册复审决定书 </a></span><span class="tiplist-right">02-07</span></li>
+                                <li><span class="tiplist-left"><a href="/news/detail/305.html">“晴隆糯薏仁”获得国家地理标志证明商标</a></span><span class="tiplist-right">01-22</span></li>
+                                <li><span class="tiplist-left"><a href="/news/detail/304.html">全年商标申请量369.1万件，同比增长28.4%</a></span><span class="tiplist-right">01-20</span></li>
+                                <li><span class="tiplist-left"><a href="/news/detail/302.html">“今日头条”商标纠纷终审有果</a></span><span class="tiplist-right">01-18</span></li>
+                                <li><span class="tiplist-left"><a href="/news/detail/301.html">顺昌海鲜菇成功注册地理标志证明商标</a></span><span class="tiplist-right">01-17</span></li>
+                                <li><span class="tiplist-left"><a href="/news/detail/300.html">云南“普洱石斛”成功注册 国家地理标志证明商标</a></span><span class="tiplist-right">01-16</span></li>
+                                <li><span class="tiplist-left"><a href="/news/detail/299.html">“微信”商标被撤 侵权诉讼“暂停”</a></span><span class="tiplist-right">01-16</span></li>
+                                <li><span class="tiplist-left"><a href="/news/detail/298.html">甘肃“陇西黄芪”地标被认定为中国驰名商标</a></span><span class="tiplist-right">01-16</span></li>
+                                <li><span class="tiplist-left"><a href="/news/detail/297.html">政经文化等公众人物 姓名不能注册为商标</a></span><span class="tiplist-right">01-12</span></li>
+                                <li style="border: none;"><span class="tiplist-left"><a href="/news/detail/296.html">俏江南再次陷入纷争</a></span><span class="tiplist-right">01-11</span></li>
+
+                        </ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/Content/js/slide_pic.js"></script>
+        <script type="text/javascript">
+            var slideshow = new TINY.slider.slide('slideshow', {
+                id: 'slideshow',
+                auto: 4,
+                resume: false,
+                vertical: false,
+                navid: 'trigger',
+                activeclass: 'current',
+                position: 0,
+                rewind: false,
+                elastic: true
+            });
+            $("div.tipnav").on("mouseover", "a", function () {
+                $(this).addClass("on").siblings().removeClass("on");
+                $("div.relist ul[data-value=" + $(this).data('value') + "]").show().siblings().hide();
+            });
+        </script>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="top">
+            <div class="center">
+                <img src="../../Static/img/serviceNav.png" alt="">
+                <div>
+                    <h1 class="same ">
+                        您的业务还没有展开？马上
+                    </h1>
+                    <div class="create same btn-same "><a href="#">创建业务</a></div>
+                    <h1 class="same">或者</h1>
+                    <div class="become same btn-same"><a href="#">成为代理商</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="service-lis">
+            <div class="center">
+                <ul>
+                    <li class="first">
+                        <dl>
+                            <dt>服务技术</dt>
+                            <dd><a href="#">联系客服</a></dd>
+                            <dd><a href="#">常用下载</a></dd>
+                            <dd><a href="#">帮助中心</a></dd>
+                            <dd><a href="#">违规举报</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>新手指导</dt>
+                            <dd><a href="#">注册第一商务</a></dd>
+                            <dd><a href="#">域名注册申请</a></dd>
+                            <dd><a href="#">购买虚拟主机</a></dd>
+                            <dd><a href="#">主机邮局续费</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>付款方式</dt>
+                            <dd><a href="#">在线支付</a></dd>
+                            <dd><a href="#">银行汇款</a></dd>
+                            <dd><a href="#">邮局汇款</a></dd>
+                            <dd><a href="#">上门缴收</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>快速入口</dt>
+                            <dd><a href="#">域名控制面板</a></dd>
+                            <dd><a href="#">虚拟主机管理</a></dd>
+                            <dd><a href="#">云主机管理</a></dd>
+                            <dd><a href="#">数据库管理</a></dd>
+                        </dl>
+                    </li>
+                    <li class="last">
+                        <dl>
+                            <dt><h3>客服热线：<span>4006-035-001</span></h3></dt>
+                            <dd class="show"><i class="icon same show1 wxshow"></i><i class="icon same show2 wx"></i><a href="#">第一商务官方微信</a></dd>
+                            <dd><i class="icon same show1 xlshow"></i><i class="icon same show2 xl"></i><a href="#">第一商务官方微博</a></dd>
+                            <dd><i class="icon same show1 qqshow"></i><i class="icon same show2 qq"></i><a href="#">第一商务官方客服</a></dd>
+                        </dl>
+                        <div>
+                            <i class="icon wxewm show-hide-icon show"></i>
+                            <i class="icon xlewm show-hide-icon"></i>
+                            <i class="icon qqewm show-hide-icon"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="center">
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">网站地图</a></li>
+                    <li><a href="#">人才招聘</a></li>
+                    <li><a href="#">客服中心</a></li>
+                    <li><a href="#">友情链接</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">付款方式</a></li>
+                    <li><a href="#">有问必答</a></li>
+                    <li><a href="#">价格总览</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>
+            客服热线：0571-87756803&nbsp;&nbsp; 87756807 &nbsp;&nbsp;&nbsp;&nbsp;合作热线：0571-87756822&nbsp;&nbsp;&nbsp;&nbsp;  网络备案：0571-87756883&nbsp;&nbsp; 87756809&nbsp;&nbsp;&nbsp;&nbsp;传真：0571-87756868
+        </p>
+        <p>
+            第一商务投诉电话：0571-87756866&nbsp;&nbsp;国家域名注册服务投诉中心投诉受理电话：010-58813000
+        </p>
+        <p>
+            地址：浙江省杭州市西湖区紫霞街176号杭州互联网创新创业园2号楼11楼(310030)
+        </p>
+        <p>
+            信息产业部域名注册服务批文号：信部电函[2008]224号&nbsp;&nbsp;&nbsp;&nbsp;经营许可证：浙B1.B2-20120241&nbsp;&nbsp;&nbsp;&nbsp; 浙公网安备33010602000268号
+        </p>
+        <p>
+            Copyright© 1999-2016 第一商务 版权所有
+        </p>
+        <p class="logo">
+            <a href="#" class="l1"></a>
+            <a href="#" class="l2"></a>
+            <a href="#" class="l3"></a>
+            <a href="#" class="l4"></a>
+            <a href="#" class="l5"></a>
+            <a href="#" class="l6"></a>
+            <a href="#" class="l7"></a>
+            <a href="#" class="l8"></a>
+        </p>    
+        <p class="link">
+            <span>友情链接：</span>
+            <a href="#">爱名网</a><span class="line">|</span><a href="#">域名抢注</a><span class="line">|</span><a href="#">商务网</a><span class="line">|</span><a href="#">电商网 </a><span class="line">|</span><a href="#">成都网建设 </a><span class="line">|</span><a href="#">折800</a><span class="line">|</span><a href="#">中网</a><span class="line">|</span><a href="#">步淘网</a><span class="line">|</span><a href="#">九赢广告联盟</a>
+        </p>
+    </div>
+</body>
+</html>
