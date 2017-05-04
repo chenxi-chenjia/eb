@@ -828,13 +828,13 @@ input, textarea {outline: none;}
 
 #tm-services3 div.tm-questions {float: left;border:1px #e6e6e6 solid;border-top:0px;width: 180px;}
 #tm-services3 div.tm-questions h3 {font-size:16px;  color:#666666; height:40px; line-height:40px;  padding-left:40px; cursor:pointer;border-top:1px #e6e6e6 solid; background:#fff;}
-#tm-services3 div.tm-questions h3 span { float:right;background:#f7f7f7 url("../../../img/svr/a.png") no-repeat; width:12px;height:6px; margin-right:10px; margin-top:17px;}
+#tm-services3 div.tm-questions h3 span { float:right;background:#f7f7f7 url("../../../img/a.png") no-repeat; width:12px;height:6px; margin-right:10px; margin-top:17px;}
 #tm-services3 div.tm-questions h3.hover,#tm-services3 div.tm-questions h3.hover a {color:#dc4c4c; }
 #tm-services3 div.tm-questions h3.opened {border-bottom:1px #e6e6e6 solid; }
-#tm-services3 div.tm-questions h3.icon-d{background:url("../../../img/svr/d.png") no-repeat 10px 12px;}
-#tm-services3 div.tm-questions h3.icon-d.hover{background:url("../../../img/svr/d-hover.png") no-repeat 10px 12px;}
-#tm-services3 div.tm-questions h3.icon-r{background:#f7f7f7 url("../../../img/svr/r.png") no-repeat 10px 10px;}
-#tm-services3 div.tm-questions h3.icon-r.hover{background:#f7f7f7 url("../../../img/svr/r-hover.png") no-repeat 10px 10px;}
+#tm-services3 div.tm-questions h3.icon-d{background:url("../../../img/d.png") no-repeat 10px 12px;}
+#tm-services3 div.tm-questions h3.icon-d.hover{background:url("../../../img/d-hover.png") no-repeat 10px 12px;}
+#tm-services3 div.tm-questions h3.icon-r{background:#f7f7f7 url("../../../img/r.png") no-repeat 10px 10px;}
+#tm-services3 div.tm-questions h3.icon-r.hover{background:#f7f7f7 url("../../../img/r-hover.png") no-repeat 10px 10px;}
 
 #tm-services3 div.tm-questions ul {margin: 10px 0;}
 #tm-services3 div.tm-questions ul li {height: 32px;line-height: 32px;text-align: left;font-size: 16px;border-left:6px #fff solid; width:174px; margin:5px 0; text-indent:35px;}
@@ -844,7 +844,7 @@ input, textarea {outline: none;}
 #tm-services3 div.tm-questions ul li.hover1 a {color:#666}
 
 #tm-services3 div.tm-answers{float: right;width: 995px;}
-div.tm-answer-header { text-align:center; background:url("../../../img/svr/bg.png") repeat-x; height:184px;}
+div.tm-answer-header { text-align:center; background:url("../../../img/bg.png") repeat-x; height:184px;}
 div.tm-answer-header div.tm-memo {  text-align:left; width:580px; margin:15px auto; font-size:14px; color:#666;line-height:24px}
 div.tm-answer-header p.price span { font-size:30px; color:#dc4c4c}
 div.tm-answer-header img {vertical-align: middle;}
@@ -856,7 +856,7 @@ div.tm-answer-download h3{ padding-top:20px;}
 div.tm-answer-download ul {width:680px; margin:37px auto 70px auto;}
 div.tm-answer-download ul li { float:left;width:49%; padding:10px 0;font-weight:normal; line-height:24px;color:#333;}
 div.tm-answer-download ul li a { color:#999;cursor:pointer; display:inline-block;*display:inline;zoom:1; font-style:normal; padding-left:24px; margin:0 3px 0 2px; background:url("../../../img/svr/d2.png") no-repeat 0 0; font-weight:normal; height:24px}
-div.tm-answer-download ul li a:hover {background-image:url("../../../img/svr/d2-hover.png");color:#dc4c4c;}
+div.tm-answer-download ul li a:hover {background-image:url("../../../img/d2-hover.png");color:#dc4c4c;}
 
 div.tm-goods-items {padding-top: 28px;padding-bottom:8px; margin:auto; width:670px; text-align:left;}
 div.tm-goods-items ul li label {display: inline-block;width: 190px;font-size: 14px;height: 42px;line-height: 42px;color: #666;text-align: right;margin-right: 18px;}
@@ -864,7 +864,7 @@ div.tm-goods-items ul li input {display: inline-block;font-size: 14px;color: #66
 div.tm-goods-items ul li input.hover,div.tm-goods-items ul li input:hover {border-color: #dc4c4c;}
 div.tm-goods-items ul li input.btn {width: 76px;height: 26px;background-color: #e6e6e6;color: #666;font-size: 14px;border: 0px;}
 div.tm-goods-items ul li span {color: #999;font-size: 12px;display: inline-block;*display:inline;zoom:1; height:14px; line-height:14px;}
-div.tm-goods-items ul li span.error {color: #333;padding-left: 16px;background: url('../../../img/svr/x.png') no-repeat 0 0;}
+div.tm-goods-items ul li span.error {color: #333;padding-left: 16px;background: url('../../../img/x.png') no-repeat 0 0;}
 div.tm-goods-items.tm-goods-fee {border-top: 1px #ccc dashed; padding-top:0px}
 div.tm-goods-items.tm-goods-fee i {font-size: 18px;color: #dc4c4c;font-style: normal;font-weight: normal;}
 div.tm-goods-items.tm-goods-fee i.big {font-size: 24px;}
@@ -892,10 +892,10 @@ div.tm-goods-more {
 div.tm-goods-more ul.tabs { width:100%; background-color:#f7f7f7; border-bottom:1px #e6e6e6 solid; height:48px; }
 div.tm-goods-more ul.tabs li { cursor:pointer; background-position: 30px 14px; background-repeat:no-repeat; height:48px; line-height:48px; float:left; width:196px; border-right:1px #e6e6e6 solid; font-size:24px; color:#999; background-color:#fff;border-bottom:1px #ddd solid; text-indent:65px;}
 div.tm-goods-more ul.tabs li.hover {color:#dc4c4c;border-bottom:1px #fff solid;}
-div.tm-goods-more ul.tabs li.t01 { background-image:url("../../../img/svr/01.png");}
-div.tm-goods-more ul.tabs li.t02 {background-image: url("../../../img/svr/02.png");}
-div.tm-goods-more ul.tabs li.t01.hover {background-image: url("../../../img/svr/01-hover.png");}
-div.tm-goods-more ul.tabs li.t02.hover {background-image: url("../../../img/svr/02-hover.png");}
+div.tm-goods-more ul.tabs li.t01 { background-image:url("../../../img/01.png");}
+div.tm-goods-more ul.tabs li.t02 {background-image: url("../../../img/02.png");}
+div.tm-goods-more ul.tabs li.t01.hover {background-image: url("../../../img/01-hover.png");}
+div.tm-goods-more ul.tabs li.t02.hover {background-image: url("../../../img/02-hover.png");}
 #t02{display:none; padding:28px 0; border-bottom:1px #e6e6e6 solid;}
 #t02 p{ margin-left:62px; margin-right:62px;}
 #t02 p.tm-question-name{
@@ -906,7 +906,7 @@ div.tm-goods-more ul.tabs li.t02.hover {background-image: url("../../../img/svr/
 }
 
 #t02 p.tm-question-name span i {
-    color:#3399dd; font-style:normal;display:inline-block; *display:inline;zoom:1;  margin-right:10px; background: url("../../../img/svr/bg-n.png") no-repeat; height:34px; width:34px;  text-align:center;
+    color:#3399dd; font-style:normal;display:inline-block; *display:inline;zoom:1;  margin-right:10px; background: url("../../../img/bg-n.png") no-repeat; height:34px; width:34px;  text-align:center;
 }
 
 #t02 p.tm-question-body{

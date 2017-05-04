@@ -16,10 +16,15 @@
 		$(this).find('a').css('color','#747474');
 	})
 	//价格预览手动切换
-	$("#serviceCentter-price .contents .top ul").on('click','li',function(){
-		$(this).closest('ul').find('.now').removeClass('now');
-		$(this).addClass('now');
-	})
+	if($('#serviceCentter-price').length>0){
+		$("#serviceCentter-price .contents .top ul").on('click','li',function(){
+			var index=$(this).index();
+			$(this).closest('ul').find('.now').removeClass('now');
+			$(this).addClass('now');
+			$('.contents .bottom').find('.show').removeClass('show').end().find('div.same').eq(index).addClass('show');
+		})
+	}
+		
 
 	//帮助中心-关于我们节点轮播
 	function helpCenterAboutmeL3jd(){

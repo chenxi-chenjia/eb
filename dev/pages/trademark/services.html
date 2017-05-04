@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商标-服务文档</title>
+    <link rel="stylesheet" href="../../Static/css/public.css">
+    <script src='../../Static/js/jquery.min.js'></script>
+</head>
+<body>
+    <script src= '../../Static/js/jquery.SuperSlide.2.1.1.js'></script>
+    <link rel="stylesheet" href="../../Static/css/module/trademark/trademark.css">
+
+    <!--头部  -->
+    <div class="header">
+        <div class="center">
+            <div class="headerLeft">
+                第一商务欢迎你
+            </div>
+            <div class="headerRight">
+                <div class="link header-float show">
+                    <a href="#" class="login">登录</a>
+                    <div class="line"></div>
+                    <a href="#" class="registered">注册</a>
+                </div>
+                <div class="login-bingo header-float">
+                    <span>路人甲123456欢迎你</span>
+                    <a href="#">退出</a>
+                </div>
+                <ul class="header-float">
+                    <li><a href="#">购物车<span>0</span></a></li>
+                    <li><a href="#">备案</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                    <li><a href="#">服务中心</a></li>
+                    <li><a href="#">新闻资讯</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <div class="center">
+            <h1 class="logo"><a href="#"><img src="../../Static/img/logo.png" alt=""></a></h1>
+            <div class="navLis">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li class="now"><a href="#">域名注册</a></li>
+                    <li><a href="#">商标注册</a></li>
+                    <li><a href="#">虚拟主机</a></li>
+                    <li><a href="#">企业邮局</a></li>
+                    <li><a href="#">云主机</a></li>
+                    <!-- <li><a href="#">SSL证书</a></li>
+                    <li><a href="#">租用托管</a></li>
+                    <li><a href="#">增值应用</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="../../Static/js/module/trademark/services/Main.js"></script>
+    <script src="../../Static/js/module/trademark/common-jquery.js"></script>
+    <!-- 内容区 -->
+   <div id="demark">
+       <div id="tm-services3" class="tm-border" style="padding-top: 0;">
+    
+            <div class="container">
+                <div class="content-newnav">
+                    当前位置：<a href="/">首页</a> &gt; <span><a href="/services/xuzhan.html">商标服务</a></span>
+                </div>
+                <div class="clearfix">
+                    <div class="tm-questions tm-services-new">
+                        <h3 class="icon-r hover opened"><span></span>商标案件申请</h3>
+                        <ul>
+                            <li data-value="xuzhan" class=""><a href="/services/xuzhan.html">商标续展</a></li>
+                            <li data-value="beian" class=""><a href="/services/beian.html">商标许可备案</a></li>
+                            <li data-value="zhuanrang" class=""><a href="/services/zhuanrang.html">商标转让</a></li>
+                            <li data-value="biangeng" class=""><a href="/services/biangeng.html">商标变更</a></li>
+                            <li data-value="zhuxiao" class=""><a href="/services/zhuxiao.html">商标注销</a></li>
+                            <li data-value="yiyi" class="hover"><a href="/services/yiyi.html">商标异议</a></li>
+                            <li data-value="chexiao" class=""><a href="/services/chexiao.html">商标撤三申请</a></li>
+                            <li data-value="bohui" class=""><a href="/services/bohui.html">商标驳回复审</a></li>
+                            <li data-value="wuxiao" class=""><a href="/services/wuxiao.html">商标无效宣告</a></li>
+                        </ul>
+                        <h3 class="icon-d"><a href="/services/xiazai.html">常用文档下载</a></h3>
+                    </div>
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            $("#tm-services3 div.tm-questions ul li[data-value=yiyi]").addClass("hover");
+                            $("#tm-services3 div.tm-questions ul").on("mouseover", "li", function(){
+                                if($(this).hasClass('hover')) return; $(this).addClass("hover1");
+                            }).on("mouseout", "li", function(){
+                                if($(this).hasClass('hover')) return; $(this).removeClass("hover1");
+                            });
+                            $("#tm-services3 h3.icon-r").on('click', function(){
+                                $(this).next().slideToggle('normal');
+                                $(this).toggleClass('opened');
+                            });
+                        });
+                    </script>
+                    <div class="tm-answers">
+                        <div class="tm-answer-header">
+                            <h3>商标异议</h3>
+                            <div class="tm-memo">
+                                在先权利人、利害关系人认为对方商标违反相关条例的，可以向商标局提出异议，商标异议时限为12-18个月。
+                            </div>
+                            <p class="price"><span>3499</span>元/件</p>
+                        </div>
+                        <div class="tm-answer-body">
+                            <form action="/services/save/" method="post">
+                                <input type="hidden" name="svr" value="yiyi">
+                                
+                                <div class="tm-template">
+                                    <input type="hidden" name="orderid" value="0">
+                                    <ul>
+                                        <li><label>申请人：</label><input type="text" data-value="申请企业或个人名称" name="apply_name" onfocus="InputFocus(this);" onblur="InputBlur(this);" style="color: rgb(170, 170, 170);"> <span data-msg="填写申请人名称" data-error="请填写正确的申请人"></span></li>
+                                        <li><label>联系方式：</label><input type="text" data-value="您的手机号码或固话" name="apply_contact" onfocus="InputFocus(this);" onblur="InputBlur(this);" style="color: rgb(170, 170, 170);"> <span data-msg="填写联系方式，手机或座机" data-error="请填写正确的手机或座机"></span></li>
+                                        <li><label>对方商标申请号：</label><input data-value="商标申请号" onfocus="InputFocus(this);" onblur="InputBlur(this);" type="text" name="apply_no" style="color: rgb(170, 170, 170);"> <span data-msg="填写商标申请号" data-error="请填写正确的商标申请号"><a target="_blank" href="/check" style="text-decoration:underline">查询</a></span></li>
+                                    </ul>
+                                    <div class="tm-button-sets">
+                                        <button onclick="AddItem(this);">新增商标异议</button>
+                                        
+                                    </div>
+                                </div><div class="tm-goods-items tm-goods-fee">
+                                    <ul>
+                                        <li><label></label> 共<i class="tm-count">1</i>件服务，需支付：<i class="big">3499</i>元</li>
+                                        <li><label></label> <button onclick="return CreateRequest();">下一步</button></li>
+                                    </ul>
+                                
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tm-goods-more">
+                            <ul class="clearfix tabs"><li data-rel="t01" class="t01">服务介绍</li><li data-rel="t02" class="t02 hover">常见问题</li></ul>
+                            <div id="t01" style="display: none;">
+                                <div class="clearfix">
+                                    <div class="tm-goods-more-title" style="padding-top: 78px;"><img src="../../Static/img/files.png"><br>申请所需文件</div>
+                                    <div class="tm-goods-more-content"><div>1、《商标异议申请书》<br>2、商标异议代理委托书<br>3、国内个人申请——身份证复印件，商标注册号；<br>4、国内公司申请——营业执照副本复印件，商标注册号 ；<br>5、国外个人申请——护照（及护照的中文翻译），商标注册号；<br>6、国外企业申请——营业主体证明复印件（及营业主体证明的中文翻译），商标注册号； </div></div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="tm-goods-more-title" style="padding-top: 22px;"><img src="../../Static/img/time.png"><br>申请主体和周期</div>
+                                    <div class="tm-goods-more-content"><div>申请主体：已进入公告期的商标会对自己品牌权利造成影响，可申请商标异议。<br>所需周期：商标异议时限约12-18个月。</div></div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="tm-goods-more-title" style="padding-top: 18px;"><img src="../../Static/img/download.png"><br>文档下载</div>
+                                    <div class="tm-goods-more-content"><div><a href="/Public/Files/yiyishenqing.doc" target="_blank" title="商标异议申请书">【商标异议申请书】</a></div><div>【代理委托书】<a href="/Public/Files/shangbiao-geren-common.doc" target="_blank">个人</a>&nbsp; &nbsp; <a href="/Public/Files/shangbiao-gongsi-common.doc" target="_blank">企业</a></div></div>
+                                </div>
+                            </div>
+                            <div id="t02" style="display: block;">
+                                <p class="tm-question-name"><span><i>1</i>什么是商标异议？</span></p><p class="tm-question-body">是指公众对某一经过初步审定并公告的商标，在法定期限内，向商标局提出该商标不予注册的反对意见，即要求商标局在规定的3个月异议期满后不要核准该商标注册。</p>
+                                <p class="tm-question-name"><span><i>2</i>商标异议申请的范围有哪几种？</span></p><p class="tm-question-body">目前，商标异议的内容主要有两种：一是与已注册的商标相同或近似；二是认为该商标违反禁用条款。</p>
+                                <p class="tm-question-name"><span><i>3</i>已注册商标可以异议吗?</span></p><p class="tm-question-body">公告期的商标可以提出异议，已注册的商标可以商标撤三申请等方式使商标灭失。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <ul class="tm-services-us clearfix">
+                    <li><img src="../../Static/img/a-1.png" width="152" height="152" alt="费用省 服务优"><p>费用省 服务优</p></li>
+                    <li><img src="../../Static/img/a-2.png" width="152" height="152" alt="报件快 效率高"><p>报件快 效率高</p></li>
+                    <li><img src="../../Static/img/a-3.png" width="152" height="152" alt="更专业 真可靠"><p>更专业 真可靠</p></li>
+                    <li><img src="../../Static/img/a-4.png" width="152" height="152" alt="正规 权威 实力"><p>正规 权威 实力</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tm-services-information">
+            <div class="tm-services-information-list" data-rel="xuzhan">
+                <div><div>申请主体： 商标到期前12个月内，希望继续保有该商标的商标注册人<br>所需周期：一般为6-12个月</div></div>
+                <div><div><a href="/Public/Files/xuzhanshenqing.doc" target="_blank" title="商标续展注册申请书">【商标续展注册申请书】</a></div></div>
+                <div>
+                    <p>什么是商标续展？</p><p>注册商标所有人在商标注册有效期届满一年后的一段时间内，依法办理一定的手续，延长其注册商标有效期的制度。</p>
+                    <p>未在有效期内及时商标续展，怎么办？</p><p>已注册的商标期满之日起6个月内希望仍继续保有该商标，可以办理商标宽展申请，继续保有该商标。</p>
+                    <p>商标续展后的有效期是多久?</p><p>商标续展可以延长商标专用权10年，不限续展次数</p>
+                    <p>为什么要及时办理商标续展？</p><p>商标注册在有效期满前，商标所有人应及时在商标注册机关办理续展注册手续。不要使商标过期失效，失去商标专用权。</p>
+                </div>
+            </div>
+            <div class="tm-services-information-list" data-rel="beian">
+                <div><div>申请主体： 不放弃商标权，但允许他人使用此商标的个人或公司<br>所需周期：商标许可备案提交申请后三个月左右，商标许可合同备案完成</div></div>
+                <div><div><a href="/Public/Files/shiyongxukebeian.doc" target="_blank" title="商标许可备案">【商标许可备案】</a></div></div>
+                <div>
+                    <p>什么是商标许可备案？</p><p>是指《商标法》规定，签订商标使用许可合同后应当在法定期限内向商标局备案。</p>
+                    <p>同时办理几件商标许可备案能否只签订一份合同？</p><p>不能。每一件商标应签定一份许可合同。</p>
+                    <p>商标许可备案需注意什么？</p><p>①必须在合同签订之日起3个月内进行备案，超过时限及核准注册的商品，不予备案；<br>②许可合同中必备条款：许可使用的商标、注册号、商品范围、年限及商标的标识提供方式；<br>③对被许可人的商品质量接受许可人监督，在使用许可商品上标明被许可人的名称和商品产地条款。</p>
+                    <p>备案后在哪里能查询？</p><p>①中国商标网官网；<br>②商标局官网；<br>③如果实在不会再商标官网查询，可以直接找我们的客服为您处理。</p>
+                </div>
+            </div>
+            <div class="tm-services-information-list" data-rel="zhuanrang">
+                <div><div>申请主体：商标出让方和受让方<br>所需周期：商标转让申请时限为6-10个月</div></div>
+                <div><div><a href="/Public/Files/zhuanrangshenqing.doc" target="_blank" title="转让移转申请注册商标申请书">【转让移转申请注册商标申请书】</a></div></div>
+                <div>
+                    <p>什么是商标转让？</p><p>商标转让是商标注册人在注册商标的有效期内，依法定程序，将商标专用权转让给另一方的行为。</p>
+                    <p>正在申请中的商标能转让吗？</p><p>可以，但须提交受理通知书和核准商标转让证明。</p>
+                    <p>商标该如何进行转让比较恰当？</p><p>自己找到买家，找商标代理机构办理转让手续。或是委托商标代理机构（例如22商标服务平台）卖商标，再办理转让手续。</p>
+                    <p>什么情况下商标转让无效？</p><p>在初审阶段尚未注册的商标；<br>注册商标有效期满及六个月宽展期内未提出续展申请，或商标局已注销的商标；<br>他人已向商标局提出该注册商标连续三年停止使用的；<br>擅自改变了注册商标的文字、图形及其组合的；<br>未经有关部门批准，自行改变注册人名义、地址，以其他事项而未办理变更手续的。</p>
+                </div>
+            </div>
+            <div class="tm-services-information-list" data-rel="biangeng">
+                <div><div>申请主体： 需变更注册人名义、登记地址等注册事项（代理人、文件接收人）的商标注册人<br>所需周期：商标变更申请后6-10个月左右完成</div></div>
+                <div><div><a href="/Public/Files/biangengshenqing.doc" target="_blank" title="商标变更申请书">【商标变更申请书】</a></div></div>
+                <div>
+                    <p>什么是商标变更？</p><p>是指变更注册商标的注册人，注册地址或者其他事项。</p>
+                    <p>申请商标变更需要注意的事项有哪些？</p><p>变更商标注册人名义或者地址的，商标注册人应当将其全部注册商标一并变更（包括已上初审公告尚在公告期的商标），没有一并变更的视为放弃变更申请。</p>
+                    <p>商标变更成功后，会重新下发商标证书吗？</p><p>商标变更成功后，商标局会下发一份变更证明，证明变更已经成功了。</p>
+                    <p>有好几个商标，这次只变一个，其他的不变可以吗？</p><p>不可以。按照商标局的规定，商标变更必须是一并变更。也就是说，有几个商标就需要变更几个商标，否则的话商标局会将变更材料不予受理。</p>
+                </div>
+            </div>
+            <div class="tm-services-information-list" data-rel="zhuxiao">
+                <div><div>申请主体：想注销整体或部分商品或服务项目的商标注册人<br>所需周期：商标注销申请后约6个月核准完成</div></div>
+                <div><div><a href="/Public/Files/zhuxiaoshenqing.doc" target="_blank" title="商标注销申请书">【商标注销申请书】</a></div></div>
+                <div>
+                    <p>什么是商标注销？</p><p>是指商标局根据商标注册人本人、或者他人的申请，将注册商标注销或部分注销的法律程序。</p>
+                    <p>商标撤销和商标注销有什么区别？</p><p>商标注销后可以重新申请;商标撤销不能再申请；商标注销是主动行为;商标撤销是被动行为。</p>
+                    <p>何种情况下可以申请注销他人的注册商标？</p><p>商标注册人死亡或者终止，自死亡或者终止之日起1年期满，该注册商标没有办理移转手续的，任何人可以向商标局申请注销该注册商标。该注册商标专用权自商标注册人死亡或者终止之日起终止。</p>
+                    <p>被注销的商标能不能重新使用？</p><p>已经注销的商标在5年内不可以重新注册，但是可以使用，前提是不可以侵犯别人的商标权。</p>
+                </div>
+            </div>
+            <div class="tm-services-information-list" data-rel="yiyi">
+                <div><div>申请主体：已进入公告期的商标会对自己品牌权利造成影响，可申请商标异议。<br>所需周期：商标异议时限约12-18个月。</div></div>
+                <div><div><a href="/Public/Files/yiyishenqing.doc" target="_blank" title="商标异议申请书">【商标异议申请书】</a></div></div>
+                <div>
+                    <p>什么是商标异议？</p><p>是指公众对某一经过初步审定并公告的商标，在法定期限内，向商标局提出该商标不予注册的反对意见，即要求商标局在规定的3个月异议期满后不要核准该商标注册。</p>
+                    <p>商标异议申请的范围有哪几种？</p><p>目前，商标异议的内容主要有两种：一是与已注册的商标相同或近似；二是认为该商标违反禁用条款。</p>
+                    <p>已注册商标可以异议吗?</p><p>公告期的商标可以提出异议，已注册的商标可以商标撤三申请等方式使商标灭失。</p>
+                </div>
+            </div>
+            <div class="tm-services-information-list" data-rel="chexiao">
+                <div><div>申请主体： 想撤销他人连续三年及以上不使用的商标的企业或个人<br>所需周期：商标撤三申请时限为12-18个月</div></div>
+                <div><div><a href="/Public/Files/P020140504606551128308.doc" target="_blank" title="撤销连续三年停止使用注册商标申请书">【撤销连续三年停止使用注册商标申请书】</a></div></div>
+                <div>
+                    <p>什么是商标撤三？</p><p>商标撤三指想商标局申请撤销没有正当理由而连续三年不使用的已注册商标，任何单位或者个人都可以向商标局申请撤销该注册商标。</p>
+                    <p>商标撤三申请的方法?</p><p>可以由申请人到商标总局办事大厅(北京市西城区茶马南街1号)办理，也可以委托机构代为办理。</p>
+                    <p>商标撤三需要多久?</p><p>商标撤三申请周期大约12—18个月。</p>
+                </div>
+            </div>
+            <div class="tm-services-information-list" data-rel="bohui">
+                <div><div>申请主体：被商标局驳回的企业或个人申请者<br>所需周期：商标复审时限为9-12个月</div></div>
+                <div><div>
+                    <a href="/Public/Files/bohui-index.doc" target="_blank" title="驳回复审首页">【驳回复审首页】</a><br>
+                    <a href="/Public/Files/bohui-content.doc" target="_blank" title="驳回复审正文">【驳回复审正文】</a></div></div>
+                <div>
+                    <p>如何申请商标复审?</p><p>商标驳回复审可以由申请人到商标总局办事大厅(北京市西城区茶马南街1号)办理，也可以委托他人或者申请机构代为办理。</p>
+                    <p>商标复审要多长时间?</p><p>商标驳回复审周期约9-12个月。</p>
+                    <p>商标复审不成功怎么办?</p><p>①规避开驳回理由重新注册申请新的商标；<br>②将商标评审委员会起诉到北京市知识产权法院，通过行政诉讼来争取商标权。</p>
+                </div>
+            </div>
+            <div class="tm-services-information-list" data-rel="wuxiao">
+                <div><div>申请主体：商标被他人恶意注册，想申请无效宣告的个人或公司<br>所需周期：商标无效宣告申请时限为18-24个月</div></div>
+                <div><div>
+                    <a href="/Public/Files/wuxiao-index.doc" target="_blank" title="商标无效宣告申请书首页">【商标无效宣告申请书首页】</a><br>
+                    <a href="/Public/Files/wuxiao-content.doc" target="_blank" title="商标无效宣告申请书正文">【商标无效宣告申请书正文】</a></div></div>
+                <div>
+                    <p>什么是商标无效？</p><p>是指商标在先权利人或者利害关系人认为已经注册的商标，违反《商标法》相关规定，请求商标评审委员会撤销该注册商标的法律程序。</p>
+                    <p>商标无效宣告要多长时间？</p><p>一年半至两年。</p>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var usermoney = 3499.0000, template="", index=0, items=[], type = "";
+            if(type && type!='yiyi')
+                window.location='/services/'+ type +'/modify';
+            function InputFocus(src){
+                var next = $(src).next().removeClass("error");
+                next.html(" " + next.attr("data-msg"));
+            }
+            function InputBlur(src, result){
+                result=result || {};
+                result.error = false;
+                if(src.type=="hidden") return;
+                var next = $(src).next(), name=src.name;
+                next.html("");
+                var val = src.value;
+                if(val==$(src).data("value")){
+                    val = "";
+                }
+                if(val==""){
+                    next.addClass("error").html(" " + next.data("error"));
+                    result.error = true;
+                    return;
+                }
+                var raise_error=false;
+                switch(name){
+                    case "apply_name":
+                        if(val.length>30) raise_error = true;
+                        break;
+                    case "apply_contact":
+                        if(!/^([\d\-\+\.]{8,15})$/.test(val)) raise_error = true;
+                        break;
+                    case "apply_no":
+                        if(!/^([\w\-]+)$/.test(val)) raise_error = true;
+                        break;
+                }
+                if(raise_error){
+                    result.error = true;
+                    next.addClass("error").html(" " + next.data("error"));
+                }
+            }
+            function CreateRequest(){
+                var find_error=false, result={};
+                $("div.tm-goods-list ul").each(function(){
+                    $(this).find("input[type!='button']").each(function(){
+                        if(this.type!="text") return;
+                        InputBlur(this, result);
+                        if(result.error) find_error = true;
+                    });
+                });
+                return !find_error;
+            }
+            function CheckFee(){
+                var count=$(".tm-goods-list").length;
+                $("div.tm-goods-fee ul li i.tm-count").html(count);
+                $("div.tm-goods-fee ul li i.big").html(count * usermoney);
+            }
+            function DeleteItem(src){
+                if($(".tm-goods-list").length>1) src.parentNode.parentNode.parentNode.removeChild(src.parentNode.parentNode);
+                if($(".tm-goods-list").length==1){
+                    $(".tm-goods-list div.tm-button-sets").html('<button onclick="AddItem(this);">新增商标异议</button>')
+                }else{
+                    $(".tm-goods-list").last().find("div.tm-button-sets").html('<button onclick="AddItem(this);">新增商标异议</button> <button class=\"tm-del\" onclick=\"DeleteItem(this);\">删除</button>')
+                }
+                CheckFee();
+            }
+            function AddItem(src){
+                $(".tm-goods-fee").before($("<div class=\"tm-goods-items tm-goods-list\">" + template.replace(/#index#/g,index++) + "</div>"));
+                $(src).parent().html("").append("<button class=\"tm-del\" onclick=\"DeleteItem(this);\">删除</button>");
+                hookinput();
+                CheckFee();
+            }
+            function Parpare(){
+                if($(".tm-goods-list").length==1){
+                    $(".tm-goods-list div.tm-button-sets").html('<button onclick="AddItem(this);">新增商标异议</button>')
+                }else{
+                    $(".tm-goods-list div.tm-button-sets").html('<button class=\"tm-del\" onclick=\"DeleteItem(this);\">删除</button>')
+                    $(".tm-goods-list div.tm-button-sets:last").html('<button onclick="AddItem(this);">新增商标异议</button> <button class=\"tm-del\" onclick=\"DeleteItem(this);\">删除</button>')
+                }
+            }
+
+
+            $(document).ready(function(){
+                $("#tm-services3 div.tm-goods-items").on("mouseover", "input[type=text]", function(){ $(this).addClass("hover");}).on("mouseout", "input[type=text]", function(){ $(this).removeClass("hover");});
+                template = $("div.tm-template").html();console.log($("div.tm-template"))
+                $("div.tm-template").remove();
+                $(".tm-goods-fee").before($("<div class=\"tm-goods-items tm-goods-list\">" + template.replace(/#index#/g,index++) + "</div>"));
+                $(".tm-goods-list button.tm-del").remove();
+                var len = items.length;
+                if(len>0){
+                    $("div.tm-goods-list").remove();
+                    var lists=[], _item;
+                    for(var i=0;i<len;i++){
+                        //var list={}, my = template;
+                        //lists.push(list);
+                        var item = $("<div class=\"tm-goods-items tm-goods-list\">" + template.replace(/#index#/g,index++) + "</div>")
+                        $(".tm-goods-fee").before(item);
+                        item.find("input[name='apply_name']").next().html("");
+                        item.find("input[name='apply_contact']").next().html("");
+                        item.find("input[name='apply_no']").next().html("");
+                        _item = items[i];
+                        if(_item.apply_name) item.find("input[name='apply_name']").val(_item.apply_name);
+                        if(_item.apply_contact) item.find("input[name='apply_contact']").val(_item.apply_contact);
+                        if(_item.apply_no) item.find("input[name='apply_no']").val(_item.apply_no);
+                        if(_item.orderid) item.find("input[name='orderid']").val(_item.orderid);
+                        Parpare();
+                    }
+                }
+                $("div.tm-goods-more ul.tabs").on('click', 'li', function(){
+                    $(this).addClass('hover').siblings().removeClass('hover');
+                    var rel = $(this).data('rel');
+                    $("div.tm-goods-more>div").hide();
+                    $("#" + rel).show();
+                });
+                $("div.tm-services-information-list[data-rel=yiyi]>div").each(function(i){
+                    if(i==0){
+                        $("#t01>div:eq(1)>div.tm-goods-more-content").html($(this).html());
+                    }
+                    if(i==1){
+                        $("#t01>div:eq(2)>div.tm-goods-more-content").html($(this).html() + '<div>【代理委托书】<a href="/Public/Files/shangbiao-geren-common.doc" target="_blank">个人</a>&nbsp; &nbsp; <a href="/Public/Files/shangbiao-gongsi-common.doc" target="_blank">企业</a></div>');
+                    }
+                    if(i==2){
+                        $("#t02").html($(this).html());
+                        hookquestion();
+                    }
+                });
+                hookinput();
+            });
+            function hookquestion(){
+                $("div.tm-goods-more-title").each(function(){
+                    var a = $(this).height();
+                    var b = $(this).next().height();
+                    if(b>a) a = b;
+                    $(this).css({"padding-top": parseInt((a-80)/2) + "px"});
+                });
+                $("#t02 p").each(function(i){
+                    if(i%2==0){
+                        $(this).addClass('tm-question-name').html('<span><i>' + Math.ceil((i+1)/2) + '</i>' + $(this).html() + '</span>');
+                    }else{
+                        $(this).addClass('tm-question-body');
+                    }
+                });
+            }
+            function hookinput(){
+                $("input[data-value]").off('focus').off('blur');
+                $("input[data-value]").each(function(){
+                    if(this.value==''){
+                        this.value = $(this).data('value');
+                        this.style.color = '#aaa';
+                    }
+                });
+                $("input[data-value]").on('focus', function(){
+                    if(this.value==$(this).data('value')){
+                        this.value = '';
+                        this.style.color = '#666';
+                    }
+                }).on('blur', function(){
+                    if(this.value==''){
+                        this.value = $(this).data('value');
+                        this.style.color = '#aaa';
+                    }
+                });
+            }
+        </script>
+    </div>
+
+
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="top">
+            <div class="center">
+                <img src="../../Static/img/serviceNav.png" alt="">
+                <div>
+                    <h1 class="same ">
+                        您的业务还没有展开？马上
+                    </h1>
+                    <div class="create same btn-same "><a href="#">创建业务</a></div>
+                    <h1 class="same">或者</h1>
+                    <div class="become same btn-same"><a href="#">成为代理商</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="service-lis">
+            <div class="center">
+                <ul>
+                    <li class="first">
+                        <dl>
+                            <dt>服务技术</dt>
+                            <dd><a href="#">联系客服</a></dd>
+                            <dd><a href="#">常用下载</a></dd>
+                            <dd><a href="#">帮助中心</a></dd>
+                            <dd><a href="#">违规举报</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>新手指导</dt>
+                            <dd><a href="#">注册第一商务</a></dd>
+                            <dd><a href="#">域名注册申请</a></dd>
+                            <dd><a href="#">购买虚拟主机</a></dd>
+                            <dd><a href="#">主机邮局续费</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>付款方式</dt>
+                            <dd><a href="#">在线支付</a></dd>
+                            <dd><a href="#">银行汇款</a></dd>
+                            <dd><a href="#">邮局汇款</a></dd>
+                            <dd><a href="#">上门缴收</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>快速入口</dt>
+                            <dd><a href="#">域名控制面板</a></dd>
+                            <dd><a href="#">虚拟主机管理</a></dd>
+                            <dd><a href="#">云主机管理</a></dd>
+                            <dd><a href="#">数据库管理</a></dd>
+                        </dl>
+                    </li>
+                    <li class="last">
+                        <dl>
+                            <dt><h3>客服热线：<span>4006-035-001</span></h3></dt>
+                            <dd class="show"><i class="icon same show1 wxshow"></i><i class="icon same show2 wx"></i><a href="#">第一商务官方微信</a></dd>
+                            <dd><i class="icon same show1 xlshow"></i><i class="icon same show2 xl"></i><a href="#">第一商务官方微博</a></dd>
+                            <dd><i class="icon same show1 qqshow"></i><i class="icon same show2 qq"></i><a href="#">第一商务官方客服</a></dd>
+                        </dl>
+                        <div>
+                            <i class="icon wxewm show-hide-icon show"></i>
+                            <i class="icon xlewm show-hide-icon"></i>
+                            <i class="icon qqewm show-hide-icon"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="center">
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">网站地图</a></li>
+                    <li><a href="#">人才招聘</a></li>
+                    <li><a href="#">客服中心</a></li>
+                    <li><a href="#">友情链接</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">付款方式</a></li>
+                    <li><a href="#">有问必答</a></li>
+                    <li><a href="#">价格总览</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>
+            客服热线：0571-87756803&nbsp;&nbsp; 87756807 &nbsp;&nbsp;&nbsp;&nbsp;合作热线：0571-87756822&nbsp;&nbsp;&nbsp;&nbsp;  网络备案：0571-87756883&nbsp;&nbsp; 87756809&nbsp;&nbsp;&nbsp;&nbsp;传真：0571-87756868
+        </p>
+        <p>
+            第一商务投诉电话：0571-87756866&nbsp;&nbsp;国家域名注册服务投诉中心投诉受理电话：010-58813000
+        </p>
+        <p>
+            地址：浙江省杭州市西湖区紫霞街176号杭州互联网创新创业园2号楼11楼(310030)
+        </p>
+        <p>
+            信息产业部域名注册服务批文号：信部电函[2008]224号&nbsp;&nbsp;&nbsp;&nbsp;经营许可证：浙B1.B2-20120241&nbsp;&nbsp;&nbsp;&nbsp; 浙公网安备33010602000268号
+        </p>
+        <p>
+            Copyright© 1999-2016 第一商务 版权所有
+        </p>
+        <p class="logo">
+            <a href="#" class="l1"></a>
+            <a href="#" class="l2"></a>
+            <a href="#" class="l3"></a>
+            <a href="#" class="l4"></a>
+            <a href="#" class="l5"></a>
+            <a href="#" class="l6"></a>
+            <a href="#" class="l7"></a>
+            <a href="#" class="l8"></a>
+        </p>    
+        <p class="link">
+            <span>友情链接：</span>
+            <a href="#">爱名网</a><span class="line">|</span><a href="#">域名抢注</a><span class="line">|</span><a href="#">商务网</a><span class="line">|</span><a href="#">电商网 </a><span class="line">|</span><a href="#">成都网建设 </a><span class="line">|</span><a href="#">折800</a><span class="line">|</span><a href="#">中网</a><span class="line">|</span><a href="#">步淘网</a><span class="line">|</span><a href="#">九赢广告联盟</a>
+        </p>
+    </div>
+    <script src="../../Static/js/module/trademark/trademark.js"></script>
+</body>
+</html>

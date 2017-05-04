@@ -61,16 +61,16 @@
 
     <!-- 内容区 -->
    <div id="demark">
-        <div id="banner_tabs" class="flexslider">
+        <div id="banner_tabs" class="flexslider" style="margin-bottom: 0;">
             <ul class="slides">
-                <li style="background-color: rgb(110, 173, 252); position: absolute; left: 0px; top: 0px; display: none;">
+                <li style="background-color: rgb(110, 173, 252); position: absolute; left: 0px; top: 0px; ">
                     <a title="商标注册，商标代持注册" href="/help"><img width="1000" height="300" src="../../Static/img/banner4.jpg"></a>
                 </li>
                 <li style="background-color: rgb(215, 238, 254); position: absolute; left: 0px; top: 0px; display: list-item;">
                     <a title="国家商标局认证正规代理商，中华商标协会会员" href="javascript:void(0)"><img width="1000" height="300" src="../../Static/img/banner2.jpg"></a>
                 </li>
             </ul>
-        <ol id="bannerCtrl" class="flex-control-nav flex-control-paging"><li class=""><a></a></li><li class="active"><a></a></li></ol></div>
+        </div>
         <script src="../../Static/js/module/trademark/fw/slide.js"></script>
         <script type="text/javascript">
             $(function () {
@@ -82,12 +82,14 @@
                         html += '<li><a></a></li>';
                     }
                     html += '</ol>';
+
                 }
                 $('#banner_tabs').append(html);
+                $('#banner_tabs').find('#bannerCtrl').find('li:first').addClass('active');
             
                 var bannerSlider = new Slider($('#banner_tabs'), {
                     time: 5000,
-                    delay: 0,
+                    delay: 400,
                     event: 'hover',
                     auto: true,
                     mode: 'fade',
