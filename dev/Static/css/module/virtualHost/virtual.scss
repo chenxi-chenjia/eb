@@ -94,6 +94,7 @@
 				color: #333;
 				height:130px;
 				line-height: 130px;
+				font-weight: 400;
 			}
 			.classify{
 				overflow: hidden;
@@ -574,15 +575,16 @@
 	}
 	.buy-form{
 		background:#f2f2f2;
-		padding-bottom:48px;
+		padding:50px 0;
+		position:relative;
 		.center{
-			padding-top:110px;
+			padding-top:90px;
 			position:relative;
 			.tab{
 				position: absolute;
 				width: 100%;
 				left: 0;
-				top:20px;
+				top:0;
 				.lis{
 					position:relative;
 					width: 25%;
@@ -1090,8 +1092,9 @@
 }
 //虚拟主机购买结果
 #virtual-buyresult{
-	padding:40px 0 50px ;
+	padding:50px 0;
 	background:#f2f2f2;
+	position:relative;
 	.content{
 		padding: 0 60px 50px 60px;
 	}

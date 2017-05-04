@@ -218,12 +218,12 @@ h1{
 	}
 }
 #help-center{
-	padding-top:80px;
 	h1{
 		padding:0;
 		position:relative;
 		font-size: 30px;
 		line-height: 72px;
+		height: 72px;
 		color:#333;
 		.line{
 			width: 60px;
@@ -506,7 +506,7 @@ h1{
 			h2{
 				padding:28px 0 20px 77px;
 				font-size: 16px;
-				color:#1296db;
+				color:#dd2726;
 			}
 			img{
 				position:absolute;
@@ -539,7 +539,7 @@ h1{
 			padding-top: 20px;
 			line-height: 24px;
 			font-size: 16px;
-			color:#1296db;
+			color:#dd2726;
 			padding-left:35px;
 			.icon{
 				background-image:url(../../../img/serviceCentter-payment.png);
@@ -575,7 +575,7 @@ h1{
 		li{
 			padding-top:25px;
 			h3{
-				color:#1296db;
+				color:#dd2726;
 				padding-bottom:20px;
 				font-weight:700;
 			}
@@ -644,7 +644,6 @@ h1{
 	}
 	.right{
 		.contents{
-			padding-top:20px;
 			.r1{
 				background:#fff;
 				padding-bottom: 40px;
@@ -790,7 +789,6 @@ h1{
 					padding-left:70px;
 					position:relative;
 					font-size: 16px;
-					font-weight: 400;
 					color:#1b96de;
 					.icon{
 						position:absolute;
@@ -987,13 +985,9 @@ h1{
 		}
 	}
 	.contents{
-		padding-top:20px;
 		p{
-			line-height: 20px;
-			font-size: 12px;
-		}
-		.mt{
-			padding-top:25px;
+			line-height: 25px;
+			font-size: 14px;
 		}
 	}
 }
@@ -1097,10 +1091,8 @@ h1{
 		}
 	}
 	.contents{
-		padding-top:20px;
 		h2{
-			color:#1296db;
-			font-weight: 550;
+			color:#dd2726;
 			padding-bottom: 15px;
 		}
 		h3{
@@ -1131,16 +1123,15 @@ h1{
 		}
 	}
 	.contents{
-		padding-top:20px;
 		h2{
-			color:#1296db;
+			color:#dd2726;
 			font-weight:550;
 			padding-bottom:15px; 
 		}
 		p{
-			line-height: 20px;
+			line-height: 25px;
 			word-break:break-all;
-			font-size: 12px; 
+			font-size: 14px; 
 			color:#444;
 		}
 	}
@@ -1461,8 +1452,8 @@ h1{
 		h2{
 			float: left;
 			width: 25%;
-			height: 97px;
-			line-height: 97px;
+			height: 50px;
+			line-height: 50px;
 			text-align: center;
 			span{
 				font-size: 18px;
@@ -1472,7 +1463,7 @@ h1{
 		}
 		.now{
 			span{
-				color:#1296db;
+				color:#dd2726;
 			}
 		}
 	}
@@ -1482,6 +1473,8 @@ h1{
 		line-height: 72px;
 	}
 	.content{
+		padding-top:50px;
+		position: relative;
 		.title{
 			text-align: center;
 			font-size: 22px;
@@ -1549,15 +1542,16 @@ h1{
 //新闻资讯
 #news{
 	padding-top:0;
+	position:relative;
 	.title-top{
 		overflow: hidden;
 		border-bottom:2px solid #ebebeb;
 		h2{
 			float: left;
 			width: 25%;
-			height: 97px;
+			height: 50px;
 			text-align: center;
-			line-height: 97px;
+			line-height: 50px;
 			*width:24%;
 			span{
 				font-size: 18px;
@@ -1568,11 +1562,13 @@ h1{
 		}
 		.now{
 			span{
-				color:#1296db;
+				color:#dd2726;
 			}
 		}
 	}
 	.content{
+		padding-top:50px ;
+		position: relative;
 		li{
 			padding-left:522px;
 			padding-top:40px;
@@ -1651,16 +1647,16 @@ h1{
 			}
 		}
 		.ys{
-			margin-top: 60px;
+			margin-top: 50px;
 				a:hover{
-				background:#1296db;
-				border-color:#1296db;
+				background:#dd2726;
+				border-color:#dd2726;
 				color:#fff;
 			}
 			.now{
 				color:#fff;
-				background:#1296db;
-				border-color:#1296db;
+				background:#dd2726;
+				border-color:#dd2726;
 			}
 		}
 	}

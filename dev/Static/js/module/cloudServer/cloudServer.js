@@ -450,17 +450,10 @@
 		})
 
 		//右边滚动
-		var mh=$('.form-right').offset().top;
-		var mgMh=$('.buybox').outerHeight()-$('.form-right').outerHeight();
-		var maxt=mh+mgMh;
-		if($(window).scrollTop()<mh){
-			$('.form-right').css('top',0);
-		}else if($(window).scrollTop()>=mh&&$(window).scrollTop()<maxt){
-			$('.form-right').css('top',$(window).scrollTop()-mh);
-		}else if($(window).scrollTop()>maxt){
-			$('.form-right').css('top',mgMh);
-		}
-		$(window).scroll(function(){
+		if($('.form-right').length>0){
+			var mh=$('.form-right').offset().top;
+			var mgMh=$('.buybox').outerHeight()-$('.form-right').outerHeight();
+			var maxt=mh+mgMh;
 			if($(window).scrollTop()<mh){
 				$('.form-right').css('top',0);
 			}else if($(window).scrollTop()>=mh&&$(window).scrollTop()<maxt){
@@ -468,7 +461,17 @@
 			}else if($(window).scrollTop()>maxt){
 				$('.form-right').css('top',mgMh);
 			}
-		})
+			$(window).scroll(function(){
+				if($(window).scrollTop()<mh){
+					$('.form-right').css('top',0);
+				}else if($(window).scrollTop()>=mh&&$(window).scrollTop()<maxt){
+					$('.form-right').css('top',$(window).scrollTop()-mh);
+				}else if($(window).scrollTop()>maxt){
+					$('.form-right').css('top',mgMh);
+				}
+			})
+		}
+			
 
 	}
 	if($('#cloudServer-buypage').length>0){

@@ -14,6 +14,22 @@ $(function(){
             delayTime: 1000
         });
     }
+    function banner_slide(){
+        var fa=$('#demark-banner');
+        var flag=true;
+        $('.slide-button',fa).on('click',function(){
+            $('.slide-box').slideToggle();
+            if(flag){
+                $('input',fa).css('borderBottomLeftRadius','0')
+            }else{
+                $('input',fa).css('borderBottomLeftRadius','4px')
+            }
+            flag=!flag;
+        })
+    }
+    if($('#demark').length>0){
+        banner_slide();
+    }
          
 })
     

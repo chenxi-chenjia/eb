@@ -1,0 +1,58 @@
+#tm-classes .container > h3 {
+    text-align: center;
+    margin: 0 auto 30px;
+    font-size: 24px;
+}
+
+#tm-classes .container > div.search-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#tm-classes .container > div.search-form a:hover {
+    color: #666;
+}
+
+#tm-classes .container > div.search-form input {
+    border: 1px #aaa solid;
+    height: 24px;
+    line-height: 24px;
+    color: #999;
+    padding: 0 10px;
+    font-size: 12px;
+    border-right: 0px;
+    width: 200px;
+}
+
+#tm-classes .container > div.search-form button {
+    border: 0px;
+    background-color: #c92627;
+    color: #fff;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+}
+#tm-classes .container {
+    padding-top:0
+} 
+div.content-newnav {
+    margin-bottom: 40px;
+}
+#tm-main-classess {
+    height : auto !important; 
+}
+#tm-main-classess h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+#demark #tm-main-classess h3 a {
+    color: #ff6a00;
+} 
+#tm-main-classess div {
+    margin-bottom: 20px; padding:10px
+}
+#tm-main-classess div:hover {
+    background-color:#fffaee;
+}
+#tm-main-classess div:hover a {
+    color: #ff6a00;
+}

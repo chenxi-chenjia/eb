@@ -21,7 +21,7 @@
 	}
 	.content{
 		position: relative;
-		z-index: 1;
+		z-index: 10;
 		padding-top:48px;
 		h1.icon{
 			width: 379px;
@@ -212,11 +212,12 @@
 	.slide-box{
 		display: none;
 		position:absolute;
-		z-index: 10;
+		z-index: 30;
 		top:58px;
 		left: 8px;
 		width:810px;
 		background:#fff;
+		box-shadow: 0 0 30px rgba(0,0,0,0.4);
 		.slide-top{
 			text-align: right;
 			height: 49px;
@@ -1109,7 +1110,8 @@ div.tm-order-classes a.add {background-color:#dc4c4b; }
 .menttip .menttip-con li,.menttip .menttip-nav{padding: 0px 12px;}
 #header-banner .container{position: relative;overflow: visible;}
 .container .content-newnav{height: 54px;line-height: 54px;}
-.container .content-newnav a{color: #0066cc;}
+.container .content-newnav a{color: #666;}
+.container .content-newnav a.this-location{color: #dd2726;}
 .mentname{width: 166px;border: 1px solid #e6e6e6;background: #FFF;position: absolute;right: 218px;z-index: 100;padding: 12px;text-align: center;top: 42px;display: none;box-shadow:0px 0px 3px 0px #ddd;}
 .mentname .out{height: 32px;width: 100px;background: #dc4c4c;display: inline-block;line-height: 32px;color: #FFF;}
 .mentname .out:hover{background: #fe9b1c;}

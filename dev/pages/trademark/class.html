@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商标-分类查询</title>
+    <link rel="stylesheet" href="../../Static/css/public.css">
+    <script src='../../Static/js/jquery.min.js'></script>
+</head>
+<body>
+    <script src= '../../Static/js/jquery.SuperSlide.2.1.1.js'></script>
+    <link rel="stylesheet" href="../../Static/css/module/trademark/trademark.css">
+
+    <!--头部  -->
+    <div class="header">
+        <div class="center">
+            <div class="headerLeft">
+                第一商务欢迎你
+            </div>
+            <div class="headerRight">
+                <div class="link header-float show">
+                    <a href="#" class="login">登录</a>
+                    <div class="line"></div>
+                    <a href="#" class="registered">注册</a>
+                </div>
+                <div class="login-bingo header-float">
+                    <span>路人甲123456欢迎你</span>
+                    <a href="#">退出</a>
+                </div>
+                <ul class="header-float">
+                    <li><a href="#">购物车<span>0</span></a></li>
+                    <li><a href="#">备案</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                    <li><a href="#">服务中心</a></li>
+                    <li><a href="#">新闻资讯</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <div class="center">
+            <h1 class="logo"><a href="#"><img src="../../Static/img/logo.png" alt=""></a></h1>
+            <div class="navLis">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li class="now"><a href="#">域名注册</a></li>
+                    <li><a href="#">商标注册</a></li>
+                    <li><a href="#">虚拟主机</a></li>
+                    <li><a href="#">企业邮局</a></li>
+                    <li><a href="#">云主机</a></li>
+                    <!-- <li><a href="#">SSL证书</a></li>
+                    <li><a href="#">租用托管</a></li>
+                    <li><a href="#">增值应用</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- banner -->
+    <div id="demark-banner">
+        <div class="bg-img"></div>
+        <div class="content">
+            <div class="center">
+               <h1 class="icon"></h1>
+                <div class="input-box">
+                    <div class="mask"></div>
+                    <div class="input">
+                        <input type="text" placeholder="请输入您要查询的商标">
+                        <div class="slide-button">
+                            全部分类
+                            <div class="jiao"></div>
+                        </div>
+                    </div>
+                    <div class="button-box">
+                        <a href="#" class="button">
+                            <span><i class="icon"></i>商标查询</span>
+                        </a>
+                    </div>
+                    <div class="slide-box">
+                        <div class="slide-top">
+                            <span class="cursor"><i class="icon"></i>使用优惠码的域名</span>
+                            <span>已选择<b>0</b>个分类</span>
+                        </div>
+                        <ul class="form-table no-float">
+                            <li class="fl" data-value="01">01.化学原料</li>
+                            <li class="fl" data-value="02">02.颜料油漆</li>
+                            <li class="fl" data-value="03">03.日化用品</li>
+                            <li class="fl" data-value="04">04.燃料油脂</li>
+                            <li class="fl" data-value="05">05.医药卫生</li>
+                            <li class="fl" data-value="06">06.五金金属</li>
+                            <li class="fl" data-value="07">07.机械设备</li>
+                            <li class="fl" data-value="08">08.手工器械</li>
+                            <li class="fl" data-value="09">09.科学仪器</li>
+                            <li class="fl" data-value="10">10.医疗器械</li>
+                            <li class="fl" data-value="11">11.家用电器</li>
+                            <li class="fl" data-value="12">12.运输工具</li>
+                            <li class="fl" data-value="13">13.军用烟花</li>
+                            <li class="fl" data-value="14">14.珠宝钟表</li>
+                            <li class="fl" data-value="15">15.乐器</li>
+                            <li class="fl" data-value="16">16.文化用品</li>
+                            <li class="fl" data-value="17">17.橡胶制品</li>
+                            <li class="fl" data-value="18">18.皮革皮具</li>
+                            <li class="fl" data-value="19">19.建筑材料</li>
+                            <li class="fl" data-value="20">20.家具</li>
+                            <li class="fl" data-value="21">21.家用器具</li>
+                            <li class="fl" data-value="22">22.绳网袋篷</li>
+                            <li class="fl" data-value="23">23.纺织纱线</li>
+                            <li class="fl" data-value="24">24.床单布料</li>
+                            <li class="fl" data-value="25">25.服装鞋帽</li>
+                            <li class="fl" data-value="26">26.花边拉链</li>
+                            <li class="fl" data-value="27">27.地毯席垫</li>
+                            <li class="fl" data-value="28">28.体育玩具</li>
+                            <li class="fl" data-value="29">29.食品罐头</li>
+                            <li class="fl" data-value="30">30.调味茶糖</li>
+                            <li class="fl" data-value="31">31.水果花木</li>
+                            <li class="fl" data-value="32">32.啤酒饮料</li>
+                            <li class="fl" data-value="33">33.酒</li>
+                            <li class="fl" data-value="34">34.烟草烟具</li>
+                            <li class="fl" data-value="35">35.广告贸易</li>
+                            <li class="fl" data-value="36">36.金融物管</li>
+                            <li class="fl" data-value="37">37.建筑修理</li>
+                            <li class="fl" data-value="38">38.通讯电信</li>
+                            <li class="fl" data-value="39">39.运输旅行</li>
+                            <li class="fl" data-value="40">40.材料处理</li>
+                            <li class="fl" data-value="41">41.教育娱乐</li>
+                            <li class="fl" data-value="42">42.科研服务</li>
+                            <li class="fl" data-value="43">43.餐饮酒店</li>
+                            <li class="fl" data-value="44">44.医疗园艺</li>
+                            <li class="fl" data-value="45">45.社会法律</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="checked-box">
+                    <label><input type="radio" name="select_type" value="模糊查询" checked="checked"> 模糊查询（商标名/申请号）</label>
+                    <label class="selector-ex"><input type="radio" name="select_type" value="近似查询"> 近似查询</label>
+                    <label class="selector-ex"><input type="radio" name="select_type" value="精确查询"> 精确查询</label>
+                    <label><input type="radio" name="select_type" value="商标申请人"> 商标申请人</label>
+                    <div class="fr">
+                        <span>2016版<b>商标分类表</b>免费商标查询</span>
+                    </div>
+                </div> 
+            </div>
+                
+        </div>
+        <div class="bottom">
+            <div class="mask"></div>
+            <div class="center no-float">
+                <i class="icon"></i>
+                <ul class="gonggao1 fl">
+                    <li>
+                        [公告] 这里是公告一这里是公告一
+                    </li>
+                     <li>
+                        [公告] 这里是公告一这里是公告一
+                    </li>
+                     <li>
+                        [公告] 这里是公告一这里是公告一
+                    </li>
+                     <li>
+                        [公告] 这里是公告一这里是公告一
+                    </li>
+                </ul>
+                <ul class="gonggao2 fl">
+                    <li>
+                        [公告] 这里是公告二这里是公告二
+                        <i class="icon"></i>
+                    </li>
+                     <li>
+                        [公告] 这里是公告二这里是公告二
+                        <i class="icon"></i>
+                    </li>
+                     <li>
+                        [公告] 这里是公告二这里是公告二
+                        <i class="icon"></i>
+                    </li>
+                     <li>
+                        [公告] 这里是公告二这里是公告二
+                        <i class="icon"></i>
+                    </li>
+                </ul>
+                <div class="fr no-float">
+                    <span>在线客服</span>
+                    <div class="icon i1 fl"></div>
+                    <div class="icon i2 fr"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 内容区 -->
+    <link rel="stylesheet" href="../../Static/css/module/trademark/class/class.css">
+   <div id="demark">
+        <div id="tm-classes">
+            <div class="container clearfix" id="tm-class-search">
+                <div class="content-newnav">
+                    当前位置：<a href="/">首页</a> &gt; <span><a href="/classes.html" class="this-location">商标国际分类</a></span>
+                </div>
+                <h3>《2016版类似商品和服务区分表》- 商标国际分类</h3>
+                <div class="search-form">
+                    <form action="/classes/search" method="get" onsubmit="if (this['keyword'].value == '输入商品名称关键字') { alert('输入商品名称关键字'); return false; }">
+                        <input type="text" value="输入商品名称关键字" name="keyword" onfocus="if (this.value == '输入商品名称关键字') { this.value = ''; }" onblur="    if (this.value == '') { this.value = '输入商品名称关键字'; }"><button>搜索</button>
+                        &nbsp;<a href="/classes.html">查看全部分类</a>&nbsp;|&nbsp;<a href="/tusu.html">浏览图形要素</a>
+                    </form>
+                </div>
+
+            </div>
+            <div class="container clearfix" id="tm-class-all" style="padding-top:10px">
+                <div id="tm-main-classess">
+                    <div><h3><a href="/classes/01.html">第01类 化学原料</a></h3><p><a href="/classes/01.html">用于工业、科学、摄影、农业、园艺和林业的化学品；未加工人造合成树脂；未加工塑料物质；肥料；灭火用合成物；淬火和焊接用制剂；保存食品用化学品；鞣料；工业用粘合剂。</a></p></div>
+                    <div><h3><a href="/classes/02.html">第02类 颜料油漆</a></h3><p><a href="/classes/02.html">颜料，清漆，漆；防锈剂和木材防腐剂；着色剂；媒染剂；未加工的天然树脂；画家、装饰家、印刷商和艺术家用金属箔及金属粉。</a></p></div>
+                    <div><h3><a href="/classes/03.html">第03类 日化用品</a></h3><p><a href="/classes/03.html">洗衣用漂白剂及其他物料；清洁、擦亮、去渍及研磨用制剂；肥皂；香料，香精油，化妆品，洗发水；牙膏。</a></p></div>
+                    <div><h3><a href="/classes/04.html">第04类 燃料油脂</a></h3><p><a href="/classes/04.html">工业用油和油脂；润滑剂；吸收、润湿和粘结灰尘用合成物；燃料（包括马达用燃料）和照明材料；照明用蜡烛和灯芯。</a></p></div>
+                    <div><h3><a href="/classes/05.html">第05类 医药卫生</a></h3><p><a href="/classes/05.html">药用和兽医用制剂；医用卫生制剂；医用或兽医用营养食物和物质，婴儿食品；人用和动物用膳食补充剂；膏药，绷敷材料；填塞牙孔用料，牙科用蜡；消毒剂；消灭有害动物制剂；杀真菌剂，除莠剂。</a></p></div>
+                    <div><h3><a href="/classes/06.html">第06类 五金金属</a></h3><p><a href="/classes/06.html">普通金属及其合金；金属建筑材料；可移动金属建筑物；铁轨用金属材料；普通金属制非电气用缆线；五金具，金属小五金具；金属管；保险箱；不属别类的普通金属制品；矿石。</a></p></div>
+                    <div><h3><a href="/classes/07.html">第07类 机械设备</a></h3><p><a href="/classes/07.html">机器和机床；马达和引擎（陆地车辆用的除外）；机器联结器和传动机件（陆地车辆用的除外）；非手动农业器具；孵化器；自动售货机。</a></p></div>
+                    <div><h3><a href="/classes/08.html">第08类 手工器械</a></h3><p><a href="/classes/08.html">手工具和器具（手动的）；刀、叉和勺餐具；随身武器；剃刀。</a></p></div>
+                    <div><h3><a href="/classes/09.html">第09类 科学仪器</a></h3><p><a href="/classes/09.html">科学、航海、测量、摄影、电影、光学、衡具、量具、信号、检验（监督）、救护（营救）和教学用装置及仪器；处理、开关、传送、积累、调节或控制电的装置和仪器；录制、通讯、重放声音或影像的装置；磁性数据载体，录音盘；光盘，DVD盘和其他数字存储媒介；投币启动装置的机械结构；收银机，计算机器，数据处理装置，计算机；计算机软件；灭火器械。</a></p></div>
+                    <div><h3><a href="/classes/10.html">第10类 医疗器械</a></h3><p><a href="/classes/10.html">外科、医疗、牙科和兽医用仪器及器械，假肢，假眼和假牙；整形用品；缝合用材料。</a></p></div>
+                    <div><h3><a href="/classes/11.html">第11类 家用电器</a></h3><p><a href="/classes/11.html">照明、加热、蒸汽发生、烹饪、冷藏、干燥、通风、供水以及卫生用装置。</a></p></div>
+                    <div><h3><a href="/classes/12.html">第12类 运输工具</a></h3><p><a href="/classes/12.html">运载工具；陆、空、海用运载装置。</a></p></div>
+                    <div><h3><a href="/classes/13.html">第13类 军用烟花</a></h3><p><a href="/classes/13.html">火器；军火及弹药；爆炸物；烟火。</a></p></div>
+                    <div><h3><a href="/classes/14.html">第14类 珠宝钟表</a></h3><p><a href="/classes/14.html">贵重金属及其合金，不属别类的贵重金属制品或镀有贵重金属的物品；珠宝首饰，宝石；钟表和计时仪器。</a></p></div>
+                    <div><h3><a href="/classes/15.html">第15类 乐器</a></h3><p><a href="/classes/15.html">乐器。</a></p></div>
+                    <div><h3><a href="/classes/16.html">第16类 文化用品</a></h3><p><a href="/classes/16.html">纸和纸板，不属别类的纸和纸板制品；印刷品；装订用品；照片；文具；文具或家庭用粘合剂；美术用品；画笔；打字机和办公用品（家具除外）；教育或教学用品（仪器除外）；包装用塑料物品（不属别类的）；印刷铅字；印版。</a></p></div>
+                    <div><h3><a href="/classes/17.html">第17类 橡胶制品</a></h3><p><a href="/classes/17.html">橡胶、古塔胶、树胶、石棉、云母，以及不属别类的这些原材料的制品；生产用成型塑料制品；包装、填充和绝缘用材料；非金属软管。</a></p></div>
+                    <div><h3><a href="/classes/18.html">第18类 皮革皮具</a></h3><p><a href="/classes/18.html">皮革和人造皮革，不属别类的皮革和人造皮革制品；毛皮；箱子和旅行袋；雨伞和阳伞；手杖；鞭和马具。</a></p></div>
+                    <div><h3><a href="/classes/19.html">第19类 建筑材料</a></h3><p><a href="/classes/19.html">非金属的建筑材料；建筑用非金属刚性管；柏油，沥青；可移动非金属建筑物；非金属碑。</a></p></div>
+                    <div><h3><a href="/classes/20.html">第20类 家具</a></h3><p><a href="/classes/20.html">家具，镜子，相框；不属别类的木、软木、苇、藤、柳条、角、骨、象牙、鲸骨、贝壳、琥珀、珍珠母、海泡石制品，这些材料的代用品或塑料制品。</a></p></div>
+                    <div><h3><a href="/classes/21.html">第21类 家用器具</a></h3><p><a href="/classes/21.html">家用或厨房用器具和容器；梳子和海绵；刷子（画笔除外）；制刷材料；清洁用具；钢丝绒；未加工或半加工玻璃（建筑用玻璃除外）；不属别类的玻璃器皿、瓷器和陶器。</a></p></div>
+                    <div><h3><a href="/classes/22.html">第22类 绳网袋篷</a></h3><p><a href="/classes/22.html">缆，绳，网，帐篷，遮篷，防水遮布，帆，袋和包（不属别类的）；衬垫和填充材料（橡胶或塑料除外）；纺织用纤维原料。</a></p></div>
+                    <div><h3><a href="/classes/23.html">第23类 纺织纱线</a></h3><p><a href="/classes/23.html">纺织用纱和线。</a></p></div>
+                    <div><h3><a href="/classes/24.html">第24类 床单布料</a></h3><p><a href="/classes/24.html">布料和不属别类的纺织品；床单；桌布。</a></p></div>
+                    <div><h3><a href="/classes/25.html">第25类 服装鞋帽</a></h3><p><a href="/classes/25.html">服装，鞋，帽。</a></p></div>
+                    <div><h3><a href="/classes/26.html">第26类 花边拉链</a></h3><p><a href="/classes/26.html">花边和刺绣，饰带和编带；纽扣，领钩扣，饰针和缝针；假花。</a></p></div>
+                    <div><h3><a href="/classes/27.html">第27类 地毯席垫</a></h3><p><a href="/classes/27.html">地毯，地席，席类，油毡及其他铺地板材料；非纺织品制墙帷。</a></p></div>
+                    <div><h3><a href="/classes/28.html">第28类 体育玩具</a></h3><p><a href="/classes/28.html">游戏器具和玩具；不属别类的体育和运动用品；圣诞树用装饰品。</a></p></div>
+                    <div><h3><a href="/classes/29.html">第29类 食品罐头</a></h3><p><a href="/classes/29.html">肉，鱼，家禽和野味；肉汁；腌渍、冷冻、干制及煮熟的水果和蔬菜；果冻，果酱，蜜饯；蛋；奶和奶制品；食用油和油脂。</a></p></div>
+                    <div><h3><a href="/classes/30.html">第30类 调味茶糖</a></h3><p><a href="/classes/30.html">咖啡，茶，可可和咖啡代用品；米；食用淀粉和西米；面粉和谷类制品；面包、糕点和甜食；冰制食品；糖，蜂蜜，糖浆；鲜酵母，发酵粉；食盐；芥末；醋，沙司（调味品）；辛香料；饮用冰。</a></p></div>
+                    <div><h3><a href="/classes/31.html">第31类 水果花木</a></h3><p><a href="/classes/31.html">谷物和不属别类的农业、园艺、林业产品；活动物；新鲜水果和蔬菜；种籽；草木和花卉；动物饲料；麦芽。</a></p></div>
+                    <div><h3><a href="/classes/32.html">第32类 啤酒饮料</a></h3><p><a href="/classes/32.html">啤酒；矿泉水和汽水以及其他不含酒精的饮料；水果饮料及果汁；糖浆及其他制饮料用的制剂。</a></p></div>
+                    <div><h3><a href="/classes/33.html">第33类 酒</a></h3><p><a href="/classes/33.html">含酒精的饮料（啤酒除外）。</a></p></div>
+                    <div><h3><a href="/classes/34.html">第34类 烟草烟具</a></h3><p><a href="/classes/34.html">烟草；烟具；火柴。</a></p></div>
+                    <div><h3><a href="/classes/35.html">第35类 广告贸易</a></h3><p><a href="/classes/35.html">广告；商业经营；商业管理；办公事务。</a></p></div>
+                    <div><h3><a href="/classes/36.html">第36类 金融物管</a></h3><p><a href="/classes/36.html">保险；金融事务；货币事务；不动产事务。</a></p></div>
+                    <div><h3><a href="/classes/37.html">第37类 建筑修理</a></h3><p><a href="/classes/37.html">房屋建筑；修理；安装服务。</a></p></div>
+                    <div><h3><a href="/classes/38.html">第38类 通讯电信</a></h3><p><a href="/classes/38.html">电信。</a></p></div>
+                    <div><h3><a href="/classes/39.html">第39类 运输旅行</a></h3><p><a href="/classes/39.html">运输；商品包装和贮藏；旅行安排。</a></p></div>
+                    <div><h3><a href="/classes/40.html">第40类 材料处理</a></h3><p><a href="/classes/40.html">材料处理。</a></p></div>
+                    <div><h3><a href="/classes/41.html">第41类 教育娱乐</a></h3><p><a href="/classes/41.html">教育；提供培训；娱乐；文体活动。</a></p></div>
+                    <div><h3><a href="/classes/42.html">第42类 科研服务</a></h3><p><a href="/classes/42.html">科学技术服务和与之相关的研究与设计服务；工业分析与研究；计算机硬件与软件的设计与开发。</a></p></div>
+                    <div><h3><a href="/classes/43.html">第43类 餐饮酒店</a></h3><p><a href="/classes/43.html">提供食物和饮料服务；临时住宿。</a></p></div>
+                    <div><h3><a href="/classes/44.html">第44类 医疗园艺</a></h3><p><a href="/classes/44.html">医疗服务；兽医服务；人或动物的卫生和美容服务；农业、园艺和林业服务。</a></p></div>
+                    <div><h3><a href="/classes/45.html">第45类 社会法律</a></h3><p><a href="/classes/45.html">法律服务；由他人提供的为满足个人需要的私人和社会服务；为保护财产和人身安全的服务。</a></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="top">
+            <div class="center">
+                <img src="../../Static/img/serviceNav.png" alt="">
+                <div>
+                    <h1 class="same ">
+                        您的业务还没有展开？马上
+                    </h1>
+                    <div class="create same btn-same "><a href="#">创建业务</a></div>
+                    <h1 class="same">或者</h1>
+                    <div class="become same btn-same"><a href="#">成为代理商</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="service-lis">
+            <div class="center">
+                <ul>
+                    <li class="first">
+                        <dl>
+                            <dt>服务技术</dt>
+                            <dd><a href="#">联系客服</a></dd>
+                            <dd><a href="#">常用下载</a></dd>
+                            <dd><a href="#">帮助中心</a></dd>
+                            <dd><a href="#">违规举报</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>新手指导</dt>
+                            <dd><a href="#">注册第一商务</a></dd>
+                            <dd><a href="#">域名注册申请</a></dd>
+                            <dd><a href="#">购买虚拟主机</a></dd>
+                            <dd><a href="#">主机邮局续费</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>付款方式</dt>
+                            <dd><a href="#">在线支付</a></dd>
+                            <dd><a href="#">银行汇款</a></dd>
+                            <dd><a href="#">邮局汇款</a></dd>
+                            <dd><a href="#">上门缴收</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>快速入口</dt>
+                            <dd><a href="#">域名控制面板</a></dd>
+                            <dd><a href="#">虚拟主机管理</a></dd>
+                            <dd><a href="#">云主机管理</a></dd>
+                            <dd><a href="#">数据库管理</a></dd>
+                        </dl>
+                    </li>
+                    <li class="last">
+                        <dl>
+                            <dt><h3>客服热线：<span>4006-035-001</span></h3></dt>
+                            <dd class="show"><i class="icon same show1 wxshow"></i><i class="icon same show2 wx"></i><a href="#">第一商务官方微信</a></dd>
+                            <dd><i class="icon same show1 xlshow"></i><i class="icon same show2 xl"></i><a href="#">第一商务官方微博</a></dd>
+                            <dd><i class="icon same show1 qqshow"></i><i class="icon same show2 qq"></i><a href="#">第一商务官方客服</a></dd>
+                        </dl>
+                        <div>
+                            <i class="icon wxewm show-hide-icon show"></i>
+                            <i class="icon xlewm show-hide-icon"></i>
+                            <i class="icon qqewm show-hide-icon"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="center">
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">网站地图</a></li>
+                    <li><a href="#">人才招聘</a></li>
+                    <li><a href="#">客服中心</a></li>
+                    <li><a href="#">友情链接</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">付款方式</a></li>
+                    <li><a href="#">有问必答</a></li>
+                    <li><a href="#">价格总览</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>
+            客服热线：0571-87756803&nbsp;&nbsp; 87756807 &nbsp;&nbsp;&nbsp;&nbsp;合作热线：0571-87756822&nbsp;&nbsp;&nbsp;&nbsp;  网络备案：0571-87756883&nbsp;&nbsp; 87756809&nbsp;&nbsp;&nbsp;&nbsp;传真：0571-87756868
+        </p>
+        <p>
+            第一商务投诉电话：0571-87756866&nbsp;&nbsp;国家域名注册服务投诉中心投诉受理电话：010-58813000
+        </p>
+        <p>
+            地址：浙江省杭州市西湖区紫霞街176号杭州互联网创新创业园2号楼11楼(310030)
+        </p>
+        <p>
+            信息产业部域名注册服务批文号：信部电函[2008]224号&nbsp;&nbsp;&nbsp;&nbsp;经营许可证：浙B1.B2-20120241&nbsp;&nbsp;&nbsp;&nbsp; 浙公网安备33010602000268号
+        </p>
+        <p>
+            Copyright© 1999-2016 第一商务 版权所有
+        </p>
+        <p class="logo">
+            <a href="#" class="l1"></a>
+            <a href="#" class="l2"></a>
+            <a href="#" class="l3"></a>
+            <a href="#" class="l4"></a>
+            <a href="#" class="l5"></a>
+            <a href="#" class="l6"></a>
+            <a href="#" class="l7"></a>
+            <a href="#" class="l8"></a>
+        </p>    
+        <p class="link">
+            <span>友情链接：</span>
+            <a href="#">爱名网</a><span class="line">|</span><a href="#">域名抢注</a><span class="line">|</span><a href="#">商务网</a><span class="line">|</span><a href="#">电商网 </a><span class="line">|</span><a href="#">成都网建设 </a><span class="line">|</span><a href="#">折800</a><span class="line">|</span><a href="#">中网</a><span class="line">|</span><a href="#">步淘网</a><span class="line">|</span><a href="#">九赢广告联盟</a>
+        </p>
+    </div>
+</body>
+</html>
+
+
+<script src="../../Static/js/module/trademark/trademark.js"></script>

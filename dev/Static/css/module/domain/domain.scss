@@ -284,6 +284,7 @@
 }
 //单一域名查询
 #domain-single{
+	padding-top:0;
 	.left{
 		width: 180px;
 		padding:0 10px;
@@ -312,14 +313,17 @@
 			margin-top: 12px;
 		}
 		.now{
-			color:#e2383a;
+			color:#dd2726;
+		}
+		a:hover{
+			color:#dd2726;
 		}
 	}
 	.right-top{
 		background:#fff;
 		width: 899px;
 		position:relative;
-		padding: 0 40px 50px 40px;
+		padding: 0 40px ;
 		.bg{
 			position:absolute;
 			width: 100%;
@@ -441,7 +445,6 @@
 		}
 	}
 	.right-bottom{
-		margin-top: 25px;
 		padding:50px 75px;
 		background:#fff;
 		h3{
@@ -466,12 +469,8 @@
 			color:#999;
 		}
 	}
-	.top-content{
-		padding-bottom:50px;
-	}
 	.bottom-content{
 		background:#fff;
-		padding:50px 0;
 		h2{
 			text-align: center;
 			font-size: 30px;
@@ -809,9 +808,7 @@
 	}
 	.floor1{
 		background:#fff;
-		padding:30px 40px 50px;
 		.title{
-			padding-bottom:20px;
 			padding-right:20px;
 			h3{
 				height: 17px;
@@ -856,8 +853,7 @@
 		}
 	}
 	.floor2{
-		margin-top: 20px;
-		padding:30px 40px 50px;
+		padding-top: 30px;
 		background:#fff;
 		h3{
 			height: 17px;
@@ -929,9 +925,10 @@
 //域名注册-批量注册
 #domain-batchregistered{
 	background:#fff;
+	padding-top:0;
+	position:relative;
 	.floor1{
 		background:#f5f5f5;
-		margin-top: -50px;
 		padding-top:50px;
 		padding-bottom:50px;
 		.center{
@@ -1094,7 +1091,7 @@
 	padding:0;
 	position:relative;
 	min-height:400px;
-	background:#f5f5f5;
+	background:#fff;
 	.icon{
 		background-image:url(../../../img/domain.png);
 	}
@@ -1311,7 +1308,7 @@
 #domain{
 	padding:0;
 	.floor1{
-		padding:70px 0;
+		padding-top:70px;
 		.jdlb{
 			position:relative;
 			height: 180px;
@@ -1493,11 +1490,9 @@
 	}
 }
 #domain-result{
-	padding:50px 0;
 	h2{
 		color:#333;
 		font-size: 26px;
-		padding-bottom:20px; 
 		font-weight: 400;
 	}
 	.content{

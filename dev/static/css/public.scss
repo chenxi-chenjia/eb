@@ -76,15 +76,17 @@ h4,h5,h6{
 	*overflow:hidden;
 }
 //面包屑导航
-.bread{
+#bread{
 	position:absolute;
 	top:0;
 	left: 0;
 	height: 50px;
 	width: 100%;
-	.center{
+	line-height: 50px;
+	div.center{
 		line-height: 50px;
-		background:transparent;
+		background:transparent !important;
+		padding: 0 !important;
 	}
 	b{
 		font-weight: 400;
@@ -626,6 +628,7 @@ h4,h5,h6{
 }
 
 .page-commonContent{
+	position:relative;
 	padding:50px 0;
 	background:#fff;
 	@include nofloat;
@@ -687,6 +690,8 @@ h4,h5,h6{
 	}
 	.right{
 		width: 951px;
+		padding-top: 50px;
+		position: relative;
 		
 	}
 }
@@ -852,11 +857,4 @@ h4,h5,h6{
 	li+li{
 		margin-left: 20px;
 	}
-}
-//楼层
-h1{
-	font-size:30px;
-	font-weight:400;
-	text-align:center;
-	padding-top:50px;
 }
