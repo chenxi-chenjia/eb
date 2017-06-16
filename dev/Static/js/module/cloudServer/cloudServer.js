@@ -5,10 +5,11 @@
 		var data={
 			type:['入门型','标准型','商务型','舒适型','企业型','豪华型'],
 			cpu:[1,2,4,8,16],
-			memory:['1GB','2GB','4GB','8GB'],
-			protect:['5G(免费)','6G','7G','8G','10G','15G','25G','35G','55G','105G','205G'],
+			memory:[],
+			protect:[5,10,20,30,50,100,200,300],
 			protecttime:['1个月','2个月','3个月','4个月','5个月','6个月','7个月','8个月','9个月','1年','2年','3年'],
-			system_class:[]
+			system_class:[],
+			defense:0
 		}
 		var user={
 			type:0,
@@ -19,7 +20,8 @@
 			protect:0,
 			broadband:1,
 			system:0,
-			protecttime:0
+			protecttime:0,
+			prise:''
 		}
 		//渲染
 		function ur(data,user){
@@ -40,15 +42,18 @@
 			
 
 			$('.memory',obj).find('.lis-box-same').empty();
+			data.memory=[];
 			if(user.cpu<4){
-				for(var i=1;i<5;i++){
+				for(var i=0;i<4;i++){
 					var el=$('<div class="lis l1">'+data.cpu[user.cpu]*Math.pow(2,i)+'GB<i class="icon nick"></i><i class="icon lw"></i><i class="icon song"></i></div>')
 					el.appendTo($('.memory',obj).find('.lis-box-same'));
+					data.memory.push(data.cpu[user.cpu]*Math.pow(2,i));
 				}
 			}else if(user.cpu==4){
-				for(var i=1;i<4;i++){
+				for(var i=0;i<3;i++){
 					var el=$('<div class="lis l1">'+data.cpu[user.cpu]*Math.pow(2,i)+'GB<i class="icon nick"></i><i class="icon lw"></i><i class="icon song"></i></div>')
 					el.appendTo($('.memory',obj).find('.lis-box-same'));
+					data.memory.push(data.cpu[user.cpu]*Math.pow(2,i));
 				}
 			}
 			$('.memory',obj).find('.bingo').removeClass('bingo').prev().removeClass('prev');
@@ -63,7 +68,7 @@
 			$('.network',obj).find('.lis').eq(nw).addClass('bingo').prev().addClass('prev');
 
 			
-			
+
 			$('.protect',obj).find('.bingo').removeClass('bingo').prev().removeClass('prev');
 			$('.protect',obj).find('.lis').eq(pt).addClass('bingo').prev().addClass('prev');
 
@@ -110,16 +115,15 @@
 
 		//初始化form
 		var disk=[];
-		var url='http://192.168.1.147/server/buy/getParams.html&query=lines,defense,system_class,price,rams,discount&format=jsonp&jsoncallback=?'
+		var API_URL="http://192.168.1.147/server/buy/getParams.html";
+
+		var initial_url=API_URL + "?sign=init&" + "&query=lines,defense,system_class,price,rams,discount&format=jsonp&jsoncallback=?";
 		$.ajax({
 			type:'get',
-			url:url,
+			url:initial_url,
 			dataType:'jsonp',
-			data:{
-				status:0
-			},
 			success:function(e){
-				var user={
+				user={
 					type:0,
 					cpu:0,
 					memory:0,
@@ -134,12 +138,25 @@
 				data.system_class=e.system_class;
 				data.lines=e.lines;
 				data.rams=e.rams;
+
+				var protect_index;
+				$.each(data.protect,function(i,v){
+					if(v==e.defense){
+						protect_index=i;
+					}
+				})
+				user.protect=protect_index;
+				data.defense=protect_index;
+			
 				ur(data,user);
 				$('.form-left select').empty();
 				$.each(data.system_class,function(i,v){
 					var el=$('<option value='+i+'>'+v.name+'</option>');
 					el.appendTo($('.form-left select'));
 				})
+
+				
+
 			},
 			error:function(){
 
@@ -155,22 +172,38 @@
 				protecttime=parseInt(data.protecttime[user.protecttime])*12;
 			}
 			var ndata={
-				status:1,
+				type:1,
 				number:1,
 				cpu:data.cpu[user.cpu],
-				ram:data.memory[user.memory].substring(0,1),
-				lineid:data.lines[user.network].id,
+				ram:data.memory[user.memory],
+				lineid:parseInt(data.lines[user.network].id),
 				harddisks:[user.disk],
 				defense:parseInt(data.protect[user.protect]),
 				months:protecttime,
 				bandwidth:user.broadband,
-				systemID:data.system_class[user.system].id
+				system_class_id:parseInt(data.system_class[user.system].id),
+				systemID:parseInt(data.system_class[user.system].id)
 			}
 			return ndata;
 		}
 		
 		//发送ajax
-		function faj(user){
+		function faj(user,b){
+			var m;
+			if(b==undefined){
+				m='system_class,price';
+			}else{
+				switch(b){
+					case 'cpu':
+					m='rams,system_class,price';
+					break;
+					case 'lines':
+					m='defense,price';
+					break;
+				}
+			}
+				
+			var url=API_URL + "?sign=init&" + "&query="+m+"&format=jsonp&jsoncallback=?";
 			user.prise='正在计算中...';
 			ur(data,user);
 			$.ajax({
@@ -180,6 +213,17 @@
 				dataType:'jsonp',
 				success:function(e){
 					user.prise=e.price.price+'元';
+					if(e.defense){
+						var protect_index;
+						$.each(data.protect,function(i,v){
+							if(v==e.defense){
+								protect_index=i;
+							}
+						})
+						user.protect=protect_index;
+						data.defense=protect_index;
+					}
+						
 					ur(data,user);
 				},
 				error:function(){
@@ -195,9 +239,14 @@
 		});
 		$('.cpu',obj).on('click','.lis',function(){
 			var index=$(this).index();
-			user.cpu=index;
 			user.memory=0;
-			faj(user);
+			user.cpu=index;
+			$('.form-left select').empty();
+			$.each(data.system_class,function(i,v){
+				var el=$('<option value='+i+'>'+v.name+'</option>');
+				el.appendTo($('.form-left select'));
+			})
+			faj(user,'cpu');
 			
 		});
 		$('.memory',obj).on('click','.lis',function(){
@@ -209,17 +258,21 @@
 		$('.network',obj).on('click','.lis',function(){
 			var index=$(this).index();
 			user.network=index;
-			faj(user);
+			faj(user,'lines');
 		});
 
 		$('.protect .frd:first',obj).on('click',' .lis',function(){
 			var index=$(this).index();
-			user.protect=index;console.log()
+			if(data.defense<=index){
+				user.protect=index;
+			}
 			faj(user);
 		});
 		$('.protect .frd:last',obj).on('click',' .lis',function(){
 			var index=$(this).index()+6;
-			user.protect=index;
+			if(data.defense<=index){
+				user.protect=index;
+			}
 			faj(user);
 		});
 
@@ -305,6 +358,7 @@
 			$(document).unbind('mousemove');
 		})
 		$('.article').on('mouseup',function(){
+			console.log(user.disk)
 			faj(user);
 		})
 		$('.disk',obj).on('change','input',function(e){

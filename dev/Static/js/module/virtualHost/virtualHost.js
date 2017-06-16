@@ -29,12 +29,13 @@
 		})
 		//价格高度
 		var priseHW=0;
-		$(' .prise',obj).each(function(i,v){
+		$('.prise',obj).each(function(i,v){
 			if($(v).outerHeight()>priseHW){
-				priseHW=$(v).outerHeight();
+				priseHW=$(v).outerHeight(false);
 			}
 		})
-		$('.prise:first',obj).outerHeight(priseHW+1).css('lineHeight',priseHW+1-30+'px');
+		console.log(priseHW)
+		$('.prise:first',obj).height(priseHW+1).css('lineHeight',priseHW+1-30+'px');
 		if (window.navigator.userAgent.indexOf("MSIE")>=1){
 			$('.prise:first',obj).css({'height':"77px",'lineHeight':"77px"})
 		}

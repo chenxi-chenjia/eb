@@ -127,56 +127,33 @@
 	}
 	helpCenterAboutmeL4jd();
 	//加入我们效果
-	function helpCenterAboutmeL5joinus(){
-		var datalist=[];
-		var obj=$("#helpCenter-aboutme .center .floor.l5 .content .right");
-		
-		$('li .slide',obj).css('display','none');
-		$('li:first .slide',obj).css('display','block');
-
-
-		function lih(index){
-			var lih=0;
-			
-			$('li',obj).each(function(i,v){
-				if(i<$('li',obj).size()-1){
-					lih=lih+$(this).outerHeight(true);
-				}
-				datalist.push($(this).find('.slide').height());
-			})
-			$('.line',obj).css('height',lih+23);
-		}
-		lih(0);
-		
-		$('li',obj).on('click',function(){
-			var index1=$(this).closest('ul').find('.now').index();
-			var index=$(this).index();
-			if (window.navigator.userAgent.indexOf("MSIE")>=1){
-				$(this).closest('ul').find('.now').removeClass('now').find('.slide').css('display','none');
-				$(this).addClass('now').find('.slide').css('display','block');
-				var lh=0;
-				$('li',obj).each(function(i,v){
-					if(i<$('li',obj).size()-1){
-						lh=lh+$(v).outerHeight(true);
-					}
-				})
-				$('.line',obj).css('height',lh+23);
-			}else{
-				if(index!==index1){
-					$(this).closest('ul').find('.now').removeClass('now');
-					$(this).addClass('now');
-					$('li',obj).eq(index1).find('.slide').slideUp();
-					$(this).find('.slide').slideDown();
-					if(index===$(this).closest('ul').find('li').size()-1){
-						var lih=($(this).closest('ul').find('li').size()-1)*76;
-					}else{
-						var lh=datalist[index];
-						var lih=($(this).closest('ul').find('li').size()-1)*76+lh;
-					}
-					$('.line',obj).animate({'height':lih});
-				}
+function helpCenterAboutmeL5joinus(obj){
+	$(function(){
+		$('.slide',obj).eq(0).show();
+		var h=$('li',obj).eq(2).find('.click').offset().top-
+				$('li',obj).eq(0).find('.click').offset().top
+		$('.line',obj).css('height',h);
+		$('.click',obj).on('click',function(){
+			var old_index=$(obj).find('.now').index();
+			var new_index=$(this).closest('li').index()
+			if(old_index==new_index){
+				return
 			}
+			$(obj).find('.now').removeClass('now').find('.slide').slideUp();
+			$(this).closest('li').addClass('now').find('.slide')
+				.slideDown(function(){
+					t=null
+					$('.line',obj).css('height',h);
+				});
+			clearInterval(t)
+			var t=setInterval(function(){
+				h=$('li',obj).eq(2).find('.click').offset().top-
+					$('li',obj).eq(0).find('.click').offset().top
+				$('.line',obj).css('height',h);
+			},10)
 		})
-
-	}
-	helpCenterAboutmeL5joinus();
+	})
+}
+if($('#helpCenter-aboutme .floor.l5 .right').length>0){
+	helpCenterAboutmeL5joinus($('#helpCenter-aboutme .floor.l5 .right'))
+}

@@ -144,8 +144,6 @@
 		var index=$(this).index();
 		$(this).closest('ul').find('.show').removeClass('show');
 		$(this).addClass('show');
-		var mx=250*index;
-		$('#service2 .service-lis').find('.show-line').animate({'left':mx},250)
 		$('#service2 .services').find('ul.box-ul.show').removeClass('show');
 		$('#service2 .services').find('ul.box-ul').eq(index).addClass('show');
 	})
@@ -162,10 +160,7 @@
 
 	//返回顶部
 	$('#fixed').on('click','.backtop',function(){
-		$("body").animate({scrollTop:0});
-		if (window.navigator.userAgent.indexOf("MSIE")>=1){
-			document.documentElement.scrollTop=0;
-		}
+		$('html,body').animate({"scrollTop":0});
 	})
 	if($(window).scrollTop()>580){
 		$('#fixed').css('display','block');

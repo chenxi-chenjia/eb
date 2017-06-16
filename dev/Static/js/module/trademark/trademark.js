@@ -26,6 +26,12 @@ $(function(){
             }
             flag=!flag;
         })
+        $(document).on('click',function(){
+            $('.slide-box').slideUp();
+        })
+        $('.input-box',fa).on('click',function(){
+            return false;
+        })
     }
     if($('#demark').length>0){
         banner_slide();

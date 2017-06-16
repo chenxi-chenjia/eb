@@ -83,7 +83,7 @@ h1{
 				background-position:0 -278px;
 			}
 		}
-		.l0{
+		.l10{
 			border-left-color:#ee6b97;
 			border-bottom:1px solid #e8e8e8;
 			.icon{
@@ -352,7 +352,7 @@ h1{
 				background-position:-110px -900px;
 			}
 		}
-		.l0{
+		.l10{
 			.icon.on{
 				background-position:0 -1011px;
 			}
@@ -1168,6 +1168,7 @@ h1{
 			height: 510px;
 			width: 640px;
 			background:#000;
+			padding-top:0;
 		}
 		.content{
 			position: relative;
@@ -1381,6 +1382,7 @@ h1{
 				width: 50%;
 			}
 			.right{
+				padding-top:0;
 				float: left;
 				width: 50%;
 				*width:49%;
@@ -1393,6 +1395,9 @@ h1{
 					height: 100px;
 					background:#c2c2c2;
 					z-index: 0;
+				}
+				.slide{
+					display: none;
 				}
 				ul{
 					padding-left:40px;

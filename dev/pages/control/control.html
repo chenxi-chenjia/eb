@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>控制面板</title>
+	<link rel="stylesheet" href="./chenxi.min.css">
+	<script src='./jquery.min.js'></script>
+	<link rel="stylesheet" href="./iconfont/iconfont.css">
+	<link rel="stylesheet" href="./control.css">
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center"><span><i class="icon"></i>独立控制面板</span></h1>
+		<div class="form-box">
+			<div class="ctn-nav">
+				<ul class="text-center">
+					<li class="middle-group checked l1">
+						<div class="middle-inline_block">
+							<div class="icon-box">
+								<i class="iconfont icon-xunizhuji"></i>
+							</div>
+							<h5>虚拟主机</h5>
+						</div>
+					</li>
+					<li class="middle-group l2">
+						<div class="middle-inline_block">
+							<div class="icon-box">
+								<i class="iconfont icon-yumingguanli"></i>
+							</div>
+							<h5>域名管理</h5>
+						</div>
+					</li>
+					<li class="middle-group l3">
+						<div class="middle-inline_block">
+							<div class="icon-box">
+								<i class="iconfont icon-data"></i>
+							</div>
+							<h5>数据库</h5>
+						</div>	
+					</li>
+				</ul>
+			</div>
+			<div class="form">
+				<div class="form-content">
+					<div class="middle-group">
+						<h4 class="middle-inline_block text-right">FTP 用户名：</h4>
+						<div class="input-box middle-inline_block">
+							<i class="icon ren"></i>
+							<input type="text">
+						</div>
+					</div>
+					<div class="middle-group">
+						<h4 class="middle-inline_block text-right">FTP 密码：</h4>
+						<div class="input-box middle-inline_block">
+							<i class="icon suo"></i>
+							<input type="text">
+						</div>
+					</div>
+					<div class="middle-group">
+						<h4 class="middle-inline_block text-right">验证码：</h4>
+						<div class="input-box middle-inline_block">
+							<input type="text" class="yzm">
+							<img src="./img/ewm.png" alt="" class="middle-inline_block">
+						</div>
+					</div>
+				</div>
+				<a class="btn center-block text-center">立即登录</a>
+			</div>
+		</div>
+		<h4 class="text-center bottom-text">Powered by ePower</h4>
+	</div>
+</body>
+</html>
+<script>
+(function(){
+	$(function(){
+		$('.form-box').on('click','li',function(){
+			$(this).parent().find('.checked').removeClass('checked');
+			$(this).addClass('checked');
+		})
+	})
+})()
+</script>

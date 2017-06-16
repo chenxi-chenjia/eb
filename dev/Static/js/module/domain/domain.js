@@ -993,14 +993,23 @@
 
 	//域名查询结果页面
 	function domain_result(){
+		var slide_flag=false;
 		$('#domain-banner .input-box input').on('focus',function(){
 			$('#domain-banner input').css('borderBottomLeftRadius','0px');
-			$('#domain-banner .yms-box').slideDown();
+			$('#domain-banner .yms-box').slideDown(function(){
+				slide_flag=true;
+			});
 		})
-		$('#domain-banner .yms-box span.shouqi.fr').on('click',function(){
-			$('#domain-banner .yms-box').slideUp(function(){
-					$('#domain-banner input').css('borderBottomLeftRadius','4px');
-				});
+		$(document).on('click',function(){
+			if(slide_flag){
+				$('#domain-banner .yms-box').slideUp(function(){
+						$('#domain-banner input').css('borderBottomLeftRadius','4px');
+						slide_flag=false;
+					});
+			}
+		})
+		$('#domain-banner .yms-box').on('click',function(){
+			return false;
 		})
 		$('#domain-result .wzc').find('ul').on('click','.left span',function(){
 			$(this).toggleClass('check');
